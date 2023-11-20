@@ -1,7 +1,7 @@
 <script lang="ts">
-	import DiGithubBadge from 'svelte-icons/di/DiGithubBadge.svelte';
 	import { onMount, onDestroy } from 'svelte';
 	import Matter from 'matter-js';
+	import Marquee from 'svelte-fast-marquee';
 	// Image file path
 	const imagePath = '/favicon.png';
 
@@ -135,9 +135,22 @@
 	});
 </script>
 
-<div class="h-screen w-screen px-8">
-	<div class="w-full h-1/3 mt-24 text-center text-[200px] text-blue-400 font-bold tracking-widest">
-		TAMUHACK
+<div class="flex flex-col h-[calc(100dvh)] w-full gap-32 font-poppins">
+	<Marquee class="py-2 bg-black text-white font-semibold">
+		<p>APPLY NOW • JANUARY 27 - 28, 2024 •&nbsp;</p>
+		<p>APPLY NOW • JANUARY 27 - 28, 2024 •&nbsp;</p>
+		<p>APPLY NOW • JANUARY 27 - 28, 2024 •&nbsp;</p>
+		<p>APPLY NOW • JANUARY 27 - 28, 2024 •&nbsp;</p>
+		<p>APPLY NOW • JANUARY 27 - 28, 2024 •&nbsp;</p>
+		<p>APPLY NOW • JANUARY 27 - 28, 2024 •&nbsp;</p>
+		<p>APPLY NOW • JANUARY 27 - 28, 2024 •&nbsp;</p>
+	</Marquee>
+	<div class="flex">
+		<h1 class="w-full text-center text-4xl lg:text-[200px] text-blue-400 font-black tracking-wider">
+			TAMUHACK
+		</h1>
 	</div>
-	<div id="physics-container" class="w-full h-1/2 rounded-lg bg-blue-400 overflow-hidden" />
+	<div class="flex px-8">
+		<div id="physics-container" class="w-full h-rounded-lg bg-blue-400 overflow-hidden" />
+	</div>
 </div>
