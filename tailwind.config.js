@@ -5,7 +5,10 @@ export default {
 		extend: {
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif']
-			}
+			},
+			height: {
+				'dscreen': 'calc(100dvh)'
+			},
 		}
 	},
 	plugins: []
