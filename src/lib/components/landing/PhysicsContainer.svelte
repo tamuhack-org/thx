@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Matter from 'matter-js';
+	import fish from '$lib/assets/fish.svg';
+
+	let visibleWalls = false;
 
 	onMount(() => {
 		var Engine = Matter.Engine,
@@ -26,8 +29,8 @@
 			element: physicsContainer,
 			engine: engine,
 			options: {
-				background: '#000000',
-				wireframeBackground: 'transparent',
+				background: '#60A5FA',
+				wireframes: false,
 				width: width,
 				height: height
 			}
@@ -36,19 +39,6 @@
 		// create runner
 		var runner = Runner.create();
 		Runner.run(runner, engine);
-
-		// Create a rectangular body with the image texture
-		const imageBody = Matter.Bodies.rectangle(100, 100, 100, 100, {
-			render: {
-				sprite: {
-					texture: '/static/favicon.png'
-				}
-			}
-		});
-
-		console.log(imageBody.render.sprite?.texture);
-
-		Composite.add(world, [imageBody]);
 
 		let bodies = [
 			// walls
@@ -59,7 +49,7 @@
 					fillStyle: '#FFFFFF',
 					strokeStyle: '#000000',
 					lineWidth: 2,
-					visible: false
+					visible: visibleWalls
 				}
 			}),
 			Bodies.rectangle(width / 2, height, width, 10, {
@@ -69,7 +59,7 @@
 					fillStyle: '#FFFFFF',
 					strokeStyle: '#000000',
 					lineWidth: 2,
-					visible: false
+					visible: visibleWalls
 				}
 			}),
 			Bodies.rectangle(width, height / 2, 10, height, {
@@ -79,7 +69,7 @@
 					fillStyle: '#FFFFFF',
 					strokeStyle: '#000000',
 					lineWidth: 2,
-					visible: false
+					visible: visibleWalls
 				}
 			}),
 			Bodies.rectangle(0, height / 2, 10, height, {
@@ -89,7 +79,7 @@
 					fillStyle: '#FFFFFF',
 					strokeStyle: '#000000',
 					lineWidth: 2,
-					visible: false
+					visible: visibleWalls
 				}
 			})
 		];
@@ -97,15 +87,16 @@
 
 		engine.gravity.y = 0;
 
-		let stack = Composites.stack(50, 120, 8, 5, 0, 0, function (x, y) {
-			// Modify polygon rendering properties here
-			return Bodies.polygon(x, y, 90, Common.random(20, 50), {
-				frictionAir: 0,
+		let stack = Composites.stack(50, 120, 6, 4, 0, 0, function (x, y) {
+			return Bodies.circle(x + Common.random(100, 120), y, 30, {
 				restitution: 0.4,
+				frictionAir: 0,
 				render: {
-					fillStyle: '#FFFFFF',
-					strokeStyle: '#000000',
-					lineWidth: 2
+					sprite: {
+						texture: '/src/lib/assets/fish.svg',
+						xScale: Common.random(8, 12) / 100,
+						yScale: Common.random(8, 12) / 100
+					}
 				}
 			});
 		});
@@ -132,6 +123,6 @@
 <div class="flex justify-center w-full px-8 pb-8 max-h-[500px]">
 	<div
 		id="physics-container"
-		class="max-w-[2000px] min-h-[500px] h-full rounded-br-3xl rounded-bl-3xl bg-blue-400 border-blue-200 overflow-hidden border-[2px]"
+		class="w-full max-w-[2000px] xl:min-h-[400px] 2xl:min-h-[500px] h-full rounded-br-3xl rounded-bl-3xl bg-blue-400 border-blue-200 overflow-hidden border-[2px]"
 	/>
 </div>
