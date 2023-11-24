@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Matter from 'matter-js';
-	import fish from '$lib/assets/fish.svg';
-
 	let visibleWalls = false;
 
 	onMount(() => {
@@ -93,7 +91,7 @@
 				frictionAir: 0,
 				render: {
 					sprite: {
-						texture: '/src/lib/assets/fish.svg',
+						texture: '/assets/fish.svg',
 						xScale: Common.random(8, 12) / 100,
 						yScale: Common.random(8, 12) / 100
 					}
