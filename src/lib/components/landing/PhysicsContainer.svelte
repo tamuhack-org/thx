@@ -110,6 +110,14 @@
 				}
 			});
 
+		mouseConstraint.mouse.element.removeEventListener(
+			'mousewheel',
+			mouseConstraint.mouse.mousewheel
+		);
+		mouseConstraint.mouse.element.removeEventListener(
+			'DOMMouseScroll',
+			mouseConstraint.mouse.mousewheel
+		);
 		Composite.add(world, mouseConstraint);
 
 		// keep the mouse in sync with rendering

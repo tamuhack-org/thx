@@ -3,6 +3,7 @@
 	import NavButton from './NavButton.svelte';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import ResourcesButton from './ResourcesButton.svelte';
 
 	let loaded = false;
 
@@ -17,7 +18,8 @@
 			duration: 500,
 			x: 0,
 			y: 200,
-			opacity: 1
+			opacity: 1,
+			delay: 500
 		}}
 		class="w-screen fixed bottom-8 font-poppins"
 	>
@@ -33,7 +35,7 @@
 					<NavButton text="FAQ" />
 					<NavButton text="Prizes" />
 				</div>
-				<CTANavButton text="Resources" />
+				<ResourcesButton />
 			</div>
 		</div>
 	</div>

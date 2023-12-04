@@ -5,7 +5,7 @@
 
 <a
 	href={link}
-	class="flex flex-col justify-center h-[60px] px-5 rounded-xl bg-black text-white font-bold text-sm"
+	class="flex flex-col justify-center h-[60px] px-5 rounded-xl bg-black text-white font-semibold text-sm"
 >
 	{text}
 </a>
