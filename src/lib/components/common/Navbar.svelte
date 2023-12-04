@@ -19,17 +19,21 @@
 			y: 200,
 			opacity: 1
 		}}
-		class="w-screen fixed bottom-8"
+		class="w-screen fixed bottom-8 font-poppins"
 	>
 		<div class="flex justify-center">
-			<div class="flex items-center bg-black bg-opacity-70 gap-[2px] px-[6px] rounded-lg">
-				<CTANavButton text="Home" />
-				<div class="flex p-[6px] m-[6px] gap-[6px] bg-[#3e3e3e] rounded-md">
+			<div
+				class="flex items-center bg-black bg-opacity-70 backdrop-blur gap-[2px] px-[6px] rounded-xl"
+			>
+				<CTANavButton text="Apply" />
+				<div
+					class="flex p-[6px] m-[6px] gap-[6px] bg-[#3e3e3e] bg-opacity-75 backdrop-blur rounded-lg"
+				>
 					<NavButton text="Schedule" />
 					<NavButton text="FAQ" />
 					<NavButton text="Prizes" />
 				</div>
-				<CTANavButton text="Apply" />
+				<CTANavButton text="Resources" />
 			</div>
 		</div>
 	</div>
