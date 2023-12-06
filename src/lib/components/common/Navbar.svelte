@@ -8,16 +8,6 @@
 
 	let loaded = false;
 	let open = false;
-	let resources = [
-		{
-			name: 'Link 1',
-			link: '#'
-		},
-		{
-			name: 'Link 2',
-			link: '#'
-		}
-	];
 	$: active = open ? 'active' : '';
 
 	onMount(() => {
