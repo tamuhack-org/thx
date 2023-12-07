@@ -17,6 +17,7 @@
 	let loaded = false;
 	let open = false;
 	$: active = open ? 'active' : '';
+	$: showText = open;
 
 	onMount(() => {
 		loaded = true;
@@ -42,7 +43,11 @@
 				<div
 					class="flex flex-row items-center bg-[#3e3e3e] mt-[6px] bg-opacity-75 px-6 backdrop-blur rounded-lg w-full h-full text-white text-sm text-left gap-16"
 				>
-					<div class="flex flex-col gap-3">
+					<div
+						class:opacity-100={open}
+						class:opacity-0={!open}
+						class="flex flex-col gap-3 transition-opacity duration-300"
+					>
 						<span class="flex flex-row gap-2">
 							<IconNotebook class="w-5 h-5" />
 							<a href="/">Hacker Guide</a>
@@ -56,7 +61,11 @@
 							<a href="/">Spotify Queue</a>
 						</span>
 					</div>
-					<div class="flex flex-col gap-3">
+					<div
+						class:opacity-100={open}
+						class:opacity-0={!open}
+						class="flex flex-col gap-3 transition-opacity duration-300"
+					>
 						<span class="flex flex-row gap-2">
 							<IconScale class="w-5 h-5" />
 							<a href="/">Devpost</a>
