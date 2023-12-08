@@ -7,11 +7,13 @@ export default {
 				poppins: ['Poppins', 'sans-serif']
 			},
 			height: {
-				'dscreen': 'calc(100dvh)'
+				dscreen: 'calc(100dvh)'
 			},
-			colors: { 
-				'dark': '#222454',
-				'beige': '#F3EED8'
+			colors: {
+				dark: '#222454',
+				beige: '#F3EED8',
+				pink: '#FC94BB',
+				blue: '#39BFDA'
 			}
 		}
 	},

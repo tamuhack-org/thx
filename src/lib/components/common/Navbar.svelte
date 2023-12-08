@@ -17,7 +17,6 @@
 	let loaded = false;
 	let open = false;
 	$: active = open ? 'active' : '';
-	$: showText = open;
 
 	onMount(() => {
 		loaded = true;
@@ -33,7 +32,7 @@
 			opacity: 1,
 			delay: 500
 		}}
-		class="flex w-full justify-center fixed bottom-8 font-poppins"
+		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50"
 	>
 		<div class="flex flex-col justify-center w-max">
 			<div
