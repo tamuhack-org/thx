@@ -1,8 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import { fade, blur, fly, slide, scale } from 'svelte/transition';
 
-	export let title = 'TAMUHACK';
+	export let title = 'TAMUHACK X';
 
 	let loaded = false;
 	onMount(() => {
@@ -10,14 +9,31 @@
 	});
 </script>
 
-<div class="flex flex-col justify-end xl:h-1/2">
+<div class="flex flex-col justify-end">
 	<div class="flex justify-center">
 		{#if loaded}
-			<h1
-				class="text-[50px] md:text-[100px] lg:text-[150px] xl:text-[200px] text-blue-400 font-black tracking-wider"
-			>
-				{title}
-			</h1>
+			<div class="">
+        <h2 class="text-center font-light my-8">Presenting our tenth anniversary</h2>
+				<h1
+					class="text-[50px] text-blue-400 font-semibold tracking-wide font-poppins"
+				>
+					{title}
+				</h1>
+			</div>
 		{/if}
 	</div>
 </div>
+
+<style>
+  h1 {
+    font-size: clamp(42px,-6.5915492958px + 9.7183098592vw,180px);
+    line-height: 100%;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 14px;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+  }
+</style>

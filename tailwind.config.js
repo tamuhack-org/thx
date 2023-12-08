@@ -9,6 +9,10 @@ export default {
 			height: {
 				'dscreen': 'calc(100dvh)'
 			},
+			colors: { 
+				'dark': '#222454',
+				'beige': '#F3EED8'
+			}
 		}
 	},
 	plugins: []
