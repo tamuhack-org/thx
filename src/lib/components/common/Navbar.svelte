@@ -46,7 +46,7 @@
 					<div
 						class:opacity-100={open}
 						class:opacity-0={!open}
-						class="flex flex-col gap-3 transition-opacity duration-300"
+						class="flex flex-col gap-3 transition-opacity duration-150"
 					>
 						<span class="flex flex-row gap-2">
 							<IconNotebook class="w-5 h-5" />
@@ -64,7 +64,7 @@
 					<div
 						class:opacity-100={open}
 						class:opacity-0={!open}
-						class="flex flex-col gap-3 transition-opacity duration-300"
+						class="flex flex-col gap-3 transition-opacity duration-150"
 					>
 						<span class="flex flex-row gap-2">
 							<IconScale class="w-5 h-5" />
@@ -116,7 +116,7 @@
 		position: relative;
 		overflow: hidden;
 		height: 0px;
-		transition: height 0.5s ease;
+		transition: height 0.25s ease;
 		text-align: center;
 	}
 
@@ -125,12 +125,12 @@
 	}
 
 	.arrow-open {
-		animation: flip-icon 0.5s ease-in-out;
+		animation: flip-icon 0.25s ease-in-out;
 		transform: rotateX(180deg);
 	}
 
 	.arrow-close {
-		animation: flip-icon-close 0.5s ease-in-out;
+		animation: flip-icon-close 0.25s ease-in-out;
 		transform: rotateX(0deg);
 	}
 

@@ -3,7 +3,7 @@
 	import Matter from 'matter-js';
 	let visibleWalls = false;
 
-	onMount(() => {
+	const renderEngine = () => {
 		var Engine = Matter.Engine,
 			Render = Matter.Render,
 			Runner = Matter.Runner,
@@ -27,7 +27,7 @@
 			element: physicsContainer,
 			engine: engine,
 			options: {
-				background: '#60A5FA',
+				background: 'transparent',
 				wireframes: false,
 				width: width,
 				height: height
@@ -123,12 +123,23 @@
 		// keep the mouse in sync with rendering
 		render.mouse = mouse;
 		Render.run(render);
+	};
+
+	onMount(() => {
+		renderEngine();
 	});
 </script>
 
 <div class="flex justify-center w-full px-8 pb-8 max-h-[500px]">
 	<div
 		id="physics-container"
-		class="w-full max-w-[2000px] xl:min-h-[400px] 2xl:min-h-[500px] h-full rounded-br-3xl rounded-bl-3xl bg-blue-400 border-blue-200 overflow-hidden border-[2px]"
+		class="w-full max-w-[2000px] xl:min-h-[400px] 2xl:min-h-[500px] h-full rounded-xl border-blue-200 overflow-hidden border-[2px]"
 	/>
 </div>
+
+<style>
+	#physics-container {
+		background-image: url('/assets/landingbg.webp');
+		background-size: cover;
+	}
+</style>
