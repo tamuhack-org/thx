@@ -6,7 +6,7 @@
 	<div class="flex justify-center select-none">
 		<div>
 			<h2 class="text-center font-light my-6 tracking-widest">PRESENTING OUR TENTH ANNIVERSARY</h2>
-			<h1 class="text-center text-[50px] text-dark font-bold tracking-wide font-poppins">
+			<h1 class="text-center text-dark font-bold tracking-wide font-poppins">
 				{title}
 			</h1>
 			<div class="flex justify-center gap-4 mt-6">
@@ -22,7 +22,7 @@
 
 <style>
 	h1 {
-		font-size: clamp(42px, -6.5915492958px + 9.7183098592vw, 180px);
+		font-size: clamp(42px, -6.5915492958px + 10.7183098592vw, 180px);
 		line-height: 80%;
 	}
 
