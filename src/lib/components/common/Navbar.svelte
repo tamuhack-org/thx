@@ -12,7 +12,6 @@
 		IconNotebook,
 		IconScale
 	} from '@tabler/icons-svelte';
-	// import ResourcesButton from './ResourcesButton.svelte';
 
 	let loaded = false;
 	let open = false;
@@ -83,7 +82,7 @@
 			<div
 				class:rounded-t-xl={!open}
 				class:transition-all={!open}
-				class:delay-[450ms]={!open}
+				class:delay-[200ms]={!open}
 				class="flex flex-col bg-black bg-opacity-70 backdrop-blur p-[6px] gap-[6px] rounded-b-xl"
 			>
 				<div class="flex items-center">

@@ -5,14 +5,16 @@
 <div class="flex flex-col justify-end mb-12 w-full">
 	<div class="flex justify-center select-none">
 		<div>
-			<h2 class="text-center font-light my-8">Presenting our tenth anniversary</h2>
-			<h1 class="text-center text-[50px] text-dark font-semibold tracking-wide font-poppins">
+			<h2 class="text-center font-light my-6">Presenting our tenth anniversary</h2>
+			<h1 class="text-center text-[50px] text-dark font-bold tracking-wide font-poppins">
 				{title}
 			</h1>
-			<div class="flex justify-center gap-4 mt-4">
+			<div class="flex justify-center gap-4 mt-6">
 				<p class="px-4 py-1 border rounded-full border-dark text-dark opacity-90">24 hours</p>
-				<p class="px-4 py-1 border rounded-full border-dark text-dark opacity-90">Hardware + Software</p>
-        <p class="px-4 py-1 border rounded-full border-dark text-dark opacity-90">MSC 2300</p>
+				<p class="px-4 py-1 border rounded-full border-dark text-dark opacity-90">
+					Hardware + Software
+				</p>
+				<p class="px-4 py-1 border rounded-full border-dark text-dark opacity-90">MSC 2300</p>
 			</div>
 		</div>
 	</div>
