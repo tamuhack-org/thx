@@ -6,7 +6,7 @@
 	<div class="flex justify-center select-none">
 		<div>
 			<h2 class="text-center font-light my-6 tracking-widest">PRESENTING OUR TENTH ANNIVERSARY</h2>
-			<h1 class="text-center text-dark font-bold tracking-wide font-poppins">
+			<h1 class="text-center text-dark font-semibold tracking-wide font-poppins">
 				{title}
 			</h1>
 			<div class="flex justify-center gap-4 mt-6">
