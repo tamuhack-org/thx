@@ -73,6 +73,7 @@
 		margin-bottom: 10px;
 		background-color: #e5e5ea;
 		font-family: 'Roboto', sans-serif;
+		transform-origin: left center;
 		font-size: 14px;
 		border-radius: 25px;
 		padding: 10px 17px;
@@ -84,30 +85,12 @@
 		margin-bottom: 10px;
 		background-color: #1f8aff;
 		font-family: 'Roboto', sans-serif;
+		transform-origin: right center;
 		color: white;
 		font-size: 14px;
 		border-radius: 25px;
 		padding: 10px 17px;
 		animation: enter 0.3s ease-in-out;
-	}
-
-	/* writer */
-	.writing {
-		display: block;
-		height: 38px;
-		width: 90px;
-		background-color: #e5e5ea;
-		border-radius: 25px;
-	}
-	.writing .dot {
-		height: 10px;
-		width: 10px;
-		background-color: #aaa;
-		opacity: 0.3;
-		border-radius: 50%;
-		position: relative;
-		-webkit-animation: dots 0.9s ease-in-out infinite;
-		animation: dots 0.9s ease-in-out infinite;
 	}
 
 	.typing-indicator {
@@ -161,11 +144,11 @@
 
 	@keyframes enter {
 		0% {
-			transform: translateY(10px);
+			transform: translateY(10px) scale(0.8);
 			opacity: 0;
 		}
 		100% {
-			transform: translateY(0px);
+			transform: translateY(0px) scale(1);
 			opacity: 1;
 		}
 	}

@@ -32,12 +32,12 @@
 						</div>
 					</div>
 					<div class="w-1/3 flex justify-end pr-2">
-						<a href="https://www.ieee.org/" target="_blank" rel="noreferrer noopener"
-							><IconInfoCircle /></a
+						<a href="https://ieee-tamu.org/" target="_blank" rel="noreferrer noopener"
+							><IconInfoCircle color="#1f8aff" /></a
 						>
 					</div>
 				</div>
-				<p class="text-xs mt-1 text-center">IEEE</p>
+				<p class="text-xs mt-1 text-center font-poppins">IEEE</p>
 			</div>
 			<Messages />
 		</div>
