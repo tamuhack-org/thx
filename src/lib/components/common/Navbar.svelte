@@ -31,29 +31,58 @@
 {#if loaded}
 	<div
 		class:opacity-0={!open}
-		class="fixed w-full h-[calc(100dvh)] bg-[#2b2b2b] bg-opacity-70 backdrop-blur-sm top-0 left-0 flex sm:hidden text-2xl z-50 transition-opacity p-[6px]"
+		class:pointer-events-none={!open}
+		class="fixed w-full h-dscreen bg-[#2b2b2b] bg-opacity-70 backdrop-blur-sm top-0 left-0 flex sm:hidden text-2xl z-50 transition-opacity p-[6px]"
 	>
-		<div class="flex flex-col rounded-xl bg-[#2b2b2b] w-full h-full text-white p-8 text-lg gap-8">
-			<span class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+		<div
+			class="flex flex-col rounded-xl bg-[#2b2b2b] w-full h-full text-white px-8 pt-8 pb-32 text-lg gap-6"
+		>
+			<a href="/" class="flex flex-row items-center gap-4 hover:opacity-75 transition-opacity">
 				<IconEdit class="w-5 h-5" />
-				<a href="/">Apply</a>
-			</span>
-			<span class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+				<p>Apply</p>
+			</a>
+			<a href="/" class="flex flex-row items-center gap-4 hover:opacity-75 transition-opacity">
 				<IconCalendar class="w-5 h-5" />
-				<a href="/">Schedule</a>
-			</span>
-			<span class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+				<p>Schedule</p>
+			</a>
+			<a href="/" class="flex flex-row items-center gap-4 hover:opacity-75 transition-opacity">
 				<IconUserQuestion class="w-5 h-5" />
-				<a href="/">FAQ</a>
-			</span>
-			<span class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+				<p>FAQ</p>
+			</a>
+			<a href="/" class="flex flex-row items-center gap-4 hover:opacity-75 transition-opacity">
 				<IconTrophy class="w-5 h-5" />
-				<a href="/">Prizes</a>
-			</span>
-			<span class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+				<p>Prizes</p>
+			</a>
+			<span class="flex flex-row items-center gap-4 hover:opacity-75 transition-opacity">
 				<IconCategory class="w-5 h-5" />
-				<a href="/">Resources</a>
+				<p>Resources</p>
 			</span>
+			<div class="flex flex-col gap-4 ml-2 font-light text-sm border-l border-[#626262] pl-4 py-1">
+				<a href="/" class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+					<IconNotebook class="w-5 h-5" />
+					<p>Hacker Guide</p>
+				</a>
+				<a href="/" class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+					<IconBrandDiscord class="w-5 h-5" />
+					<p>Discord</p>
+				</a>
+				<a href="/" class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+					<IconBrandSpotify class="w-5 h-5" />
+					<p>Spotify Queue</p>
+				</a>
+				<a href="/" class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+					<IconScale class="w-5 h-5" />
+					<p>Devpost</p>
+				</a>
+				<a href="/" class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+					<IconHelp class="w-5 h-5" />
+					<p>HelpR</p>
+				</a>
+				<a href="/" class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+					<IconLicense class="w-5 h-5" />
+					<p>Code of Conduct</p>
+				</a>
+			</div>
 		</div>
 	</div>
 	<div
@@ -85,36 +114,54 @@
 						class:opacity-0={!open}
 						class="flex flex-col gap-3 transition-opacity duration-150"
 					>
-						<span class="flex flex-row gap-2 hover:opacity-75 transition-opacity">
+						<a
+							href="/"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
 							<IconNotebook class="w-5 h-5" />
-							<a href="/">Hacker Guide</a>
-						</span>
-						<span class="flex flex-row gap-2 hover:opacity-75 transition-opacity">
+							<p>Hacker Guide</p>
+						</a>
+						<a
+							href="/"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
 							<IconBrandDiscord class="w-5 h-5" />
-							<a href="/">Discord</a>
-						</span>
-						<span class="flex flex-row gap-2 hover:opacity-75 transition-opacity">
+							<p>Discord</p>
+						</a>
+						<a
+							href="/"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
 							<IconBrandSpotify class="w-5 h-5" />
-							<a href="/">Spotify Queue</a>
-						</span>
+							<p>Spotify Queue</p>
+						</a>
 					</div>
 					<div
 						class:opacity-100={open}
 						class:opacity-0={!open}
 						class="flex flex-col gap-3 transition-opacity duration-150"
 					>
-						<span class="flex flex-row gap-2 hover:opacity-75 transition-opacity">
+						<a
+							href="/"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
 							<IconScale class="w-5 h-5" />
-							<a href="/">Devpost</a>
-						</span>
-						<span class="flex flex-row gap-2 hover:opacity-75 transition-opacity">
+							<p>Devpost</p>
+						</a>
+						<a
+							href="/"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
 							<IconHelp class="w-5 h-5" />
-							<a href="/">HelpR</a>
-						</span>
-						<span class="flex flex-row gap-2 hover:opacity-75 transition-opacity">
+							<p>HelpR</p>
+						</a>
+						<a
+							href="/"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
 							<IconLicense class="w-5 h-5" />
-							<a href="/">Code of Conduct</a>
-						</span>
+							<p>Code of Conduct</p>
+						</a>
 					</div>
 				</div>
 			</div>
