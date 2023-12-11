@@ -31,7 +31,7 @@
 {#if loaded}
 	<div
 		class:opacity-0={!open}
-		class="fixed w-full h-[calc(100dvh)] bg-[#2b2b2b] bg-opacity-70 backdrop-blur-sm top-0 left-0 flex sm:hidden text-2xl z-10 transition-opacity p-[6px]"
+		class="fixed w-full h-[calc(100dvh)] bg-[#2b2b2b] bg-opacity-70 backdrop-blur-sm top-0 left-0 flex sm:hidden text-2xl z-50 transition-opacity p-[6px]"
 	>
 		<div class="flex flex-col rounded-xl bg-[#2b2b2b] w-full h-full text-white p-8 text-lg gap-8">
 			<span class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
@@ -67,7 +67,7 @@
 		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50"
 	>
 		<button
-			class="flex sm:hidden justify-center rounded-xl bg-black bg-opacity-70 backdrop-blur-sm p-4 text-white z-20"
+			class="flex sm:hidden justify-center rounded-xl bg-black bg-opacity-70 backdrop-blur-sm p-4 text-white z-50"
 			on:click={() => (open = !open)}
 		>
 			<IconMenu2 class="w-5 h-5" />
