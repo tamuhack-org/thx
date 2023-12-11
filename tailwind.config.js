@@ -4,7 +4,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				poppins: ['Poppins', 'sans-serif']
+				poppins: ['Poppins', 'sans-serif'],
+				'general-sans': ['General Sans', 'sans-serif']
 			},
 			height: {
 				dscreen: 'calc(100dvh)'

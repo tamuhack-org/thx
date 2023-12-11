@@ -10,7 +10,13 @@
 		IconHelp,
 		IconLicense,
 		IconNotebook,
-		IconScale
+		IconScale,
+		IconMenu2,
+		IconEdit,
+		IconCalendar,
+		IconUserQuestion,
+		IconTrophy,
+		IconCategory
 	} from '@tabler/icons-svelte';
 
 	let loaded = false;
@@ -24,6 +30,33 @@
 
 {#if loaded}
 	<div
+		class:opacity-0={!open}
+		class="fixed w-full h-[calc(100dvh)] bg-[#2b2b2b] bg-opacity-70 backdrop-blur-sm top-0 left-0 flex sm:hidden text-2xl z-10 transition-opacity p-[6px]"
+	>
+		<div class="flex flex-col rounded-xl bg-[#2b2b2b] w-full h-full text-white p-8 text-lg gap-8">
+			<span class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+				<IconEdit class="w-5 h-5" />
+				<a href="/">Apply</a>
+			</span>
+			<span class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+				<IconCalendar class="w-5 h-5" />
+				<a href="/">Schedule</a>
+			</span>
+			<span class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+				<IconUserQuestion class="w-5 h-5" />
+				<a href="/">FAQ</a>
+			</span>
+			<span class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+				<IconTrophy class="w-5 h-5" />
+				<a href="/">Prizes</a>
+			</span>
+			<span class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+				<IconCategory class="w-5 h-5" />
+				<a href="/">Resources</a>
+			</span>
+		</div>
+	</div>
+	<div
 		in:fly={{
 			duration: 500,
 			x: 0,
@@ -33,28 +66,34 @@
 		}}
 		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50"
 	>
-		<div class="flex flex-col justify-center w-max">
+		<button
+			class="flex sm:hidden justify-center rounded-xl bg-black bg-opacity-70 backdrop-blur-sm p-4 text-white z-20"
+			on:click={() => (open = !open)}
+		>
+			<IconMenu2 class="w-5 h-5" />
+		</button>
+		<div class="hidden sm:flex flex-col justify-center w-max">
 			<div
 				class:active
-				class="flex flex-col items-center justify-center gap-[6px] bg-black bg-opacity-70 backdrop-blur rounded-t-xl expand-container px-[6px]"
+				class="flex flex-col items-center justify-center gap-[6px] bg-black bg-opacity-70 backdrop-blur-sm rounded-t-xl expand-container px-[6px]"
 			>
 				<div
-					class="flex flex-row items-center bg-[#3e3e3e] mt-[6px] bg-opacity-75 px-6 backdrop-blur rounded-lg w-full h-full text-white text-sm text-left gap-16"
+					class="flex flex-row items-center bg-[#2b2b2b] mt-[6px] bg-opacity-70 px-6 backdrop-blur-sm rounded-lg w-full h-full text-white text-sm text-left gap-16"
 				>
 					<div
 						class:opacity-100={open}
 						class:opacity-0={!open}
 						class="flex flex-col gap-3 transition-opacity duration-150"
 					>
-						<span class="flex flex-row gap-2">
+						<span class="flex flex-row gap-2 hover:opacity-75 transition-opacity">
 							<IconNotebook class="w-5 h-5" />
 							<a href="/">Hacker Guide</a>
 						</span>
-						<span class="flex flex-row gap-2">
+						<span class="flex flex-row gap-2 hover:opacity-75 transition-opacity">
 							<IconBrandDiscord class="w-5 h-5" />
 							<a href="/">Discord</a>
 						</span>
-						<span class="flex flex-row gap-2">
+						<span class="flex flex-row gap-2 hover:opacity-75 transition-opacity">
 							<IconBrandSpotify class="w-5 h-5" />
 							<a href="/">Spotify Queue</a>
 						</span>
@@ -64,15 +103,15 @@
 						class:opacity-0={!open}
 						class="flex flex-col gap-3 transition-opacity duration-150"
 					>
-						<span class="flex flex-row gap-2">
+						<span class="flex flex-row gap-2 hover:opacity-75 transition-opacity">
 							<IconScale class="w-5 h-5" />
 							<a href="/">Devpost</a>
 						</span>
-						<span class="flex flex-row gap-2">
+						<span class="flex flex-row gap-2 hover:opacity-75 transition-opacity">
 							<IconHelp class="w-5 h-5" />
 							<a href="/">HelpR</a>
 						</span>
-						<span class="flex flex-row gap-2">
+						<span class="flex flex-row gap-2 hover:opacity-75 transition-opacity">
 							<IconLicense class="w-5 h-5" />
 							<a href="/">Code of Conduct</a>
 						</span>
@@ -83,13 +122,11 @@
 				class:rounded-t-xl={!open}
 				class:transition-all={!open}
 				class:delay-[200ms]={!open}
-				class="flex flex-col bg-black bg-opacity-70 backdrop-blur p-[6px] gap-[6px] rounded-b-xl"
+				class="flex flex-col bg-black bg-opacity-70 backdrop-blur-sm p-[6px] gap-[6px] rounded-b-xl"
 			>
 				<div class="flex items-center">
-					<CTANavButton text="Apply" />
-					<div
-						class="flex p-[6px] gap-[6px] mx-[6px] bg-[#3e3e3e] bg-opacity-75 backdrop-blur rounded-lg"
-					>
+					<CTANavButton text="Apply" link="https://register.tamuhack.com/" />
+					<div class="flex p-[6px] gap-[6px] mx-[6px] bg-[#2b2b2b] rounded-lg">
 						<NavButton text="Schedule" />
 						<NavButton text="FAQ" />
 						<NavButton text="Prizes" />

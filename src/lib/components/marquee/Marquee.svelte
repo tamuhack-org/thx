@@ -14,15 +14,19 @@
 </script>
 
 {#if loaded}
-	<span in:fly={{
-		duration: 500,
-		x: 0,
-		y: -200,
-		opacity: 1
-	}}>
+	<span
+		in:fly={{
+			duration: 500,
+			x: 0,
+			y: -200,
+			opacity: 1
+		}}
+	>
 		<Marquee class="py-2 bg-black text-white font-semibold" speed={30}>
 			<!-- have one constant text to get the width, there is a slight delay when rendering the rest of the text, need transition to mask the delay  -->
-			<p class="max-w-fit" bind:clientWidth={childWidth}>APPLY NOW • JANUARY 27 - 28, 2024 •&nbsp;</p>
+			<p class="max-w-fit" bind:clientWidth={childWidth}>
+				APPLY NOW • JANUARY 27 - 28, 2024 •&nbsp;
+			</p>
 			{#if childWidth}
 				{#each { length: repeatedChildNumber } as _, i}
 					<p class="max-w-fit">APPLY NOW • JANUARY 27 - 28, 2024 •&nbsp;</p>
