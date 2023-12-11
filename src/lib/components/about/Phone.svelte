@@ -1,36 +1,50 @@
-<script>
+<script lang="ts">
 	import Messages from './Messages.svelte';
+	import { inview } from 'svelte-inview';
+	import { fly } from 'svelte/transition';
+	import { IconChevronLeft, IconChevronRight, IconInfoCircle } from '@tabler/icons-svelte';
+
+	let isInView: boolean;
 </script>
 
-<div class="iphone-x scale-90 md:scale-100 -translate-y-8 md:translate-y-0">
-	<div class="flex flex-col justify-center w-full h-[110px] border-b-[1px]">
-		<div class="flex justify-center w-full translate-y-3">
-			<div></div>
-			<div class="rounded-full h-12 w-12 bg-gray-400 text-center text-2xl my-auto">
-        <div class= ""></div>
-      </div>
-			<div></div>
+<div
+	use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
+	on:change={({ detail }) => {
+		isInView = detail.inView;
+	}}
+>
+	{#if isInView}
+		<div
+			in:fly={{
+				duration: 500,
+				opacity: 1,
+				y: 550,
+				delay: 500
+			}}
+			class="md:-rotate-12 iphone-x scale-50 md:scale-100 -translate-y-8 md:translate-y-0"
+		>
+			<div class="flex flex-col justify-center w-full h-[120px] border-b-[1px]">
+				<div class="flex justify-between w-full mt-6 items-center px-2">
+					<div class="w-1/3"><IconChevronLeft /></div>
+					<div class="w-1/3 flex justify-center">
+						<div class="rounded-full h-12 w-12 bg-gray-400 text-center text-2xl my-auto">
+							<div class="flex flex-col justify-center h-full">🤖</div>
+						</div>
+					</div>
+					<div class="w-1/3 flex justify-end pr-2">
+						<a href="https://www.ieee.org/" target="_blank" rel="noreferrer noopener"
+							><IconInfoCircle /></a
+						>
+					</div>
+				</div>
+				<p class="text-xs mt-1 text-center">IEEE</p>
+			</div>
+			<Messages />
 		</div>
-	</div>
-	<Messages />
+	{/if}
 </div>
 
 <style lang="scss">
-	body {
-		background: #f4f6fc;
-
-		&:after {
-			content: 'Made with ❤️ by Adiel Hercules';
-			position: absolute;
-			top: 0;
-			right: 0;
-			padding: 10px;
-			background-color: #3f436b;
-			color: #fff;
-			opacity: 0.6;
-		}
-	}
-
 	.iphone-x {
 		position: relative;
 		margin: 40px auto;
@@ -65,43 +79,6 @@
 			height: 30px;
 			background-color: #1f1f1f;
 			border-radius: 0px 0px 40px 40px;
-		}
-
-		span {
-			position: absolute;
-			display: block;
-			color: transparent;
-		}
-
-		s {
-			position: absolute;
-			display: block;
-			color: transparent;
-		}
-
-		s {
-			top: 50px;
-			color: #fff;
-			text-align: center;
-			text-decoration: none;
-			width: 100%;
-			font-size: 70px;
-			font-weight: 100;
-			padding-top: 60px;
-		}
-
-		span {
-			bottom: 50px;
-			width: 40px;
-			height: 40px;
-			background-color: rgba(0, 0, 0, 0.3);
-			border-radius: 50%;
-			left: 30px;
-
-			& + span {
-				left: auto;
-				right: 30px;
-			}
 		}
 	}
 </style>

@@ -10,17 +10,22 @@
 	}
 
 	function start() {
-		let messages = document.getElementsByClassName('message');
+		let incoming = Array.from(document.getElementsByClassName('message'));
+		let outgoing = Array.from(document.getElementsByClassName('outgoing-message'));
+
+		let messages = incoming.concat(outgoing);
+
 		let timeOut = 1000;
 
-		Array.from(messages).forEach((message, index) => {
+		messages.forEach((message, index) => {
 			index += 1;
 			setTimeout(() => {
 				showMessage(index);
+				if (index == messages.length - 1) {
+					document.getElementById('writing-container').style.display = 'none';
+				}
 			}, timeOut);
-			timeOut += 1000;
-
-			console.log('hi');
+			timeOut += 2000;
 		});
 		timeOut -= 1000;
 
@@ -36,24 +41,24 @@
 </script>
 
 <div class="container">
-	<button class="message" id="message-1"> Yo </button>
-	<div class="message" id="message-2">You wanna make the biggest hardware hackathon in Texas?</div>
-	<div class="message" id="message-3">
-		See an example <a href="https://adesurirey.github.io/en" target="blank">here</a>
+	<button class="message" id="message-1">Crazy idea</button>
+	<div class="message" id="message-2">
+		Let's partner up to make TAMUhack the biggest hardware hackathon in Texas
 	</div>
-	<div id="writing-container" class="writing-container">
-		<div class="writing" id="writer">
-			<div class="dot left"></div>
-			<div class="dot center"></div>
-			<div class="dot right"></div>
-		</div>
-		<div class="message" id="message-4">
-			<a href="/" id="replay">replay me</a>
+	<div class="message" id="message-3">We'll bring hardware, judges, and prizes...</div>
+	<div class="flex justify-end">
+		<div class="outgoing-message" id="message-4">We're down 👀</div>
+	</div>
+	<div id="writing-container" class="writing-container flex justify-start">
+		<div class="typing-indicator scale-75">
+			<span></span>
+			<span></span>
+			<span></span>
 		</div>
 	</div>
 </div>
 
-<style>
+<style lang="scss">
 	/* roboto font */
 	@import url(https://fonts.googleapis.com/css?family=Roboto);
 
@@ -71,6 +76,19 @@
 		font-size: 14px;
 		border-radius: 25px;
 		padding: 10px 17px;
+		animation: enter 0.3s ease-in-out;
+	}
+
+	.outgoing-message {
+		display: none;
+		margin-bottom: 10px;
+		background-color: #1f8aff;
+		font-family: 'Roboto', sans-serif;
+		color: white;
+		font-size: 14px;
+		border-radius: 25px;
+		padding: 10px 17px;
+		animation: enter 0.3s ease-in-out;
 	}
 
 	/* writer */
@@ -80,14 +98,6 @@
 		width: 90px;
 		background-color: #e5e5ea;
 		border-radius: 25px;
-	}
-	.writing::before {
-		content: '';
-		border: solid 20px;
-		border-color: transparent transparent #e5e5ea;
-		position: relative;
-		top: 0px;
-		left: -10px;
 	}
 	.writing .dot {
 		height: 10px;
@@ -99,19 +109,65 @@
 		-webkit-animation: dots 0.9s ease-in-out infinite;
 		animation: dots 0.9s ease-in-out infinite;
 	}
-	.writing .dot.left {
-		top: -7px;
-		margin-left: 17px;
+
+	.typing-indicator {
+		background-color: #e6e7ed;
+		will-change: transform;
+		width: auto;
+		border-radius: 50px;
+		padding: 20px;
+		display: table;
+		position: relative;
+		transform-origin: left center;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -2px;
+			left: -2px;
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			background-color: #e6e7ed;
+		}
+		&::after {
+			height: 10px;
+			width: 10px;
+			left: -10px;
+			bottom: -10px;
+		}
+		span {
+			height: 15px;
+			width: 15px;
+			float: left;
+			margin: 0 1px;
+			background-color: #9e9ea1;
+			display: block;
+			border-radius: 50%;
+			opacity: 0.4;
+			@for $i from 1 through 3 {
+				&:nth-of-type(#{$i}) {
+					animation: 1s blink infinite ($i * 0.3333s);
+				}
+			}
+		}
 	}
-	.writing .dot.center {
-		top: -27x;
-		left: 37px;
-		-webkit-animation-delay: 0.3s;
+
+	@keyframes blink {
+		50% {
+			opacity: 1;
+		}
 	}
-	.writing .dot.right {
-		top: -37px;
-		left: 57px;
-		-webkit-animation-delay: 0.6s;
+
+	@keyframes enter {
+		0% {
+			transform: translateY(10px);
+			opacity: 0;
+		}
+		100% {
+			transform: translateY(0px);
+			opacity: 1;
+		}
 	}
 	@-webkit-keyframes dots {
 		0% {
