@@ -12,3 +12,9 @@
 </svelte:head>
 
 <slot />
+
+<style>
+	:global(body) {
+		background: #e9e9e9;
+	}
+</style>
