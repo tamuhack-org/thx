@@ -9,7 +9,7 @@
 			<h1 class="text-center text-dark font-semibold tracking-wide font-poppins">
 				{title}
 			</h1>
-			<div class="flex justify-center gap-4 mt-6">
+			<div class="hidden md:flex justify-center gap-4 mt-6">
 				<p class="px-4 py-1 border rounded-full border-dark text-dark opacity-90">24 hours</p>
 				<p class="px-4 py-1 border rounded-full border-dark text-dark opacity-90">
 					Hardware + Software
