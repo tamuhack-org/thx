@@ -9,7 +9,7 @@
 	});
 </script>
 
-<div class="flex justify-between items-center w-screen min-h-[70px] px-8">
+<div class="flex justify-between items-center w-full min-h-[70px] px-8 mt-[40px]">
 	<div class="flex gap-2 items-center w-1/2 h-full">
 		<h1 class="text-3xl font-poppins font-semibold">th.</h1>
 	</div>

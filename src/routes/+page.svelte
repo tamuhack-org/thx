@@ -9,6 +9,7 @@
 	import IEEE from '$lib/components/about/IEEE.svelte';
 	import Phone from '$lib/components/about/Phone.svelte';
 	import Messages from '$lib/components/about/Messages.svelte';
+	import Sponsors from '$lib/components/about/Sponsors.svelte';
 
 	let screenWidth: number;
 	let screenHeight: number;
@@ -17,7 +18,18 @@
 <svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
 
 <!-- LANDING -->
-<div class="min-h-dscreen w-full font-poppins bg-opacity-50 max-w-[2000px]">
+<a
+	id="mlh-trust-badge"
+	style="display:block;max-width:100px;min-width:60px;position:absolute;right:50px;top:0;width:10%;z-index:10000"
+	href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=black"
+	target="_blank"
+	><img
+		src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-black.svg"
+		alt="Major League Hacking 2024 Hackathon Season"
+		style="width:100%"
+	/></a
+>
+<div class="min-h-dscreen w-full font-poppins bg-opacity-50 max-w-[1800px] mx-auto">
 	<Marquee {screenWidth} />
 	<TopNavbar />
 
@@ -47,14 +59,19 @@
 				<Prizes />
 			</div>
 			<div
-				class="h-full col-span-2 row-span-2 min-h-[200px] rounded-xl bg-pink overflow-hidden max-h-[500px]"
+				class="relative h-full col-span-2 row-span-2 min-h-[200px] rounded-xl bg-pink overflow-hidden max-h-[500px]"
 			>
 				<Phone />
+				<!-- <p
+					class="absolute text z-50 -right-4 leading-0 top-36 rotate-[78deg] text-3xl font-poppins font-semibold"
+				>
+					TAMUhack + IEEE
+				</p> -->
 			</div>
 			<div
-				class="h-full col-span-2 min-h-[200px] rounded-xl bg-[#1d1d1d] overflow-hidden max-h-[275px]"
+				class="h-full col-span-3 min-h-[200px] rounded-xl bg-[#1d1d1d] border-2 border-[#1d1d1d] overflow-hidden max-h-[275px]"
 			>
-				<IEEE />
+				<Sponsors />
 			</div>
 		</div>
 		<p class="text-dark font-poppins font-light text-md mt-12">

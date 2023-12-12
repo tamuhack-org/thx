@@ -14,7 +14,11 @@
 </script>
 
 {#if loaded}
-	<span
+	<a
+		href="https://register.tamuhack.com/"
+		rel="noopener noreferrer"
+		target="_blank"
+		class="absolute left-0 top-0 w-screen"
 		in:fly={{
 			duration: 500,
 			x: 0,
@@ -33,5 +37,5 @@
 				{/each}
 			{/if}
 		</Marquee>
-	</span>
+	</a>
 {/if}
