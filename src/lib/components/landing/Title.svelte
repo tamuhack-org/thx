@@ -9,10 +9,10 @@
 			<h1 class="text-center text-dark font-semibold tracking-wide font-poppins">
 				{title}
 			</h1>
-			<div class="hidden md:flex justify-center gap-4 mt-6">
-				<p class="px-4 py-1 border rounded-full border-dark text-dark opacity-90">24 hours</p>
+			<div class="hidden md:flex justify-center gap-4 mt-6 font-light tracking-wide">
+				<p class="px-4 py-1 border rounded-full border-dark text-dark opacity-90">24 HOURS</p>
 				<p class="px-4 py-1 border rounded-full border-dark text-dark opacity-90">
-					Hardware + Software
+					HARDWARE + SOFTWARE
 				</p>
 				<p class="px-4 py-1 border rounded-full border-dark text-dark opacity-90">MSC 2300</p>
 			</div>
@@ -28,7 +28,7 @@
 
 	h2 {
 		font-weight: 300;
-		font-size: 14px;
+		font-size: 16px;
 		color: #222;
 		font-family: '', sans-serif;
 	}
