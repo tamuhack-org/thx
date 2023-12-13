@@ -14,6 +14,7 @@ export default {
 				beige: '#F3EED8',
 				pink: '#FC94BB',
 				blue: '#39BFDA',
+				green: '#C7F4E7',
 				background: '#E9E9E9',
 			}
 		}

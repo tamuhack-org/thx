@@ -10,6 +10,7 @@
 	import Phone from '$lib/components/about/Phone.svelte';
 	import Messages from '$lib/components/about/Messages.svelte';
 	import Sponsors from '$lib/components/about/Sponsors.svelte';
+	import Construction from '$lib/components/common/Construction.svelte';
 
 	let screenWidth: number;
 	let screenHeight: number;
@@ -49,9 +50,9 @@
 				class="underline">Learn more.</a
 			>
 		</p>
-		<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 mt-12">
+		<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 md:gap-x-4 gap-y-4 mt-12">
 			<div
-				class="flex justify-center col-span-2 md:col-span-1 md:aspect-square min-h-[200px] rounded-xl bg-blue max-h-[275px]"
+				class="flex justify-center col-span-2 md:col-span-1 min-h-[200px] rounded-xl bg-blue xl:max-h-[275px]"
 			>
 				<Eyes />
 			</div>
@@ -59,17 +60,12 @@
 				<Prizes />
 			</div>
 			<div
-				class="relative h-full col-span-2 row-span-2 min-h-[200px] rounded-xl bg-pink overflow-hidden max-h-[500px]"
+				class="relative h-full col-span-2 md:col-span-3 xl:col-span-2 row-span-2 min-h-[200px] rounded-xl bg-pink overflow-hidden max-h-[500px]"
 			>
 				<Phone />
-				<!-- <p
-					class="absolute text z-50 -right-4 leading-0 top-36 rotate-[78deg] text-3xl font-poppins font-semibold"
-				>
-					TAMUhack + IEEE
-				</p> -->
 			</div>
 			<div
-				class="h-full col-span-3 min-h-[200px] rounded-xl bg-[#1d1d1d] border-2 border-[#1d1d1d] overflow-hidden max-h-[275px]"
+				class="h-full col-span-3 min-h-[200px] rounded-xl bg-[#1d1d1d] border-8 border-[#1d1d1d] overflow-hidden max-h-[275px]"
 			>
 				<Sponsors />
 			</div>
@@ -80,7 +76,12 @@
 			line for students who are not accepted. After 11AM, we will admit people from the waitlist line
 			until the MSC capacity has been reached.
 		</p>
+
+		<div class="my-64">
+			<Construction />
+		</div>
 	</div>
+	<p>Footer here</p>
 </div>
 
-<div class="h-dscreen w-full font-poppins bg-[#E9E9E9] bg-opacity-50 max-w-[2000px]"></div>
+<div class="min-h-screen w-full font-poppins bg-opacity-50 max-w-[1800px] mx-auto"></div>
