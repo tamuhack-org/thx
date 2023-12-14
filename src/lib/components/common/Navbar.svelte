@@ -32,7 +32,7 @@
 	<div
 		class:opacity-0={!open}
 		class:pointer-events-none={!open}
-		class="fixed max-w-[500px] mx-auto h-dscreen bg-[#2b2b2b] bg-opacity-70 backdrop-blur-sm top-0 left-0 flex sm:hidden text-2xl z-50 transition-opacity p-[6px]"
+		class="fixed h-dscreen bg-[#2b2b2b] bg-opacity-70 backdrop-blur-sm top-0 left-0 flex sm:hidden text-2xl z-50 transition-opacity p-[6px]"
 	>
 		<div
 			class="flex flex-col rounded-xl bg-[#2b2b2b] w-full h-full text-white px-8 pt-8 pb-32 text-lg gap-6"
@@ -93,7 +93,7 @@
 			opacity: 1,
 			delay: 500
 		}}
-		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50"
+		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50 pointer-events-none"
 	>
 		<button
 			class="flex sm:hidden justify-center rounded-xl bg-black bg-opacity-70 backdrop-blur-sm p-4 text-white z-50"
@@ -101,7 +101,7 @@
 		>
 			<IconMenu2 class="w-5 h-5" />
 		</button>
-		<div class="hidden sm:flex flex-col justify-center w-max">
+		<div class="hidden sm:flex flex-col justify-center w-max pointer-events-auto">
 			<div
 				class:active
 				class="flex flex-col items-center justify-center gap-[6px] bg-black bg-opacity-70 backdrop-blur-sm rounded-t-xl expand-container px-[6px]"

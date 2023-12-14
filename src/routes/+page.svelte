@@ -21,7 +21,7 @@
 <!-- LANDING -->
 <a
 	id="mlh-trust-badge"
-	style="display:block;max-width:100px;min-width:60px;position:absolute;right:50px;top:0;width:10%;z-index:10000"
+	style="display:block;max-width:100px;min-width:60px;position:absolute;right:50px;top:0;width:10%;z-index:40"
 	href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=black"
 	target="_blank"
 	><img
