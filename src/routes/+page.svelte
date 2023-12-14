@@ -19,23 +19,21 @@
 <svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
 
 <!-- LANDING -->
-<a
-	id="mlh-trust-badge"
-	style="display:block;max-width:100px;min-width:60px;position:absolute;right:50px;top:0;width:10%;z-index:40"
-	href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=black"
-	target="_blank"
-	><img
-		src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-black.svg"
-		alt="Major League Hacking 2024 Hackathon Season"
-		style="width:100%"
-	/></a
->
-<div class="min-h-dscreen w-full font-poppins bg-opacity-50 max-w-[1800px] mx-auto">
-	<Marquee {screenWidth} />
-	<TopNavbar />
 
-	<!-- FIXED BOTTOM NAV  -->
-	<Navbar />
+<Marquee {screenWidth} />
+<div class="relative min-h-dscreen w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto">
+	<a
+		id="mlh-trust-badge"
+		style="display:block;max-width:100px;min-width:60px;position:absolute;right:40px;top:0;width:10%;z-index:40"
+		href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=black"
+		target="_blank"
+		><img
+			src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-black.svg"
+			alt="Major League Hacking 2024 Hackathon Season"
+			style="width:100%"
+		/></a
+	>
+	<TopNavbar />
 
 	<div class="mb-16">
 		<Title />
@@ -83,5 +81,8 @@
 	</div>
 	<p>Footer here</p>
 </div>
+
+<!-- FIXED BOTTOM NAV  -->
+<Navbar />
 
 <div class="min-h-screen w-full font-poppins bg-opacity-50 max-w-[1800px] mx-auto"></div>

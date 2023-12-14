@@ -5,7 +5,9 @@
 <div class="flex flex-col justify-end mb-12 w-full">
 	<div class="flex justify-center select-none">
 		<div>
-			<h2 class="text-center font-light my-6 tracking-widest">PRESENTING OUR TENTH ANNIVERSARY</h2>
+			<h2 class="text-center font-light my-6 tracking-widest text-dark">
+				PRESENTING OUR TENTH ANNIVERSARY
+			</h2>
 			<h1 class="text-center text-dark font-semibold tracking-wide font-poppins">
 				{title}
 			</h1>
@@ -27,9 +29,7 @@
 	}
 
 	h2 {
-		font-weight: 300;
-		font-size: 16px;
-		color: #222;
+		font-size: clamp(12px, -0.5px + 1.5vw, 18px);
 		font-family: '', sans-serif;
 	}
 </style>

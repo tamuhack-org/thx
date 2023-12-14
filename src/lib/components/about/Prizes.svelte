@@ -3,7 +3,10 @@
 
 <div class="relative w-full h-full flex flex-col justify-center overflow-hidden">
 	<div class="w-full flex justify-center">
-		<p id="prize-text" class="text-white font-poppins font-medium text-3xl opacity-90 z-10">
+		<p
+			id="prize-text"
+			class="text-white font-poppins font-medium text-2xl sm:text-3xl opacity-90 z-10"
+		>
 			$6000+ in prizes
 		</p>
 	</div>
