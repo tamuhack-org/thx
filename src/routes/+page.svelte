@@ -24,7 +24,7 @@
 <div class="relative min-h-dscreen w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto">
 	<a
 		id="mlh-trust-badge"
-		style="display:block;max-width:100px;min-width:60px;position:absolute;right:40px;top:0;width:10%;z-index:40"
+		style="display:block;max-width:100px;min-width:60px;position:absolute;right:20px;top:0;width:10%;z-index:40"
 		href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=black"
 		target="_blank"
 		><img
