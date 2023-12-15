@@ -1,4 +1,4 @@
 {
 	// enable globally (here: format on save)
-	"editor.formatOnSave": true,
+	"editor.formatOnSave": true
 }

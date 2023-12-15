@@ -11,6 +11,7 @@
 	import Messages from '$lib/components/about/Messages.svelte';
 	import Sponsors from '$lib/components/about/Sponsors.svelte';
 	import Construction from '$lib/components/common/Construction.svelte';
+	import Footer from '$lib/components/common/Footer.svelte';
 
 	let screenWidth: number;
 	let screenHeight: number;
@@ -79,10 +80,8 @@
 			<Construction />
 		</div>
 	</div>
-	<p>Footer here</p>
+	<Footer />
 </div>
 
 <!-- FIXED BOTTOM NAV  -->
 <Navbar />
-
-<div class="min-h-screen w-full font-poppins bg-opacity-50 max-w-[1800px] mx-auto"></div>
