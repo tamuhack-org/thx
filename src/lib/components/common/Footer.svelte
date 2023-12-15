@@ -83,7 +83,7 @@
 <div class="lg:flex lg:justify-between items-center px-8 lg:px-16 text-dark font-poppins">
 	<div class="lg:text-start text-center">
 		<p class="mb-0 font-poppins text-2xl font-semibold">Sign up to our newsletter</p>
-		<p class="font-poppins">
+		<p class="font-poppins font-light">
 			Stay connected! Sign up for our mailing list for events, updates, and more.
 		</p>
 	</div>
