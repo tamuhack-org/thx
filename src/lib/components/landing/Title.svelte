@@ -18,6 +18,14 @@
 				</p>
 				<p class="px-4 py-1 border rounded-full border-dark text-dark opacity-90">MSC 2300</p>
 			</div>
+			<div class="flex sm:hidden justify-center gap-4 mt-6 font-light tracking-wide">
+				<a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer">
+					<button
+						class="px-6 py-3 rounded-md text-white border-[1px] border-dark bg-dark font-normal hover:bg-black transition-all"
+						>Apply</button
+					></a
+				>
+			</div>
 		</div>
 	</div>
 </div>

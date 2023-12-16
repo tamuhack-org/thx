@@ -76,7 +76,7 @@
 			until the MSC capacity has been reached.
 		</p>
 
-		<div class="my-64">
+		<div id="under-construction" class="my-32">
 			<Construction />
 		</div>
 	</div>

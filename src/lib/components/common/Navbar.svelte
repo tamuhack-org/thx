@@ -173,7 +173,7 @@
 			>
 				<div class="flex items-center">
 					<CTANavButton text="Apply" link="https://register.tamuhack.com/" />
-					<div class="flex p-[6px] gap-[6px] mx-[6px] bg-[#2b2b2b] rounded-lg">
+					<div class="flex p-[6px] gap-[6px] mx-[6px] bg-[#2b2b2b] rounded-lg scroll-smooth">
 						<NavButton text="Schedule" />
 						<NavButton text="FAQ" />
 						<NavButton text="Prizes" />

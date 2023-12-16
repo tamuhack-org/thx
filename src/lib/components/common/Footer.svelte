@@ -1,17 +1,17 @@
 <script lang="ts">
 	let resources = [
-		{
-			name: 'Hacker Guide',
-			link: 'https://hackers.tamuhack.com/'
-		},
-		{
-			name: 'Spotify Queue',
-			link: '/'
-		},
-		{
-			name: 'Devpost',
-			link: '/'
-		},
+		// {
+		// 	name: 'Hacker Guide',
+		// 	link: 'https://hackers.tamuhack.com/'
+		// },
+		// {
+		// 	name: 'Spotify Queue',
+		// 	link: '/'
+		// },
+		// {
+		// 	name: 'Devpost',
+		// 	link: '/'
+		// },
 		{
 			name: 'HelpR',
 			link: 'https://helpr.tamuhack.org/'
@@ -70,17 +70,21 @@
 
 	let workshops = [
 		{
-			name: 'Intro to Web Dev',
-			link: '/'
-		},
-		{
-			name: 'Intro to Git',
+			name: 'Coming Soon!',
 			link: '/'
 		}
+		// {
+		// 	name: 'Intro to Web Dev',
+		// 	link: '/'
+		// }
+		// {
+		// 	name: 'Intro to Git',
+		// 	link: '/'
+		// }
 	];
 </script>
 
-<div class="lg:flex lg:justify-between items-center px-8 lg:px-16 text-dark font-poppins">
+<div class="lg:flex lg:justify-between items-center px-8 lg:px-8 text-dark font-poppins">
 	<div class="lg:text-start text-center">
 		<p class="mb-0 font-poppins text-2xl font-semibold">Sign up to our newsletter</p>
 		<p class="font-poppins font-light">
