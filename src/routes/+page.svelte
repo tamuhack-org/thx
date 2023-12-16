@@ -22,10 +22,12 @@
 <!-- LANDING -->
 
 <Marquee {screenWidth} />
-<div class="relative min-h-dscreen w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto">
+<div
+	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden"
+>
 	<a
 		id="mlh-trust-badge"
-		style="display:block;max-width:100px;min-width:60px;position:absolute;right:20px;top:0;width:10%;z-index:40"
+		style="display:block;max-width:100px;min-width:60px;position:absolute;right:20px;top:40px;width:10%;z-index:40"
 		href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=black"
 		target="_blank"
 		><img
@@ -36,7 +38,7 @@
 	>
 	<TopNavbar />
 
-	<div class="mb-16">
+	<div class="mb-2">
 		<Title />
 		<PhysicsContainer />
 	</div>

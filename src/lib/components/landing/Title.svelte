@@ -2,7 +2,7 @@
 	export let title = 'TAMUHACK X';
 </script>
 
-<div class="flex flex-col justify-end mb-12 w-full">
+<div class="flex flex-col justify-end mb-12 w-full mt-10 sm:mt-0">
 	<div class="flex justify-center select-none">
 		<div>
 			<h2 class="text-center font-light my-6 tracking-widest text-dark">
