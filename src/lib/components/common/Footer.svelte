@@ -157,7 +157,8 @@
 						href={resource.link}
 						target="_blank"
 						rel="noreferrer noopener"
-						class="font-poppins font-medium text-lg hover:text-black">{resource.name}</a
+						class="font-poppins font-medium text-lg hover:text-black transition-colors"
+						>{resource.name}</a
 					>
 				</div>
 			{/each}
@@ -170,7 +171,8 @@
 						href={social.link}
 						target="_blank"
 						rel="noreferrer noopener"
-						class="font-poppins font-medium text-lg hover:text-black">{social.name}</a
+						class="font-poppins font-medium text-lg hover:text-black transition-colors"
+						>{social.name}</a
 					>
 				</div>
 			{/each}
@@ -183,7 +185,8 @@
 						href={hackathon.link}
 						target="_blank"
 						rel="noreferrer noopener"
-						class="font-poppins font-medium text-lg hover:text-black">{hackathon.name}</a
+						class="font-poppins font-medium text-lg hover:text-black transition-colors"
+						>{hackathon.name}</a
 					>
 				</div>
 			{/each}
@@ -196,7 +199,8 @@
 						href={workshop.link}
 						target="_blank"
 						rel="noreferrer noopener"
-						class="font-poppins font-medium text-lg hover:text-black">{workshop.name}</a
+						class="font-poppins font-medium text-lg hover:text-black transition-colors"
+						>{workshop.name}</a
 					>
 				</div>
 			{/each}
