@@ -16,12 +16,11 @@
 		<h1 class="text-3xl font-poppins font-semibold">th.</h1>
 	</div>
 	<div class="hidden sm:flex justify-end gap-2 lg:pr-[108px]">
-		<a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer">
-			<button
+		<!-- <a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer"> <button
 				class="px-6 py-3 rounded-md border-[1px] border-dark hover:bg-dark hover:text-white transition-all"
 				>Mentor</button
 			></a
-		>
+		> -->
 		<a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer">
 			<button
 				class="px-6 py-3 rounded-md text-white border-[1px] border-dark bg-dark font-normal hover:bg-black transition-all"

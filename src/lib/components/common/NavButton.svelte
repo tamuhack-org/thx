@@ -1,6 +1,6 @@
 <script>
 	export let text = 'link';
-	export let link = '#';
+	export let link = '/#under-construction';
 </script>
 
 <a

@@ -62,7 +62,10 @@
 					<IconNotebook class="w-5 h-5" />
 					<p>Hacker Guide</p>
 				</a>
-				<a href="/" class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+				<a
+					href="https://discord.gg/VZyKP4JcC3"
+					class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+				>
 					<IconBrandDiscord class="w-5 h-5" />
 					<p>Discord</p>
 				</a>
@@ -74,11 +77,17 @@
 					<IconScale class="w-5 h-5" />
 					<p>Devpost</p>
 				</a>
-				<a href="/" class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+				<a
+					href="https://helpr.tamuhack.org"
+					class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+				>
 					<IconHelp class="w-5 h-5" />
 					<p>HelpR</p>
 				</a>
-				<a href="/" class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
+				<a
+					href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf?_gl=1*19bpx84*_ga*NDgxNjY1Mzk0LjE3MDIxODA5Njk.*_ga_E5KT6TC4TK*MTcwMjcwNzc3NC40LjAuMTcwMjcwNzc3NC4wLjAuMA.."
+					class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+				>
 					<IconLicense class="w-5 h-5" />
 					<p>Code of Conduct</p>
 				</a>
@@ -96,7 +105,7 @@
 		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50 pointer-events-none"
 	>
 		<button
-			class="flex sm:hidden justify-center rounded-xl bg-black bg-opacity-70 backdrop-blur-sm p-4 text-white z-50 pointer-events-auto"
+			class="hidden sm:hidden justify-center rounded-xl bg-black bg-opacity-70 backdrop-blur-sm p-4 text-white z-50 pointer-events-auto"
 			on:click={() => (open = !open)}
 		>
 			<IconMenu2 class="w-5 h-5" />
@@ -114,24 +123,18 @@
 						class:opacity-0={!open}
 						class="flex flex-col gap-3 transition-opacity duration-150"
 					>
-						<a
-							href="/"
-							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
-						>
+						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
 							<IconNotebook class="w-5 h-5" />
 							<p>Hacker Guide</p>
 						</a>
 						<a
-							href="/"
+							href="https://discord.gg/VZyKP4JcC3"
 							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconBrandDiscord class="w-5 h-5" />
 							<p>Discord</p>
 						</a>
-						<a
-							href="/"
-							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
-						>
+						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
 							<IconBrandSpotify class="w-5 h-5" />
 							<p>Spotify Queue</p>
 						</a>
@@ -141,22 +144,19 @@
 						class:opacity-0={!open}
 						class="flex flex-col gap-3 transition-opacity duration-150"
 					>
-						<a
-							href="/"
-							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
-						>
+						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
 							<IconScale class="w-5 h-5" />
 							<p>Devpost</p>
 						</a>
 						<a
-							href="/"
+							href="https://helpr.tamuhack.org"
 							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconHelp class="w-5 h-5" />
 							<p>HelpR</p>
 						</a>
 						<a
-							href="/"
+							href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf?_gl=1*19bpx84*_ga*NDgxNjY1Mzk0LjE3MDIxODA5Njk.*_ga_E5KT6TC4TK*MTcwMjcwNzc3NC40LjAuMTcwMjcwNzc3NC4wLjAuMA.."
 							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconLicense class="w-5 h-5" />
@@ -173,7 +173,7 @@
 			>
 				<div class="flex items-center">
 					<CTANavButton text="Apply" link="https://register.tamuhack.com/" />
-					<div class="flex p-[6px] gap-[6px] mx-[6px] bg-[#2b2b2b] rounded-lg">
+					<div class="flex p-[6px] gap-[6px] mx-[6px] bg-[#2b2b2b] rounded-lg scroll-smooth">
 						<NavButton text="Schedule" />
 						<NavButton text="FAQ" />
 						<NavButton text="Prizes" />
