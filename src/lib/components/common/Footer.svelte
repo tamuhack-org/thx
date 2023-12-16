@@ -140,7 +140,7 @@
 </div>
 <!-- End Mailchimp sign up -->
 
-<div class="lg:flex justify-between px-8 lg:px-16 my-8 lg:my-16 text-dark">
+<div class="lg:flex justify-between px-8 my-8 lg:my-16 text-dark">
 	<div class="lg:w-1/5">
 		<p class="font-poppins font-semibold text-3xl mb-8">TAMUhack X</p>
 		<p class="font-poppins font-base text-xl mb-8">Celebrating 10 years of TAMUhack!</p>
