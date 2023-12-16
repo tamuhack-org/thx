@@ -44,10 +44,11 @@
 	<div class="mx-8 mt-32">
 		<p class="text-dark font-poppins font-light text-xl md:text-3xl md:w-2/3">
 			TAMUhack is a 24 hour event where teams create innovative software and hardware solutions to
-			real-world problems in a community of mentorship. <a
+			real-world problems in a community of mentorship.
+			<!-- <a
 				href="https://tamuhack.org/"
 				class="underline">Learn more.</a
-			>
+			> -->
 		</p>
 		<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 md:gap-x-4 gap-y-4 mt-12">
 			<div
