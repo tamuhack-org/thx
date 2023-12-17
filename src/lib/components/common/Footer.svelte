@@ -148,7 +148,7 @@
 		<p class="font-poppins font-base text-xl mb-8">Celebrating 10 years of TAMUhack!</p>
 		<div id="3d-friend" class="mb-8 hidden xl:block absolute right-5 bottom-5"></div>
 	</div>
-	<div class="flex flex-wrap justify-start lg:justify-center flex-grow gap-12">
+	<div class="flex flex-wrap justify-start lg:justify-end flex-grow gap-12">
 		<div>
 			<p class="font-light font-poppins text-base mb-2">Hacker Resources</p>
 			{#each resources as resource}
@@ -157,7 +157,8 @@
 						href={resource.link}
 						target="_blank"
 						rel="noreferrer noopener"
-						class="font-poppins font-medium text-lg hover:text-black">{resource.name}</a
+						class="font-poppins font-medium text-lg hover:text-black transition-colors"
+						>{resource.name}</a
 					>
 				</div>
 			{/each}
@@ -170,7 +171,8 @@
 						href={social.link}
 						target="_blank"
 						rel="noreferrer noopener"
-						class="font-poppins font-medium text-lg hover:text-black">{social.name}</a
+						class="font-poppins font-medium text-lg hover:text-black transition-colors"
+						>{social.name}</a
 					>
 				</div>
 			{/each}
@@ -183,7 +185,8 @@
 						href={hackathon.link}
 						target="_blank"
 						rel="noreferrer noopener"
-						class="font-poppins font-medium text-lg hover:text-black">{hackathon.name}</a
+						class="font-poppins font-medium text-lg hover:text-black transition-colors"
+						>{hackathon.name}</a
 					>
 				</div>
 			{/each}
@@ -196,7 +199,8 @@
 						href={workshop.link}
 						target="_blank"
 						rel="noreferrer noopener"
-						class="font-poppins font-medium text-lg hover:text-black">{workshop.name}</a
+						class="font-poppins font-medium text-lg hover:text-black transition-colors"
+						>{workshop.name}</a
 					>
 				</div>
 			{/each}
