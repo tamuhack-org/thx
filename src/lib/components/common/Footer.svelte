@@ -99,13 +99,15 @@
 		target="_blank"
 		novalidate
 	>
-		<div class="mc-field-group lg:flex-none flex justify-center gap-4 py-4">
+		<div
+			class="w-full lg:flex-none flex flex-row max-[320px]:flex-col max-[320px]:justify-stretch justify-center items-stretch gap-3 lg:gap-5 py-4"
+		>
 			<label for="mce-EMAIL" style="display:none">Email Address </label>
 			<input
 				type="text"
 				value=""
 				name="EMAIL"
-				class="2xl:w-96 w-72 px-4 py-2 rounded-md border-dark font-light"
+				class="2xl:w-96 w-64 px-4 py-2 rounded-md border-dark font-light"
 				id="mce-EMAIL"
 				placeholder="Enter your email address"
 			/>
@@ -155,7 +157,7 @@
 						href={resource.link}
 						target="_blank"
 						rel="noreferrer noopener"
-						class="font-poppins font-medium text-lg text-dark">{resource.name}</a
+						class="font-poppins font-medium text-lg hover:text-black">{resource.name}</a
 					>
 				</div>
 			{/each}
@@ -168,7 +170,7 @@
 						href={social.link}
 						target="_blank"
 						rel="noreferrer noopener"
-						class="font-poppins font-medium text-lg">{social.name}</a
+						class="font-poppins font-medium text-lg hover:text-black">{social.name}</a
 					>
 				</div>
 			{/each}
@@ -181,7 +183,7 @@
 						href={hackathon.link}
 						target="_blank"
 						rel="noreferrer noopener"
-						class="font-poppins font-medium text-lg">{hackathon.name}</a
+						class="font-poppins font-medium text-lg hover:text-black">{hackathon.name}</a
 					>
 				</div>
 			{/each}
@@ -194,7 +196,7 @@
 						href={workshop.link}
 						target="_blank"
 						rel="noreferrer noopener"
-						class="font-poppins font-medium text-lg">{workshop.name}</a
+						class="font-poppins font-medium text-lg hover:text-black">{workshop.name}</a
 					>
 				</div>
 			{/each}
@@ -204,7 +206,7 @@
 
 <div class="bottom-0">
 	<div class="h-[3px] mx-8 bg-dark rounded-xl bg-opacity-5"></div>
-	<p class="py-3 pl-8 text-sm text-dark font-light">
+	<p class="mx-8 py-3 text-sm text-dark font-light">
 		Interested in sponsoring? Reach out to us at <a
 			class="underline"
 			href="mailto:sponsor@tamuhack.com">sponsor@tamuhack.com</a

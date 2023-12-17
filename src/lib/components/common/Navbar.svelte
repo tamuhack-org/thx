@@ -32,7 +32,7 @@
 	<div
 		class:opacity-0={!open}
 		class:pointer-events-none={!open}
-		class="fixed w-full h-dscreen bg-[#2b2b2b] bg-opacity-70 backdrop-blur-sm top-0 left-0 flex sm:hidden text-2xl z-50 transition-opacity p-[6px] overflow-y-hidden"
+		class="fixed font-poppins w-full h-dscreen bg-[#2b2b2b] bg-opacity-70 backdrop-blur-sm top-0 left-0 flex sm:hidden text-2xl z-50 transition-opacity p-[6px] overflow-y-hidden"
 	>
 		<div
 			class="flex flex-col rounded-xl bg-[#2b2b2b] w-full h-full text-white px-8 pt-8 pb-32 text-lg gap-6"
