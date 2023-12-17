@@ -148,7 +148,7 @@
 		<p class="font-poppins font-base text-xl mb-8">Celebrating 10 years of TAMUhack!</p>
 		<div id="3d-friend" class="mb-8 hidden xl:block absolute right-5 bottom-5"></div>
 	</div>
-	<div class="flex flex-wrap justify-start lg:justify-center flex-grow gap-12">
+	<div class="flex flex-wrap justify-start lg:justify-end flex-grow gap-12">
 		<div>
 			<p class="font-light font-poppins text-base mb-2">Hacker Resources</p>
 			{#each resources as resource}
