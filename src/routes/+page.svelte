@@ -6,9 +6,7 @@
 	import TopNavbar from '$lib/components/common/TopNavbar.svelte';
 	import Eyes from '$lib/components/about/Eyes.svelte';
 	import Prizes from '$lib/components/about/Prizes.svelte';
-	import IEEE from '$lib/components/about/IEEE.svelte';
 	import Phone from '$lib/components/about/Phone.svelte';
-	import Messages from '$lib/components/about/Messages.svelte';
 	import Sponsors from '$lib/components/about/Sponsors.svelte';
 	import Construction from '$lib/components/common/Construction.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
@@ -18,6 +16,20 @@
 </script>
 
 <svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
+
+<svelte:head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta
+		name="description"
+		content="[January 27th, 2024] - At TAMUhack, teams spend the weekend working on innovative software and hardware solutions to real-world problems in a community full of mentorship."
+	/>
+	<meta
+		name="keywords"
+		content="[January 27th, 2024] - At TAMUhack, teams spend the weekend working on innovative software and hardware solutions to real-world problems in a community full of mentorship."
+	/>
+	<title>TAMUhack X</title>
+</svelte:head>
 
 <!-- LANDING -->
 

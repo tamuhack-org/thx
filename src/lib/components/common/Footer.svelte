@@ -100,14 +100,14 @@
 		novalidate
 	>
 		<div
-			class="w-full lg:flex-none flex flex-row max-[320px]:flex-col max-[320px]:justify-stretch justify-center items-stretch gap-3 lg:gap-5 py-4"
+			class="w-full lg:flex-none flex flex-row max-[400px]:flex-col max-[400px]:justify-stretch justify-center items-stretch gap-3 lg:gap-5 py-4"
 		>
 			<label for="mce-EMAIL" style="display:none">Email Address </label>
 			<input
 				type="text"
 				value=""
 				name="EMAIL"
-				class="2xl:w-96 w-64 px-4 py-2 rounded-md border-dark font-light"
+				class="2xl:w-96 w-full min-[401px]:w-64 px-4 py-2 rounded-md border-dark font-light"
 				id="mce-EMAIL"
 				placeholder="Enter your email address"
 			/>
@@ -117,7 +117,7 @@
 					value="Subscribe"
 					name="subscribe"
 					id="mc-embedded-subscribe"
-					class="px-4 py-2 rounded-md bg-dark hover:bg-white border border-dark text-white hover:text-dark font-normal cursor-pointer"
+					class="px-4 py-2 w-full min-[401px]:w-auto rounded-md bg-dark hover:bg-white border border-dark text-white hover:text-dark font-normal cursor-pointer"
 				/>
 			</button>
 		</div>
