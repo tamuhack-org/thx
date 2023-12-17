@@ -172,12 +172,6 @@
 				class="flex flex-col bg-black bg-opacity-70 backdrop-blur-sm p-[6px] gap-[6px] rounded-b-xl"
 			>
 				<div class="flex items-center">
-					<CTANavButton text="Apply" link="https://register.tamuhack.com/" />
-					<div class="flex p-[6px] gap-[6px] mx-[6px] bg-[#2b2b2b] rounded-lg scroll-smooth">
-						<NavButton text="Schedule" />
-						<NavButton text="FAQ" />
-						<NavButton text="Prizes" />
-					</div>
 					<button
 						class="flex flex-row justify-center items-center h-[60px] px-5 rounded-xl bg-black text-white font-semibold text-sm gap-2"
 						on:click={() => (open = !open)}
@@ -187,6 +181,12 @@
 							<IconChevronDown class="w-5 h-5" />
 						</span>
 					</button>
+					<div class="flex p-[6px] gap-[6px] ml-[6px] bg-[#2b2b2b] rounded-lg scroll-smooth">
+						<NavButton text="Schedule" />
+						<NavButton text="FAQ" />
+						<NavButton text="Prizes" />
+						<CTANavButton text="Apply" link="https://register.tamuhack.com/" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -206,12 +206,12 @@
 		height: 140px;
 	}
 
-	.arrow-open {
+	.arrow-close {
 		animation: flip-icon 0.25s ease-in-out;
 		transform: rotateX(180deg);
 	}
 
-	.arrow-close {
+	.arrow-open {
 		animation: flip-icon-close 0.25s ease-in-out;
 		transform: rotateX(0deg);
 	}
