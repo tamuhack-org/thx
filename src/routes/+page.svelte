@@ -82,11 +82,6 @@
 			<div
 				class="relative h-full col-span-3 min-h-[200px] rounded-xl bg-[#1d1d1d] overflow-hidden max-h-[275px]"
 			>
-				<h1
-					class="absolute text-white font-medium text-3xl pointer-events-none bg-[rgba(29,29,29,0.6)] w-full h-full flex justify-center items-center z-10 text-center"
-				>
-					Celebrating 10 years of TAMUhack
-				</h1>
 				<Anniversary />
 			</div>
 		</div>
