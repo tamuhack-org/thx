@@ -28,7 +28,7 @@
 				y = e.clientY - bounds!.top;
 
 			let smallScreenWidth = 640;
-			let distanceThreshold = window.innerWidth > smallScreenWidth ? 100 : 60;
+			let distanceThreshold = window.innerWidth > smallScreenWidth ? 100 : 50;
 			if (distanceFromLast(x, y) > distanceThreshold) {
 				const lead = images[globalIndex % images.length],
 					tail = images[(globalIndex - 5) % images.length];
