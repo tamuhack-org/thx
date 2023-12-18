@@ -10,6 +10,7 @@
 	import Sponsors from '$lib/components/about/Sponsors.svelte';
 	import Construction from '$lib/components/common/Construction.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
+	import Anniversary from '$lib/components/about/Anniversary.svelte';
 
 	let screenWidth: number;
 	let screenHeight: number;
@@ -79,9 +80,14 @@
 				<Phone />
 			</div>
 			<div
-				class="h-full col-span-3 min-h-[200px] rounded-xl bg-[#1d1d1d] border-8 border-[#1d1d1d] overflow-hidden max-h-[275px]"
+				class="relative h-full col-span-3 min-h-[200px] rounded-xl bg-[#1d1d1d] overflow-hidden max-h-[275px]"
 			>
-				<Sponsors />
+				<h1
+					class="absolute text-white font-medium text-3xl pointer-events-none bg-[rgba(29,29,29,0.6)] w-full h-full flex justify-center items-center z-10 text-center"
+				>
+					Celebrating 10 years of TAMUhack
+				</h1>
+				<Anniversary />
 			</div>
 		</div>
 		<p class="text-dark font-poppins font-light text-md mt-12">
