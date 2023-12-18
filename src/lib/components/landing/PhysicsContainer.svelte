@@ -210,5 +210,6 @@
 	#physics-container {
 		background-image: url('/assets/landingbg.svg');
 		background-size: cover;
+		background-position: center;
 	}
 </style>
