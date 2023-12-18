@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { IconHandClick } from '@tabler/icons-svelte';
 </script>
 
+<IconHandClick class="absolute bottom-4 right-4 text-white w-5 h-5 z-20" />
 <div class="relative w-full h-full flex flex-col justify-center overflow-hidden">
 	<div class="w-full flex justify-center">
 		<p

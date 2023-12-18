@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { IconHandClick } from '@tabler/icons-svelte';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
@@ -40,6 +41,7 @@
 	});
 </script>
 
+<IconHandClick class="absolute bottom-4 right-4 text-white w-5 h-5 z-20" />
 <div
 	class="absolute text-white font-medium text-xl sm:text-3xl bg-[rgba(29,29,29,0.6)] w-full h-full flex justify-center items-center z-10 text-center"
 >
@@ -120,6 +122,7 @@
 		width: 35vmin;
 		position: absolute;
 		transform: translate(-50%, -50%);
+		border-radius: 0.5rem;
 	}
 
 	.image[data-status='inactive'] {

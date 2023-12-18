@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { scale } from 'svelte/transition';
 	import { inview } from 'svelte-inview';
+	import { IconHandClick } from '@tabler/icons-svelte';
 
-	let isInView;
+	let isInView: boolean;
 
 	let m = { x: 0, y: 0 };
 	let scroll = 0;
@@ -12,9 +13,12 @@
 
 		let lefteye = document.getElementById('left');
 		let righteye = document.getElementById('right');
-		let container = document.getElementById('eyeContainer');
-		let x = lefteye.offsetLeft + lefteye.offsetWidth / 2;
-		let y = lefteye.offsetTop + lefteye.offsetHeight / 2;
+		let container = document.getElementById('bruhamburger');
+		let bounds = container?.getBoundingClientRect();
+		let staticPositionX = bounds?.left + window.scrollX;
+		let staticPositionY = bounds?.top + window.scrollY;
+		let x = staticPositionX + lefteye.offsetLeft + lefteye.offsetWidth / 2;
+		let y = staticPositionY + lefteye.offsetTop + lefteye.offsetHeight / 2;
 		let rad = Math.atan2(m.x - x, m.y + scroll - lefteye.offsetHeight / 2 - y);
 		let rot = rad * (180 / Math.PI) * -1 + 180;
 
@@ -25,6 +29,7 @@
 
 <svelte:window bind:scrollY={scroll} />
 
+<IconHandClick class="absolute bottom-4 right-4 text-white w-5 h-5 z-20" />
 <div on:mousemove={handleMousemove} class="move-area">
 	<div
 		use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
