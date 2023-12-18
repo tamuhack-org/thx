@@ -10,8 +10,11 @@
 	import Sponsors from '$lib/components/about/Sponsors.svelte';
 	import Construction from '$lib/components/common/Construction.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
+<<<<<<< Updated upstream
 	import Anniversary from '$lib/components/about/Anniversary.svelte';
 	import { IconHandClick } from '@tabler/icons-svelte';
+=======
+>>>>>>> Stashed changes
 	import Tiger from '$lib/components/common/Tiger.svelte';
 
 	let screenWidth: number;
