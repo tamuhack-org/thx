@@ -40,12 +40,15 @@
 	});
 </script>
 
-<h1
+<div
 	class="absolute text-white font-medium text-xl sm:text-3xl bg-[rgba(29,29,29,0.6)] w-full h-full flex justify-center items-center z-10 text-center"
 >
-	Celebrating 10 years of&nbsp;<span class="text-blue">TAMU</span><span class="text-pink">hack</span
-	>
-</h1>
+	<h1>
+		Celebrating 10 years of&nbsp;<span class="text-blue">TAMU</span><span class="text-pink"
+			>hack</span
+		>
+	</h1>
+</div>
 <div id="anniversary" class="bg-[#1d1d1d] overflow-hidden w-full h-full relative">
 	<img
 		class="image"
