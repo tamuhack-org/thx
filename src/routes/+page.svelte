@@ -10,9 +10,87 @@
 	import Construction from '$lib/components/common/Construction.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
 	import Anniversary from '$lib/components/about/Anniversary.svelte';
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	import anime from 'animejs';
 
 	let screenWidth: number;
 	let screenHeight: number;
+
+	function startLoader() {
+		let counterElement = document.querySelector('.count p');
+		let currentValue = 0;
+
+		function updateCounter() {
+			if (currentValue < 100) {
+				let increment = Math.floor(Math.random() * 10) + 1;
+				currentValue = Math.min(currentValue + increment, 100);
+				counterElement.textContent = currentValue.toString();
+
+				let delay = Math.floor(Math.random() * 100) + 25;
+				setTimeout(updateCounter, delay);
+			}
+		}
+
+		updateCounter();
+	}
+
+	onMount(() => {
+		startLoader();
+
+		gsap.to('.count', { opacity: 0, delay: 3, duration: 0.5 });
+
+		let textWrapper = document.querySelector('.ml16');
+		textWrapper.innerHTML = textWrapper?.textContent?.replace(
+			/\S/g,
+			"<span class='inline-block leading-4 text-dark'>$&</span>"
+		);
+
+		anime
+			.timeline({ loop: false })
+			.add({
+				targets: '.ml16 span',
+				translateY: [-100, 0],
+				easing: 'easeOutExpo',
+				duration: 1000,
+				delay: (el, i) => 100 * i
+			})
+			.add({
+				targets: '.ml16 span',
+				translateY: [0, 100],
+				easing: 'easeOutExpo',
+				duration: 5000,
+				delay: (el, i) => 1200 + 30 * i
+			});
+
+		gsap.to('.pre-loader', {
+			scale: 0.5,
+			ease: 'power4.inOut',
+			duration: 2,
+			delay: 3
+		});
+
+		gsap.to('.loader', {
+			height: '0',
+			ease: 'power4.inOut',
+			duration: 1.5,
+			delay: 3.75
+		});
+
+		gsap.to('.loader-bg', {
+			height: '0',
+			ease: 'power4.inOut',
+			duration: 1.5,
+			delay: 4
+		});
+
+		gsap.to('.loader-2', {
+			clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+			ease: 'power4.inOut',
+			duration: 1.5,
+			delay: 3.5
+		});
+	});
 </script>
 
 <svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
@@ -34,17 +112,17 @@
 <!-- LANDING -->
 
 <!-- LOADER ANIMATION STUFF -->
-<!-- <div class="container">
+<div class="container">
 	<div class="pre-loader">
 		<div class="loader"></div>
 		<div class="loader-bg"></div>
 	</div>
 	<div class="loader-content">
 		<div class="count"><p>0</p></div>
-		<div class="copy"><p class="ml16">TAMUhack X</p></div>
+		<div class="copy"><p class="ml16">TAMUHACK X</p></div>
 	</div>
 	<div class="loader-2"></div>
-</div> -->
+</div>
 
 <Marquee {screenWidth} />
 <div
@@ -117,12 +195,17 @@
 
 <style>
 	/* LOADER ANIMATION STUFF */
-	/* .pre-loader {
+	.container {
+		pointer-events: none;
+	}
+
+	.pre-loader {
 		position: fixed;
 		top: 0;
 		width: 100%;
 		height: 100%;
 		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+		z-index: 100;
 	}
 
 	.loader {
@@ -143,10 +226,12 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		display: flex;
-		width: 400px;
-		z-index: 100;
-		color: white;
+		width: 300px;
+		z-index: 200;
+		color: #222454;
 	}
+
+	/* flex-col for smaller screens for .loader-content */
 
 	.count {
 		flex: 2;
@@ -155,19 +240,23 @@
 		padding: 0 1em;
 	}
 
+	/* @media (max-width: 640px) {
+		.count {
+			flex: 1;
+			text-align: center;
+		}
+	} */
+
 	.copy {
 		flex: 6;
 		font-size: 30px;
 		line-height: 1;
+		font-weight: 600;
 	}
 
 	.ml16 {
+		color: transparent;
 		overflow: hidden;
-	}
-
-	.ml16 .letter {
-		display: inline-block;
-		line-height: 1em;
 	}
 
 	.loader-bg {
@@ -176,7 +265,7 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: #e9e9e9;
+		background: #222454;
 		z-index: -1;
 	}
 
@@ -185,5 +274,23 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-	} */
+		z-index: 50;
+	}
+
+	@media (max-width: 640px) {
+		.loader-content {
+			flex-direction: column;
+		}
+
+		.count {
+			flex: 1;
+			text-align: center;
+			margin-bottom: 0.5em;
+		}
+
+		.copy {
+			text-align: center;
+			font-size: x-large;
+		}
+	}
 </style>
