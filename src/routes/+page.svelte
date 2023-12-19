@@ -35,6 +35,18 @@
 
 <!-- LANDING -->
 
+<!-- <div class="container">
+	<div class="pre-loader">
+		<div class="loader"></div>
+		<div class="loader-bg"></div>
+	</div>
+	<div class="loader-content">
+		<div class="count"><p>0</p></div>
+		<div class="copy"><p class="ml16">TAMUhack X</p></div>
+	</div>
+	<div class="loader-2"></div>
+</div> -->
+
 <Marquee {screenWidth} />
 <div
 	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden"
@@ -103,3 +115,75 @@
 
 <!-- FIXED BOTTOM NAV  -->
 <Navbar />
+
+<style>
+	.pre-loader {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+	}
+
+	.loader {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: black;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.loader-content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		width: 400px;
+		z-index: 100;
+		color: white;
+	}
+
+	.count {
+		flex: 2;
+		text-align: right;
+		line-height: 1;
+		padding: 0 1em;
+	}
+
+	.copy {
+		flex: 6;
+		font-size: 30px;
+		line-height: 1;
+	}
+
+	.ml16 {
+		overflow: hidden;
+	}
+
+	.ml16 .letter {
+		display: inline-block;
+		line-height: 1em;
+	}
+
+	.loader-bg {
+		position: absolute;
+		display: block;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: #222454;
+		z-index: -1;
+	}
+
+	.loader-2 {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

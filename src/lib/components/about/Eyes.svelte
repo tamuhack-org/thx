@@ -4,6 +4,7 @@
 	import { IconHandClick } from '@tabler/icons-svelte';
 
 	let isInView: boolean;
+	$: hovering = false;
 
 	let m = { x: 0, y: 0 };
 	let scroll = 0;
@@ -29,8 +30,18 @@
 
 <svelte:window bind:scrollY={scroll} />
 
-<IconHandClick class="absolute bottom-4 right-4 text-white w-5 h-5 z-20" />
-<div on:mousemove={handleMousemove} class="move-area">
+<IconHandClick
+	class={`absolute bottom-4 right-4 text-white w-5 h-5 z-20 transition-opacity ${
+		hovering && 'opacity-20'
+	}`}
+/>
+<div
+	on:mousemove={handleMousemove}
+	on:mouseenter={() => (hovering = true)}
+	on:mouseleave={() => (hovering = false)}
+	role="banner"
+	class="move-area"
+>
 	<div
 		use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
 		on:change={({ detail }) => {
