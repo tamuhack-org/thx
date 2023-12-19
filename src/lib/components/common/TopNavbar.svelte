@@ -1,19 +1,13 @@
-<script>
-	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
-
-	let loaded = false;
-
-	onMount(() => {
-		loaded = true;
-	});
-</script>
-
 <div
 	class="flex justify-between items-center w-[89%] md:w-[90%] lg:w-full min-h-[70px] px-8 mt-[40px]"
 >
 	<div class="flex gap-2 items-center w-1/2 h-full">
-		<h1 class="text-3xl font-poppins font-semibold">th</h1>
+		<a
+			href="https://tamuhack.org"
+			target="_blank"
+			rel="noreferrer noopener"
+			class="text-3xl font-poppins font-semibold">th</a
+		>
 	</div>
 	<div class="hidden sm:flex justify-end gap-2 lg:pr-[108px]">
 		<!-- <a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer"> <button
