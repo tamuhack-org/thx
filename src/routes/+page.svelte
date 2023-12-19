@@ -7,11 +7,9 @@
 	import Eyes from '$lib/components/about/Eyes.svelte';
 	import Prizes from '$lib/components/about/Prizes.svelte';
 	import Phone from '$lib/components/about/Phone.svelte';
-	import Sponsors from '$lib/components/about/Sponsors.svelte';
 	import Construction from '$lib/components/common/Construction.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
 	import Anniversary from '$lib/components/about/Anniversary.svelte';
-	import { IconHandClick } from '@tabler/icons-svelte';
 
 	let screenWidth: number;
 	let screenHeight: number;
@@ -35,6 +33,7 @@
 
 <!-- LANDING -->
 
+<!-- LOADER ANIMATION STUFF -->
 <!-- <div class="container">
 	<div class="pre-loader">
 		<div class="loader"></div>
@@ -117,7 +116,8 @@
 <Navbar />
 
 <style>
-	.pre-loader {
+	/* LOADER ANIMATION STUFF */
+	/* .pre-loader {
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -130,7 +130,7 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: black;
+		background: #e9e9e9;
 		color: white;
 		display: flex;
 		justify-content: center;
@@ -176,7 +176,7 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: #222454;
+		background: #e9e9e9;
 		z-index: -1;
 	}
 
@@ -185,5 +185,5 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-	}
+	} */
 </style>
