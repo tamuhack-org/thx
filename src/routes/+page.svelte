@@ -12,7 +12,6 @@
 	import Footer from '$lib/components/common/Footer.svelte';
 	import Anniversary from '$lib/components/about/Anniversary.svelte';
 	import { IconHandClick } from '@tabler/icons-svelte';
-	import Tiger from '$lib/components/common/Tiger.svelte';
 
 	let screenWidth: number;
 	let screenHeight: number;
@@ -57,7 +56,6 @@
 		<Title />
 		<PhysicsContainer />
 	</div>
-	<Tiger />
 
 	<div class="mx-8 mt-32">
 		<p class="text-dark font-poppins font-light text-xl md:text-3xl md:w-2/3">
