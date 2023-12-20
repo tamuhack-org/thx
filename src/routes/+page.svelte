@@ -92,7 +92,6 @@
 			duration: 1,
 			delay: 2.375,
 			onComplete: () => {
-				document.querySelector('body')!.style.overflow = 'auto';
 				$animationDone = true;
 			}
 		});
