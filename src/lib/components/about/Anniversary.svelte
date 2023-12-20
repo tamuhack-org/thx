@@ -31,7 +31,7 @@
 
 			let smallScreenWidth = 640;
 			let distanceThreshold = window.innerWidth > smallScreenWidth ? 100 : 50;
-			if (distanceFromLast(x, y) > distanceThreshold) {
+			if (distanceFromLast(x, y) > distanceThreshold && hovering) {
 				const lead = images[globalIndex % images.length],
 					tail = images[(globalIndex - 5) % images.length];
 
