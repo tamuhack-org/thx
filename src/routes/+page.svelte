@@ -10,6 +10,7 @@
 	import Construction from '$lib/components/common/Construction.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
 	import Anniversary from '$lib/components/about/Anniversary.svelte';
+	import Tiger from '$lib/components/common/Tiger.svelte';
 
 	let screenWidth: number;
 	let screenHeight: number;
@@ -104,7 +105,9 @@
 			line for students who are not accepted. After 11AM, we will admit people from the waitlist line
 			until the MSC capacity has been reached.
 		</p>
-
+		<div class="mt-32">
+			<Tiger />
+		</div>
 		<div id="under-construction" class="my-32">
 			<Construction />
 		</div>
