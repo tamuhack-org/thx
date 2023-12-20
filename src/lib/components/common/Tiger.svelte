@@ -4,6 +4,7 @@
 	let scrollPosition = 0;
 	let screenHeight = 0;
 	let screenWidth = 0;
+	let tigerPosY = 0;
 	let isScrolling = false;
 
 	onMount(() => {
@@ -19,6 +20,8 @@
 	function handleScroll() {
 		// Update scroll position
 		scrollPosition = window.scrollY;
+		let tiger = document.getElementById('tiger') as HTMLVideoElement;
+		tigerPosY = tiger.getBoundingClientRect().top + scrollPosition;
 		isScrolling = true;
 		playTiger();
 
@@ -43,22 +46,23 @@
 		}
 	}
 
-	let translateY = 0; // Initial translation value
+	let translateX = 0; // Initial translation value
 
-	$: translateY = scrollPosition * 0.8 - screenWidth; // Adjust the multiplier for the desired speed
+	$: translateX = scrollPosition - tigerPosY; // Adjust the multiplier for the desired speed
 
 	// Add dynamic styles for animation
-	$: tigerStyle = `transform: translateY(-50%) translateX(${-translateY}px);`;
+	$: tigerStyle = `transform: translateY(-50%) translateX(${-translateX}px);`;
 </script>
 
 <svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
 
-<video muted id="tiger" src="/assets/tiger.webm" style={tigerStyle} />
+<video muted id="tiger" style={tigerStyle}>
+	<source src="/assets/tiger.webm" type="video/webm" />
+</video>
 
 <style>
 	/* Add styles for positioning the tiger image */
 	#tiger {
 		height: 100px;
-		transition: opacity 0.2s ease-out;
 	}
 </style>
