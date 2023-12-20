@@ -4,6 +4,7 @@
 	import { fly } from 'svelte/transition';
 
 	export let screenWidth: number;
+	export let animationDone: boolean;
 	let childWidth: number;
 	let loaded = false;
 	$: repeatedChildNumber = Math.floor(screenWidth / childWidth) + 2;
@@ -13,7 +14,7 @@
 	});
 </script>
 
-{#if loaded}
+{#if animationDone}
 	<a
 		href="https://register.tamuhack.com/"
 		rel="noopener noreferrer"

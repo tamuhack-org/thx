@@ -17,6 +17,8 @@
 	let screenWidth: number;
 	let screenHeight: number;
 
+	$: animationDone = false;
+
 	function startLoader() {
 		let counterElement = document.querySelector('.count p');
 		let currentValue = 0;
@@ -91,6 +93,7 @@
 			delay: 3.5,
 			onComplete: () => {
 				document.querySelector('body')!.style.overflow = 'auto';
+				animationDone = true;
 			}
 		});
 	});
@@ -126,7 +129,7 @@
 </div>
 
 <!-- LANDING -->
-<Marquee {screenWidth} />
+<Marquee {screenWidth} {animationDone} />
 <div
 	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden"
 >
@@ -193,7 +196,7 @@
 </div>
 
 <!-- FIXED BOTTOM NAV  -->
-<Navbar />
+<Navbar {animationDone} />
 
 <style>
 	/* LOADER ANIMATION CSS */
@@ -223,7 +226,7 @@
 	}
 
 	.loader-content {
-		position: absolute;
+		position: fixed;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);

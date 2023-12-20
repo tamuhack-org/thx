@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import CTANavButton from './CTANavButton.svelte';
 	import NavButton from './NavButton.svelte';
 	import { onMount } from 'svelte';
@@ -19,6 +19,7 @@
 		IconCategory
 	} from '@tabler/icons-svelte';
 
+	export let animationDone: boolean;
 	let loaded = false;
 	let open = false;
 	$: active = open ? 'active' : '';
@@ -28,7 +29,7 @@
 	});
 </script>
 
-{#if loaded}
+{#if animationDone}
 	<div
 		class:opacity-0={!open}
 		class:pointer-events-none={!open}
