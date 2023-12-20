@@ -17,6 +17,7 @@
 		}
 	});
 
+	let timer = -1;
 	function handleScroll() {
 		// Update scroll position
 		scrollPosition = window.scrollY;
@@ -25,11 +26,12 @@
 		isScrolling = true;
 		playTiger();
 
-		// You can add a timeout to determine when scrolling has stopped
-		// Adjust the delay based on your preference
-		setTimeout(() => {
+		if (timer != -1) clearTimeout(timer);
+
+		timer = setTimeout(() => {
 			isScrolling = false;
-		}, 300); // Adjust the delay time (in milliseconds)
+			pauseTiger();
+		}, 100);
 	}
 
 	function playTiger() {
@@ -48,7 +50,7 @@
 
 	let translateX = 0; // Initial translation value
 
-	$: translateX = scrollPosition - tigerPosY; // Adjust the multiplier for the desired speed
+	$: translateX = (scrollPosition - tigerPosY) * 1.1; // Adjust the multiplier for the desired speed
 
 	// Add dynamic styles for animation
 	$: tigerStyle = `transform: translateY(-50%) translateX(${-translateX}px);`;
