@@ -18,8 +18,8 @@
 		IconTrophy,
 		IconCategory
 	} from '@tabler/icons-svelte';
+	import { animationDone } from '$lib/stores';
 
-	export let animationDone: boolean;
 	let loaded = false;
 	let open = false;
 	$: active = open ? 'active' : '';
@@ -29,7 +29,7 @@
 	});
 </script>
 
-{#if animationDone}
+{#if $animationDone}
 	<div
 		class:opacity-0={!open}
 		class:pointer-events-none={!open}
@@ -101,7 +101,7 @@
 			x: 0,
 			y: 200,
 			opacity: 1,
-			delay: 500
+			delay: 1500
 		}}
 		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50 pointer-events-none"
 	>

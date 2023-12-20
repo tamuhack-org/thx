@@ -43,6 +43,7 @@
 		"animejs": "^3.2.2",
 		"gsap": "^3.12.4",
 		"matter-js": "^0.19.0",
+		"split-type": "^0.3.4",
 		"svelte-fast-marquee": "^0.7.0",
 		"svelte-icons": "^2.1.0",
 		"svelte-inview": "^4.0.1"

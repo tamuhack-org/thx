@@ -13,11 +13,11 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import anime from 'animejs';
+	import { animationDone } from '$lib/stores';
+	import { fly } from 'svelte/transition';
 
 	let screenWidth: number;
 	let screenHeight: number;
-
-	$: animationDone = false;
 
 	function startLoader() {
 		let counterElement = document.querySelector('.count p');
@@ -89,11 +89,11 @@
 		gsap.to('.loader-2', {
 			clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
 			ease: 'power4.inOut',
-			duration: 1.5,
-			delay: 2,
+			duration: 1,
+			delay: 2.375,
 			onComplete: () => {
 				document.querySelector('body')!.style.overflow = 'auto';
-				animationDone = true;
+				$animationDone = true;
 			}
 		});
 	});
@@ -129,21 +129,30 @@
 </div>
 
 <!-- LANDING -->
-<Marquee {screenWidth} {animationDone} />
+<Marquee {screenWidth} />
 <div
 	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden"
 >
-	<a
-		id="mlh-trust-badge"
-		style="display:block;max-width:100px;min-width:60px;position:absolute;right:20px;top:40px;width:10%;z-index:40"
-		href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=black"
-		target="_blank"
-		><img
-			src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-black.svg"
-			alt="Major League Hacking 2024 Hackathon Season"
-			style="width:100%"
-		/></a
-	>
+	{#if $animationDone}
+		<a
+			id="mlh-trust-badge"
+			style="display:block;max-width:100px;min-width:60px;position:absolute;right:20px;top:40px;width:10%;z-index:40"
+			href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=black"
+			target="_blank"
+			in:fly={{
+				duration: 500,
+				x: 0,
+				y: -300,
+				opacity: 1,
+				delay: 2000
+			}}
+			><img
+				src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-black.svg"
+				alt="Major League Hacking 2024 Hackathon Season"
+				style="width:100%"
+			/></a
+		>
+	{/if}
 	<TopNavbar />
 
 	<div class="mb-2">
@@ -196,7 +205,7 @@
 </div>
 
 <!-- FIXED BOTTOM NAV  -->
-<Navbar {animationDone} />
+<Navbar />
 
 <style>
 	/* LOADER ANIMATION CSS */
@@ -270,7 +279,9 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-		z-index: 50;
+		background: #222454;
+		z-index: 60;
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 	}
 
 	@media (max-width: 640px) {

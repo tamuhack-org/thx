@@ -2,9 +2,9 @@
 	import Marquee from 'svelte-fast-marquee';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import { animationDone } from '$lib/stores';
 
 	export let screenWidth: number;
-	export let animationDone: boolean;
 	let childWidth: number;
 	let loaded = false;
 	$: repeatedChildNumber = Math.floor(screenWidth / childWidth) + 2;
@@ -14,17 +14,18 @@
 	});
 </script>
 
-{#if animationDone}
+{#if $animationDone}
 	<a
 		href="https://register.tamuhack.com/"
 		rel="noopener noreferrer"
 		target="_blank"
-		class="absolute left-0 top-0 w-full"
+		class="absolute left-0 top-0 w-full z-50"
 		in:fly={{
 			duration: 500,
 			x: 0,
 			y: -200,
-			opacity: 1
+			opacity: 1,
+			delay: 1500
 		}}
 	>
 		<Marquee class="py-2 bg-dark text-white font-semibold" speed={30}>
