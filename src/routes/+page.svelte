@@ -7,11 +7,9 @@
 	import Eyes from '$lib/components/about/Eyes.svelte';
 	import Prizes from '$lib/components/about/Prizes.svelte';
 	import Phone from '$lib/components/about/Phone.svelte';
-	import Sponsors from '$lib/components/about/Sponsors.svelte';
 	import Construction from '$lib/components/common/Construction.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
 	import Anniversary from '$lib/components/about/Anniversary.svelte';
-	import { IconHandClick } from '@tabler/icons-svelte';
 	import Tiger from '$lib/components/common/Tiger.svelte';
 
 	let screenWidth: number;
@@ -35,6 +33,19 @@
 </svelte:head>
 
 <!-- LANDING -->
+
+<!-- LOADER ANIMATION STUFF -->
+<!-- <div class="container">
+	<div class="pre-loader">
+		<div class="loader"></div>
+		<div class="loader-bg"></div>
+	</div>
+	<div class="loader-content">
+		<div class="count"><p>0</p></div>
+		<div class="copy"><p class="ml16">TAMUhack X</p></div>
+	</div>
+	<div class="loader-2"></div>
+</div> -->
 
 <Marquee {screenWidth} />
 <div
@@ -95,6 +106,8 @@
 			until the MSC capacity has been reached.
 		</p>
 
+		<Tiger />
+
 		<div id="under-construction" class="my-32">
 			<Construction />
 		</div>
@@ -104,3 +117,76 @@
 
 <!-- FIXED BOTTOM NAV  -->
 <Navbar />
+
+<style>
+	/* LOADER ANIMATION STUFF */
+	/* .pre-loader {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+	}
+
+	.loader {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: #e9e9e9;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.loader-content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		width: 400px;
+		z-index: 100;
+		color: white;
+	}
+
+	.count {
+		flex: 2;
+		text-align: right;
+		line-height: 1;
+		padding: 0 1em;
+	}
+
+	.copy {
+		flex: 6;
+		font-size: 30px;
+		line-height: 1;
+	}
+
+	.ml16 {
+		overflow: hidden;
+	}
+
+	.ml16 .letter {
+		display: inline-block;
+		line-height: 1em;
+	}
+
+	.loader-bg {
+		position: absolute;
+		display: block;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: #e9e9e9;
+		z-index: -1;
+	}
+
+	.loader-2 {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	} */
+</style>

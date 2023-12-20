@@ -2,6 +2,8 @@
 	import { IconHandClick } from '@tabler/icons-svelte';
 	import { onMount } from 'svelte';
 
+	$: hovering = false;
+
 	onMount(() => {
 		const images = document.getElementsByClassName('image');
 
@@ -43,8 +45,15 @@
 	});
 </script>
 
-<IconHandClick class="absolute bottom-4 right-4 text-white w-5 h-5 z-20" />
+<IconHandClick
+	class={`absolute bottom-4 right-4 text-white w-5 h-5 z-20 transition-opacity ${
+		hovering && 'opacity-20'
+	}`}
+/>
 <div
+	on:mouseenter={() => (hovering = true)}
+	on:mouseleave={() => (hovering = false)}
+	role="banner"
 	class="absolute text-white font-medium text-xl sm:text-3xl bg-[rgba(29,29,29,0.6)] w-full h-full flex justify-center items-center z-10 text-center"
 >
 	<h1>

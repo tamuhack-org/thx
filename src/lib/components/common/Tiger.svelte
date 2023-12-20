@@ -64,7 +64,7 @@
 
 <svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
 
-<img id="tiger" src="/assets/tiger.gif" alt="Tiger Animation" style={tigerStyle} />
+<video id="tiger" src="/assets/tiger.gif" alt="Tiger Animation" style={tigerStyle} />
 
 <style>
 	/* Add styles for positioning the tiger image */
