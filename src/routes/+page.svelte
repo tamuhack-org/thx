@@ -36,9 +36,6 @@
 	}
 
 	onMount(() => {
-		divHeight = document.querySelector('.loader-bg')!.clientHeight;
-		console.log('before ', divHeight);
-
 		startLoader();
 
 		gsap.to('.count', { opacity: 0, delay: 3, duration: 0.5 });
