@@ -62,7 +62,7 @@
 		>
 	</h1>
 </div>
-<div id="anniversary" class="bg-[#1d1d1d] overflow-hidden w-full h-full relative">
+<div id="anniversary" class="bg-dark overflow-hidden w-full h-full relative">
 	<img
 		class="image"
 		data-index="0"

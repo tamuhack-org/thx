@@ -25,7 +25,7 @@
 			x: 0,
 			y: -200,
 			opacity: 1,
-			delay: 1500
+			delay: 2250
 		}}
 	>
 		<Marquee class="py-2 bg-dark text-white font-semibold" speed={30}>

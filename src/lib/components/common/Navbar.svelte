@@ -101,7 +101,7 @@
 			x: 0,
 			y: 200,
 			opacity: 1,
-			delay: 1500
+			delay: 2500
 		}}
 		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50 pointer-events-none"
 	>

@@ -16,7 +16,7 @@
 				in:scale={{
 					duration: 500,
 					opacity: 1,
-					delay: 2000
+					delay: 2500
 				}}>th</a
 			>
 		{/if}
@@ -35,7 +35,7 @@
 				in:scale={{
 					duration: 500,
 					opacity: 1,
-					delay: 2000
+					delay: 2500
 				}}
 			>
 				<button
