@@ -29,7 +29,7 @@
 				currentValue = Math.min(currentValue + increment, 100);
 				counterElement.textContent = currentValue.toString();
 
-				let delay = Math.floor(Math.random() * 100) + 25;
+				let delay = Math.floor(Math.random() * 50) + 25;
 				setTimeout(updateCounter, delay);
 			}
 		}
@@ -40,7 +40,7 @@
 	onMount(() => {
 		startLoader();
 
-		gsap.to('.count', { opacity: 0, delay: 3, duration: 0.5 });
+		gsap.to('.count', { opacity: 0, delay: 1.5, duration: 0.5 });
 
 		let textWrapper = document.querySelector('.ml16');
 		textWrapper.innerHTML = textWrapper?.textContent?.replace(
@@ -55,42 +55,42 @@
 				translateY: [-100, 0],
 				easing: 'easeOutExpo',
 				duration: 1000,
-				delay: (el, i) => 100 * i
+				delay: (el, i) => 10 * i
 			})
 			.add({
 				targets: '.ml16 span',
 				translateY: [0, 100],
 				easing: 'easeOutExpo',
 				duration: 5000,
-				delay: (el, i) => 1200 + 30 * i
+				delay: (el, i) => 500 + 30 * i
 			});
 
 		gsap.to('.pre-loader', {
 			scale: 0.5,
 			ease: 'power4.inOut',
 			duration: 2,
-			delay: 3
+			delay: 1.5
 		});
 
 		gsap.to('.loader', {
 			height: '0',
 			ease: 'power4.inOut',
 			duration: 1.5,
-			delay: 3.75
+			delay: 2.25
 		});
 
 		gsap.to('.loader-bg', {
 			height: '0',
 			ease: 'power4.inOut',
 			duration: 1.5,
-			delay: 4
+			delay: 2.5
 		});
 
 		gsap.to('.loader-2', {
 			clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
 			ease: 'power4.inOut',
 			duration: 1.5,
-			delay: 3.5,
+			delay: 2,
 			onComplete: () => {
 				document.querySelector('body')!.style.overflow = 'auto';
 				animationDone = true;
