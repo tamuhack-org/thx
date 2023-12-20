@@ -36,6 +36,9 @@
 	}
 
 	onMount(() => {
+		divHeight = document.querySelector('.loader-bg')!.clientHeight;
+		console.log('before ', divHeight);
+
 		startLoader();
 
 		gsap.to('.count', { opacity: 0, delay: 3, duration: 0.5 });
@@ -88,7 +91,10 @@
 			clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
 			ease: 'power4.inOut',
 			duration: 1.5,
-			delay: 3.5
+			delay: 3.5,
+			onComplete: () => {
+				document.querySelector('body')!.style.overflow = 'auto';
+			}
 		});
 	});
 </script>
@@ -109,9 +115,7 @@
 	<title>TAMUhack X</title>
 </svelte:head>
 
-<!-- LANDING -->
-
-<!-- LOADER ANIMATION STUFF -->
+<!-- LOADER ANIMATION -->
 <div class="container">
 	<div class="pre-loader">
 		<div class="loader"></div>
@@ -124,6 +128,7 @@
 	<div class="loader-2"></div>
 </div>
 
+<!-- LANDING -->
 <Marquee {screenWidth} />
 <div
 	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden"
@@ -194,7 +199,7 @@
 <Navbar />
 
 <style>
-	/* LOADER ANIMATION STUFF */
+	/* LOADER ANIMATION CSS */
 	.container {
 		pointer-events: none;
 	}
@@ -231,21 +236,12 @@
 		color: #222454;
 	}
 
-	/* flex-col for smaller screens for .loader-content */
-
 	.count {
 		flex: 2;
 		text-align: right;
 		line-height: 1;
 		padding: 0 1em;
 	}
-
-	/* @media (max-width: 640px) {
-		.count {
-			flex: 1;
-			text-align: center;
-		}
-	} */
 
 	.copy {
 		flex: 6;
