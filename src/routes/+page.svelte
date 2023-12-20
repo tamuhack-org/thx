@@ -105,9 +105,9 @@
 			line for students who are not accepted. After 11AM, we will admit people from the waitlist line
 			until the MSC capacity has been reached.
 		</p>
-
-		<Tiger />
-
+		<div class="mt-32">
+			<Tiger />
+		</div>
 		<div id="under-construction" class="my-32">
 			<Construction />
 		</div>

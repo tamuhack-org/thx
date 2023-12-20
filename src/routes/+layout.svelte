@@ -20,5 +20,7 @@
 <style>
 	:global(body) {
 		background: #f9f7f0;
+		height: 100vh;
+		overflow: hidden;
 	}
 </style>
