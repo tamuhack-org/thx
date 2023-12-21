@@ -66,5 +66,6 @@
 	/* Add styles for positioning the tiger image */
 	#tiger {
 		height: 175px;
+		pointer-events: none;
 	}
 </style>
