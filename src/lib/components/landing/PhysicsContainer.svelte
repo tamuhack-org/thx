@@ -202,7 +202,7 @@
 			opacity: 0,
 			duration: 1,
 			ease: 'power4.out',
-			delay: 5.5,
+			delay: 6,
 			onComplete: () => {
 				document.querySelector('body')!.style.overflow = 'auto';
 			}
