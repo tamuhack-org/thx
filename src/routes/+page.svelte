@@ -171,6 +171,7 @@
 		</p>
 		<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 md:gap-x-4 gap-y-4 mt-12">
 			<div
+				id="eyecontainer"
 				class="relative flex justify-center col-span-2 md:col-span-1 min-h-[200px] rounded-xl bg-blue xl:max-h-[275px]"
 			>
 				<Eyes />

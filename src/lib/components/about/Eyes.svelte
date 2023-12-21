@@ -14,7 +14,7 @@
 
 		let lefteye = document.getElementById('left');
 		let righteye = document.getElementById('right');
-		let container = document.getElementById('bruhamburger');
+		let container = document.getElementById('eyecontainer');
 		let bounds = container?.getBoundingClientRect();
 		let staticPositionX = bounds?.left + window.scrollX;
 		let staticPositionY = bounds?.top + window.scrollY;
