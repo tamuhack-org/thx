@@ -40,7 +40,7 @@
 	}
 
 	onMount(() => {
-		// force scroll back up after reload
+		// force scroll to top after reload
 		setTimeout(() => {
 			window.scroll({
 				top: 0,
