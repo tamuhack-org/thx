@@ -19,6 +19,7 @@
 
 	let screenWidth: number;
 	let screenHeight: number;
+	let container: Element;
 
 	function startLoader() {
 		let counterElement = document.querySelector('.count p');
@@ -39,6 +40,14 @@
 	}
 
 	onMount(() => {
+		// force scroll back up after reload
+		setTimeout(() => {
+			window.scroll({
+				top: 0,
+				behavior: 'instant'
+			});
+		}, 1);
+
 		startLoader();
 
 		gsap.to('.count', { opacity: 0, delay: 1.5, duration: 0.5 });
@@ -131,6 +140,7 @@
 <!-- LANDING -->
 <Marquee {screenWidth} />
 <div
+	bind:this={container}
 	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden"
 >
 	{#if $animationDone}
