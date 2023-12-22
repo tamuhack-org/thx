@@ -18,7 +18,7 @@
 		href="https://register.tamuhack.com/"
 		rel="noopener noreferrer"
 		target="_blank"
-		class="absolute left-0 top-0 w-full"
+		class="absolute left-0 top-0 w-full max-w-max"
 		in:fly={{
 			duration: 500,
 			x: 0,
