@@ -16,6 +16,7 @@
 	import { animationDone } from '$lib/stores';
 	import { fly } from 'svelte/transition';
 	import Tiger from '$lib/components/common/Tiger.svelte';
+	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
 
 	let screenWidth: number;
 	let screenHeight: number;
