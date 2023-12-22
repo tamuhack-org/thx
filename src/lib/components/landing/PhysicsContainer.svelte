@@ -96,11 +96,11 @@
 			// Use a switch statement to handle different images and sizes
 			switch (row * 4 + col + 1) {
 				case 1:
-					imageName = 'assets/stingy1.png';
+					imageName = 'assets/stingy1.svg';
 					bodySize = 35;
 					break;
 				case 2: {
-					imageName = 'assets/jelly1.png';
+					imageName = 'assets/jelly1.svg';
 					bodySize = 32;
 					break;
 				}
@@ -110,9 +110,9 @@
 						frictionAir: 0,
 						render: {
 							sprite: {
-								texture: 'assets/sharky1.png',
-								xScale: 0.1,
-								yScale: 0.1
+								texture: 'assets/sharky1.svg',
+								xScale: 0.4,
+								yScale: 0.4
 							}
 						}
 					});
@@ -126,9 +126,9 @@
 						frictionAir: 0,
 						render: {
 							sprite: {
-								texture: 'assets/sharky2.png',
-								xScale: 0.1,
-								yScale: 0.1
+								texture: 'assets/sharky2.svg',
+								xScale: 0.4,
+								yScale: 0.4
 							}
 						}
 					});
@@ -138,12 +138,12 @@
 				}
 
 				case 6: {
-					imageName = 'assets/fishy1.png';
+					imageName = 'assets/fishy1.svg';
 					bodySize = 25;
 					break;
 				}
 				default: {
-					imageName = 'assets/jelly1.png';
+					imageName = 'assets/jelly1.svg';
 					bodySize = 35;
 					break;
 				}
@@ -154,8 +154,8 @@
 				render: {
 					sprite: {
 						texture: imageName,
-						xScale: 0.1,
-						yScale: 0.1
+						xScale: 0.4,
+						yScale: 0.4
 					}
 				}
 			});
