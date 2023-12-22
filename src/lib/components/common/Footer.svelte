@@ -135,7 +135,7 @@
           ></div>
         </div> -->
 		<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-		<div style="position: absolute; left: -5000px" aria-hidden="true">
+		<div class="hidden" aria-hidden="true">
 			<input type="text" name="b_43a795784ca963e25903a0da6_9937fe4fc5" tabindex="-1" value="" />
 		</div>
 	</form>
