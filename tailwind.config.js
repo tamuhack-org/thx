@@ -15,7 +15,7 @@ const config = {
 		},
 		extend: {
 			colors: {
-				dark: '#222454',
+				dark: '#1d1d1d',
 				beige: '#F3EED8',
 				pink: '#FC94BB',
 				blue: '#39BFDA',
