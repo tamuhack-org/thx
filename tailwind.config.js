@@ -15,12 +15,12 @@ const config = {
 		},
 		extend: {
 			colors: {
-				dark: '#1d1d1d',
+				dark: '#222454',
 				beige: '#F3EED8',
 				pink: '#FC94BB',
 				blue: '#39BFDA',
 				green: '#C7F4E7',
-				background: '#FFFFFF',
+				background: '#ffffff',
 				border: "hsl(var(--border) / <alpha-value>)",
 				input: "hsl(var(--input) / <alpha-value>)",
 				ring: "hsl(var(--ring) / <alpha-value>)",
