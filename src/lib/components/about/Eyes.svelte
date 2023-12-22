@@ -48,7 +48,7 @@
 			isInView = detail.inView;
 		}}
 		id="eyeContainer"
-		class="container"
+		class="eye-container"
 	>
 		{#if isInView}
 			<div
@@ -85,7 +85,7 @@
 		overflow: hidden;
 	}
 
-	.container {
+	.eye-container {
 		width: 100%;
 		display: flex;
 		flex-direction: row;

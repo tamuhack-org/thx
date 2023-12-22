@@ -20,7 +20,6 @@
 
 	let screenWidth: number;
 	let screenHeight: number;
-	let container: Element;
 
 	function startLoader() {
 		let counterElement = document.querySelector('.count p');
@@ -126,7 +125,7 @@
 </svelte:head>
 
 <!-- LOADER ANIMATION -->
-<div class="container">
+<div class="loader-container">
 	<div class="pre-loader">
 		<div class="loader"></div>
 		<div class="loader-bg"></div>
@@ -141,7 +140,6 @@
 <!-- LANDING -->
 <Marquee {screenWidth} />
 <div
-	bind:this={container}
 	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden"
 >
 	{#if $animationDone}
@@ -222,7 +220,7 @@
 
 <style>
 	/* LOADER ANIMATION CSS */
-	.container {
+	.loader-container {
 		pointer-events: none;
 	}
 

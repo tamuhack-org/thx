@@ -40,7 +40,7 @@
 	});
 </script>
 
-<div class="container">
+<div class="messages-container">
 	<button class="message" id="message-1">Crazy idea</button>
 	<div class="message" id="message-2">
 		Let's partner up to make TAMUhack the biggest hardware hackathon in Texas
@@ -63,7 +63,7 @@
 	@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 	/* messages */
-	.container {
+	.messages-container {
 		max-width: 500px;
 		margin: auto;
 		padding: 15px;

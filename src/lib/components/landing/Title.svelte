@@ -2,6 +2,8 @@
 	import SplitType from 'split-type';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
+	import { animationDone } from '$lib/stores';
+	import { scale } from 'svelte/transition';
 
 	export let title = 'TAMUHACK X';
 
@@ -86,14 +88,23 @@
 					MSC 2300
 				</p>
 			</div>
-			<div class="flex sm:hidden justify-center gap-4 mt-6 font-light tracking-wide">
-				<a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer">
-					<button
-						class="px-6 py-3 rounded-md text-white border-[1px] border-dark bg-dark font-normal hover:bg-black transition-all"
-						>Apply</button
-					></a
+			{#if $animationDone}
+				<div
+					class="flex sm:hidden justify-center gap-4 mt-6 font-light tracking-wide"
+					in:scale={{
+						duration: 500,
+						opacity: 1,
+						delay: 2500
+					}}
 				>
-			</div>
+					<a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer">
+						<button
+							class="px-6 py-3 rounded-md text-white border-[1px] border-dark bg-dark font-normal hover:bg-black transition-all"
+							>Apply</button
+						></a
+					>
+				</div>
+			{/if}
 		</div>
 	</div>
 </div>
