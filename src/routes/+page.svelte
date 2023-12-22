@@ -50,7 +50,7 @@
 
 <Marquee {screenWidth} />
 <div
-	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden"
+	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden overflow-x-hidden"
 >
 	<a
 		id="mlh-trust-badge"
