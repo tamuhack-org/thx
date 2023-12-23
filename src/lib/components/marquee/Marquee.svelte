@@ -2,12 +2,11 @@
 	import Marquee from 'svelte-fast-marquee';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import { animationDone } from '$lib/stores';
+	import { animationDone, screenWidth } from '$lib/stores';
 
-	export let screenWidth: number;
 	let childWidth: number;
 	let loaded = false;
-	$: repeatedChildNumber = Math.floor(screenWidth / childWidth) + 2;
+	$: repeatedChildNumber = Math.floor($screenWidth / childWidth) + 2;
 
 	onMount(() => {
 		loaded = true;
@@ -25,7 +24,7 @@
 			x: 0,
 			y: -200,
 			opacity: 1,
-			delay: 2250
+			delay: $screenWidth > 768 ? 2250 : 1250
 		}}
 	>
 		<Marquee class="py-2 bg-dark text-white font-semibold" speed={30}>

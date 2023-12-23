@@ -2,11 +2,9 @@
 	import { onMount } from 'svelte';
 	import Matter from 'matter-js';
 	import { gsap } from 'gsap';
+	import { screenWidth } from '$lib/stores';
 
 	let visibleWalls = false;
-
-	let screenWidth: number;
-	let screenHeight: number;
 
 	const renderEngine = () => {
 		var Engine = Matter.Engine,
@@ -196,7 +194,7 @@
 	};
 
 	onMount(() => {
-		if (screenWidth > 768) {
+		if ($screenWidth > 768) {
 			renderEngine();
 		}
 
@@ -205,15 +203,13 @@
 			opacity: 0,
 			duration: 1,
 			ease: 'power4.out',
-			delay: 6,
+			delay: $screenWidth > 768 ? 6 : 5,
 			onComplete: () => {
 				document.querySelector('body')!.style.overflow = 'auto';
 			}
 		});
 	});
 </script>
-
-<svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
 
 <div class="flex justify-center w-full px-8 pb-8 max-h-[500px]">
 	<div

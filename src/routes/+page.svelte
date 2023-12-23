@@ -13,12 +13,11 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import anime from 'animejs';
-	import { animationDone } from '$lib/stores';
+	import { animationDone, screenWidth } from '$lib/stores';
 	import { fly } from 'svelte/transition';
 	import Tiger from '$lib/components/common/Tiger.svelte';
 	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
 
-	let screenWidth: number;
 	let screenHeight: number;
 
 	function startLoader() {
@@ -108,7 +107,7 @@
 	});
 </script>
 
-<svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
+<svelte:window bind:innerWidth={$screenWidth} bind:innerHeight={screenHeight} />
 
 <svelte:head>
 	<meta charset="utf-8" />
@@ -138,7 +137,7 @@
 </div>
 
 <!-- LANDING -->
-<Marquee {screenWidth} />
+<Marquee />
 <div
 	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden overflow-x-hidden"
 >
@@ -153,7 +152,7 @@
 				x: 0,
 				y: -300,
 				opacity: 1,
-				delay: 2500
+				delay: $screenWidth > 768 ? 2500 : 1500
 			}}
 			><img
 				src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-black.svg"

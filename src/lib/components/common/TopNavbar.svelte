@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { animationDone } from '$lib/stores';
+	import { animationDone, screenWidth } from '$lib/stores';
 	import { scale } from 'svelte/transition';
 </script>
 
@@ -16,7 +16,7 @@
 				in:scale={{
 					duration: 500,
 					opacity: 1,
-					delay: 2500
+					delay: $screenWidth > 768 ? 2500 : 1500
 				}}>th</a
 			>
 		{/if}

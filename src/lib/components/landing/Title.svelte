@@ -2,7 +2,7 @@
 	import SplitType from 'split-type';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
-	import { animationDone } from '$lib/stores';
+	import { animationDone, screenWidth } from '$lib/stores';
 	import { scale } from 'svelte/transition';
 
 	export let title = 'TAMUHACK X';
@@ -94,7 +94,7 @@
 					in:scale={{
 						duration: 500,
 						opacity: 1,
-						delay: 2500
+						delay: $screenWidth > 768 ? 2500 : 1500
 					}}
 				>
 					<a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer">
