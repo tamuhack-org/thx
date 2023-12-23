@@ -20,7 +20,7 @@ const config = {
 				pink: '#FC94BB',
 				blue: '#39BFDA',
 				green: '#C7F4E7',
-				background: '#f9f7f0',
+				background: '#ffffff',
 				border: 'hsl(var(--border) / <alpha-value>)',
 				input: 'hsl(var(--input) / <alpha-value>)',
 				ring: 'hsl(var(--ring) / <alpha-value>)',

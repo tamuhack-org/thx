@@ -19,7 +19,7 @@
 
 <style>
 	:global(body) {
-		background: #f9f7f0;
+		background: #ffffff;
 		overflow-x: hidden;
 	}
 </style>

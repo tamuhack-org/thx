@@ -21,7 +21,7 @@
 				y: 550,
 				delay: 500
 			}}
-			class="-rotate-12 iphone-x scale-[0.7] sm:scale-75 md:scale-100 -translate-y-8 md:translate-y-0"
+			class="-rotate-12 iphone-x scale-[0.7] sm:scale-75 md:scale-100 -translate-y-8 md:translate-y-8 translate-x-8"
 		>
 			<div class="flex flex-col justify-center w-full h-[120px] border-b-[1px]">
 				<div class="flex justify-between w-full mt-6 items-center px-2">
