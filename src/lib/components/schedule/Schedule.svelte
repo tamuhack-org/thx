@@ -110,21 +110,24 @@
 
 <div class="flex flex-col lg:flex-row justify-center gap-4 mt-8">
 	<div class="relative">
-		<div class="sticky top-16 lg:w-[300px] max-w-[400px] mx-auto p-4 border border-dark rounded-md">
-			<p class="text-xl text-dark font-poppins mb-4">Filters</p>
-			<div class="flex flex-wrap gap-x-2">
-				{#each filters as filter}
-					<button
-						on:click={() => handleFilter(filter)}
-						class={`${activeFilters.includes(filter) ? "border-[#FF5799] bg-[#FF5799] text-white" : "text-dark border-dark"} text-md font-poppins mb-4 border border-opacity-20 rounded-md p-2 transition-all`}
-						>{filter}</button
-					>
-				{/each}
-			</div>
+    <div class="sticky top-16 lg:w-[300px] max-w-[400px] mx-auto">
+      <div class="p-4 border border-dark rounded-md">
+        <p class="text-xl text-dark font-poppins mb-4">Filters</p>
+        <div class="flex flex-wrap gap-x-2">
+          {#each filters as filter}
+            <button
+              on:click={() => handleFilter(filter)}
+              class={`${activeFilters.includes(filter) ? "border-[#FF5799] bg-[#FF5799] text-white" : "text-dark border-dark"} text-md font-poppins mb-4 border border-opacity-20 rounded-md p-2 transition-all`}
+              >{filter}</button
+            >
+          {/each}
+        </div>
+      </div>
+      <img src="/assets/scheduley.png" alt="" class="hidden lg:flex mt-8" />
 		</div>
 	</div>
 	<div class="lg:w-1/2">
-		<p class="text-4xl text-[#FF5799] font-poppins font-semibold mb-4">Saturday</p>
+		<p class="text-4xl text-[#FF5799] font-poppins font-semibold mb-4">Day 2: Saturday</p>
 		<div class="rounded-md border border-dark p-4">
 			{#each events.filter((event) => event.day == '27') as event, index}
 				<div
@@ -149,7 +152,7 @@
 				{/if}
 			{/each}
 		</div>
-    <p class="text-4xl text-[#FF5799] font-poppins font-semibold mb-4 mt-8">Sunday</p>
+    <p class="text-4xl text-[#FF5799] font-poppins font-semibold mb-4 mt-8">Day 2: Sunday</p>
     <div class="rounded-md border border-dark p-4">
       {#each events.filter((event) => event.day == '28') as event, index}
         <div
@@ -169,7 +172,7 @@
             <p class="font-poppins font-light text-end text-dark">{event.description}</p>
           </div>
         </div>
-        {#if index !== events.filter((event) => event.day == '27').length - 1}
+        {#if index !== events.filter((event) => event.day == '28').length - 1}
           <div class="w-full h-[2px] bg-dark rounded-full bg-opacity-20" />
         {/if}
       {/each}

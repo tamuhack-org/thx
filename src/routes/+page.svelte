@@ -11,7 +11,6 @@
 	import Footer from '$lib/components/common/Footer.svelte';
 	import Anniversary from '$lib/components/about/Anniversary.svelte';
 	import Tiger from '$lib/components/common/Tiger.svelte';
-	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
 	import Schedule from '$lib/components/schedule/Schedule.svelte';
 
 	let screenWidth: number;
