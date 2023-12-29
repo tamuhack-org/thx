@@ -18,7 +18,6 @@
 		>
 			{title}
 		</p>
-		<p class="text-lg text-dark font-light font-poppins">{description}</p>
 	</div>
 	<div class="flex justify-end w-1/3">
 		<p class="text-lg text-dark font-light font-poppins">{time}</p>
