@@ -127,7 +127,7 @@
 		</div>
 	</div>
 	<div class="lg:w-1/2">
-		<p class="text-4xl text-[#FF5799] font-poppins font-semibold mb-4">Day 2: Saturday</p>
+		<p class="text-4xl text-[#FF5799] font-poppins font-semibold mb-4">Day 1: Saturday</p>
 		<div class="rounded-md border border-dark p-4">
 			{#each events.filter((event) => event.day == '27') as event, index}
 				<div
