@@ -110,7 +110,7 @@
 
 <div class="flex flex-col lg:flex-row justify-center gap-4 mt-8">
 	<div class="relative">
-    <div class="sticky top-16 lg:w-[300px] max-w-[400px] mx-auto">
+    <div class="sticky top-0 lg:translate-y-[56px] lg:w-[300px] max-w-[400px] mx-auto">
       <div class="p-4 border border-dark rounded-md">
         <p class="text-xl text-dark font-poppins mb-4">Filters</p>
         <div class="flex flex-wrap gap-x-2">
@@ -123,6 +123,7 @@
           {/each}
         </div>
       </div>
+      <p class="font-poppins font-dark">*More events coming soon</p>
       <img src="/assets/scheduley.png" alt="" class="hidden lg:flex mt-8" />
 		</div>
 	</div>
