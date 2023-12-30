@@ -135,7 +135,7 @@
 	</div>
 </div> -->
 
-<div id="transition-container" class="flex items-start justify-center text-red-500 border">
+<div id="transition-container" class="flex items-start justify-center text-white">
 	<h1 id="numbers" class="font-bold text-8xl"><span class="font-bold text-8xl">$</span>0</h1>
 </div>
 
