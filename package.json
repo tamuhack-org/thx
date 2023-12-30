@@ -39,6 +39,7 @@
 	"dependencies": {
 		"@tabler/icons-svelte": "^2.42.0",
 		"@vercel/analytics": "^1.1.1",
+		"animejs": "^3.2.2",
 		"bits-ui": "^0.11.8",
 		"clsx": "^2.0.0",
 		"cmdk-sv": "^0.0.12",
