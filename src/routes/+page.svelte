@@ -11,7 +11,7 @@
 	import Footer from '$lib/components/common/Footer.svelte';
 	import Anniversary from '$lib/components/about/Anniversary.svelte';
 	import Tiger from '$lib/components/common/Tiger.svelte';
-	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
+	import Schedule from '$lib/components/schedule/Schedule.svelte';
 
 	let screenWidth: number;
 	let screenHeight: number;
@@ -49,9 +49,7 @@
 </div> -->
 
 <Marquee {screenWidth} />
-<div
-	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden overflow-x-hidden"
->
+<div class="h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto">
 	<a
 		id="mlh-trust-badge"
 		style="display:block;max-width:100px;min-width:60px;position:absolute;right:20px;top:40px;width:10%;z-index:40"
@@ -95,7 +93,7 @@
 				<Phone />
 			</div>
 			<div
-				class="relative h-full col-span-3 min-h-[200px] rounded-xl bg-[#1d1d1d] overflow-hidden max-h-[275px]"
+				class="relative h-full col-span-3 min-h-[200px] rounded-xl bg-dark overflow-hidden max-h-[275px]"
 			>
 				<Anniversary />
 			</div>
@@ -106,13 +104,18 @@
 			line for students who are not accepted. After 11AM, we will admit people from the waitlist line
 			until the MSC capacity has been reached.
 		</p>
-		<div class="mt-32">
+		<div class="mt-16 h-[300px] overflow-x-hidden">
+
 			<Tiger />
+		</div>
+		<div class="mt-16">
+			<Schedule />
 		</div>
 		<div id="under-construction" class="my-32">
 			<Construction />
 		</div>
 	</div>
+	
 	<Footer />
 </div>
 
