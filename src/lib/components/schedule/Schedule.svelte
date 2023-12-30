@@ -157,7 +157,7 @@
 					</div>
 					{#if index !== events.filter((event) => event.day == '27').length - 1}
 						<div
-							class="w-full h-[2px] bg-dark rounded-full bg-opacity-20 group-hover:bg-opacity-100 transition-all"
+							class="w-full h-[2px] bg-dark rounded-full bg-opacity-20 group-hover:bg-opacity-80 transition-all"
 						/>
 					{/if}
 				</div>
@@ -166,28 +166,32 @@
 		<p class="text-4xl text-[#FF5799] font-poppins font-semibold mb-4 mt-8">Day 2: Sunday</p>
 		<div class="rounded-md border border-dark p-4">
 			{#each events.filter((event) => event.day == '28') as event, index}
-				<div
-					class={activeFilters.some((item) => event.tags?.includes(item)) ||
-					activeFilters.length == 0
-						? 'scheduleRowActive'
-						: 'scheduleRow'}
-				>
-					<div class="flex justify-between">
-						<p class="font-poppins font-medium text-lg text-dark w-1/3 flex-shrink-0">
-							{event.time}
-						</p>
-						<p class="font-poppins font-medium text-lg text-dark w-2/3 text-end">
-							{event.event_name}
-						</p>
-					</div>
+				<div class="group">
+					<div
+						class={activeFilters.some((item) => event.tags?.includes(item)) ||
+						activeFilters.length == 0
+							? 'scheduleRowActive'
+							: 'scheduleRow'}
+					>
+						<div class="flex justify-between">
+							<p class="font-poppins font-medium text-lg text-dark w-1/3 flex-shrink-0">
+								{event.time}
+							</p>
+							<p class="font-poppins font-medium text-lg text-dark w-2/3 text-end">
+								{event.event_name}
+							</p>
+						</div>
 
-					<div class="flex justify-end">
-						<p class="font-poppins font-light text-end text-dark">{event.description}</p>
+						<div class="flex justify-end">
+							<p class="font-poppins font-light text-end text-dark">{event.description}</p>
+						</div>
 					</div>
+					{#if index !== events.filter((event) => event.day == '28').length - 1}
+						<div
+							class="w-full h-[2px] bg-dark rounded-full bg-opacity-20 group-hover:bg-opacity-80 transition-all"
+						/>
+					{/if}
 				</div>
-				{#if index !== events.filter((event) => event.day == '28').length - 1}
-					<div class="w-full h-[2px] bg-dark rounded-full bg-opacity-20" />
-				{/if}
 			{/each}
 		</div>
 	</div>
