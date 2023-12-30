@@ -6,8 +6,10 @@
 			href="https://tamuhack.org"
 			target="_blank"
 			rel="noreferrer noopener"
-			class="text-3xl font-poppins font-semibold">th</a
+			class="text-3xl font-poppins font-semibold"
 		>
+			<img src="/assets/logoy.png" alt="TAMUhack Logo" class="h-[50px] md:h-[60px]" />
+		</a>
 	</div>
 	<div class="hidden sm:flex justify-end gap-2 lg:pr-[108px]">
 		<!-- <a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer"> <button
