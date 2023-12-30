@@ -110,27 +110,62 @@
 
 <div class="flex flex-col lg:flex-row justify-center gap-4 mt-8">
 	<div class="relative">
-    <div class="sticky top-0 lg:translate-y-[56px] lg:w-[300px] max-w-[400px] mx-auto">
-      <div class="p-4 border border-dark rounded-md">
-        <p class="text-xl text-dark font-poppins mb-4">Filters</p>
-        <div class="flex flex-wrap gap-x-2">
-          {#each filters as filter}
-            <button
-              on:click={() => handleFilter(filter)}
-              class={`${activeFilters.includes(filter) ? "border-[#FF5799] bg-[#FF5799] text-white" : "text-dark border-dark"} text-md font-poppins mb-4 border border-opacity-20 rounded-md p-2 transition-all`}
-              >{filter}</button
-            >
-          {/each}
-        </div>
-      </div>
-      <p class="font-poppins font-dark">*More events coming soon</p>
-      <img src="/assets/scheduley.png" alt="" class="hidden lg:flex mt-8" />
+		<div class="sticky top-0 lg:translate-y-[56px] lg:w-[300px] max-w-[400px] mx-auto">
+			<div class="p-4 border border-dark rounded-md">
+				<p class="text-xl text-dark font-poppins mb-4">Filters</p>
+				<div class="flex flex-wrap gap-x-2">
+					{#each filters as filter}
+						<button
+							on:click={() => handleFilter(filter)}
+							class={`${
+								activeFilters.includes(filter)
+									? 'border-[#FF5799] bg-[#FF5799] text-white'
+									: 'text-dark border-dark'
+							} text-md font-poppins mb-4 border border-opacity-20 rounded-md p-2 transition-all`}
+							>{filter}</button
+						>
+					{/each}
+				</div>
+			</div>
+			<p class="font-poppins text-dark">*More events coming soon</p>
+			<img src="/assets/scheduley.png" alt="" class="hidden lg:flex mt-8" />
 		</div>
 	</div>
 	<div class="lg:w-1/2">
 		<p class="text-4xl text-[#FF5799] font-poppins font-semibold mb-4">Day 1: Saturday</p>
 		<div class="rounded-md border border-dark p-4">
 			{#each events.filter((event) => event.day == '27') as event, index}
+				<div class="group">
+					<div
+						class={activeFilters.some((item) => event.tags?.includes(item)) ||
+						activeFilters.length == 0
+							? 'scheduleRowActive'
+							: 'scheduleRow'}
+					>
+						<div class="flex justify-between">
+							<p class="font-poppins font-medium text-lg text-dark w-1/3 flex-shrink-0">
+								{event.time}
+							</p>
+							<p class="font-poppins font-medium text-lg text-dark w-2/3 text-end">
+								{event.event_name}
+							</p>
+						</div>
+
+						<div class="flex justify-end">
+							<p class="font-poppins font-light text-end text-dark">{event.description}</p>
+						</div>
+					</div>
+					{#if index !== events.filter((event) => event.day == '27').length - 1}
+						<div
+							class="w-full h-[2px] bg-dark rounded-full bg-opacity-20 group-hover:bg-opacity-100 transition-all"
+						/>
+					{/if}
+				</div>
+			{/each}
+		</div>
+		<p class="text-4xl text-[#FF5799] font-poppins font-semibold mb-4 mt-8">Day 2: Sunday</p>
+		<div class="rounded-md border border-dark p-4">
+			{#each events.filter((event) => event.day == '28') as event, index}
 				<div
 					class={activeFilters.some((item) => event.tags?.includes(item)) ||
 					activeFilters.length == 0
@@ -138,47 +173,24 @@
 						: 'scheduleRow'}
 				>
 					<div class="flex justify-between">
-						<p class="font-poppins font-medium text-lg text-dark w-1/3 flex-shrink-0">{event.time}</p>
+						<p class="font-poppins font-medium text-lg text-dark w-1/3 flex-shrink-0">
+							{event.time}
+						</p>
 						<p class="font-poppins font-medium text-lg text-dark w-2/3 text-end">
-              {event.event_name}
+							{event.event_name}
 						</p>
 					</div>
 
 					<div class="flex justify-end">
-            <p class="font-poppins font-light text-end text-dark">{event.description}</p>
-          </div>
+						<p class="font-poppins font-light text-end text-dark">{event.description}</p>
+					</div>
 				</div>
-				{#if index !== events.filter((event) => event.day == '27').length - 1}
+				{#if index !== events.filter((event) => event.day == '28').length - 1}
 					<div class="w-full h-[2px] bg-dark rounded-full bg-opacity-20" />
 				{/if}
 			{/each}
 		</div>
-    <p class="text-4xl text-[#FF5799] font-poppins font-semibold mb-4 mt-8">Day 2: Sunday</p>
-    <div class="rounded-md border border-dark p-4">
-      {#each events.filter((event) => event.day == '28') as event, index}
-        <div
-          class={activeFilters.some((item) => event.tags?.includes(item)) ||
-          activeFilters.length == 0
-            ? 'scheduleRowActive'
-            : 'scheduleRow'}
-        >
-          <div class="flex justify-between">
-            <p class="font-poppins font-medium text-lg text-dark w-1/3 flex-shrink-0">{event.time}</p>
-            <p class="font-poppins font-medium text-lg text-dark w-2/3 text-end">
-              {event.event_name}
-            </p>
-          </div>
-
-          <div class="flex justify-end">
-            <p class="font-poppins font-light text-end text-dark">{event.description}</p>
-          </div>
-        </div>
-        {#if index !== events.filter((event) => event.day == '28').length - 1}
-          <div class="w-full h-[2px] bg-dark rounded-full bg-opacity-20" />
-        {/if}
-      {/each}
-    </div>
-  </div>
+	</div>
 </div>
 
 <style>
