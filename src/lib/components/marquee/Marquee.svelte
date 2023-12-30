@@ -2,11 +2,11 @@
 	import Marquee from 'svelte-fast-marquee';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import { screenWidth } from '$lib/stores';
 
-	export let screenWidth: number;
 	let childWidth: number;
 	let loaded = false;
-	$: repeatedChildNumber = Math.floor(screenWidth / childWidth) + 2;
+	$: repeatedChildNumber = Math.floor($screenWidth / childWidth) + 2;
 
 	onMount(() => {
 		loaded = true;
@@ -18,7 +18,7 @@
 		href="https://register.tamuhack.com/"
 		rel="noopener noreferrer"
 		target="_blank"
-		class="absolute left-0 top-0 w-full max-w-max"
+		class="absolute left-0 top-0 w-full max-w-max z-50"
 		in:fly={{
 			duration: 500,
 			x: 0,

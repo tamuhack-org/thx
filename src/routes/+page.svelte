@@ -10,14 +10,121 @@
 	import Construction from '$lib/components/common/Construction.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
 	import Anniversary from '$lib/components/about/Anniversary.svelte';
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import anime from 'animejs';
+	import { animationDone, screenWidth, screenHeight } from '$lib/stores';
+	import { fly } from 'svelte/transition';
 	import Tiger from '$lib/components/common/Tiger.svelte';
 	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
+	import PrizesTransition from '$lib/components/landing/PrizesTransition.svelte';
 
-	let screenWidth: number;
-	let screenHeight: number;
+	function startLoader() {
+		let counterElement = document.querySelector('.count p');
+		let currentValue = 0;
+
+		function updateCounter() {
+			if (currentValue < 100) {
+				let increment = Math.floor(Math.random() * 10) + 1;
+				currentValue = Math.min(currentValue + increment, 100);
+				counterElement.textContent = currentValue.toString();
+
+				let delay = Math.floor(Math.random() * 50) + 25;
+				setTimeout(updateCounter, delay);
+			}
+		}
+
+		updateCounter();
+	}
+
+	onMount(() => {
+		// force scroll to top after reload
+		// setTimeout(() => {
+		// 	window.scroll({
+		// 		top: 0,
+		// 		behavior: 'instant'
+		// 	});
+		// }, 1);
+
+		// startLoader();
+
+		// gsap.to('.count', { opacity: 0, delay: 1.5, duration: 0.5 });
+
+		// let textWrapper = document.querySelector('.ml16');
+		// textWrapper.innerHTML = textWrapper?.textContent?.replace(
+		// 	/\S/g,
+		// 	"<span class='inline-block leading-4 text-dark'>$&</span>"
+		// );
+
+		// anime
+		// 	.timeline({ loop: false })
+		// 	.add({
+		// 		targets: '.ml16 span',
+		// 		translateY: [-100, 0],
+		// 		easing: 'easeOutExpo',
+		// 		duration: 1000,
+		// 		delay: (el, i) => 10 * i
+		// 	})
+		// 	.add({
+		// 		targets: '.ml16 span',
+		// 		translateY: [0, 100],
+		// 		easing: 'easeOutExpo',
+		// 		duration: 5000,
+		// 		delay: (el, i) => 500 + 30 * i
+		// 	});
+
+		// gsap.to('.pre-loader', {
+		// 	scale: 0.5,
+		// 	ease: 'power4.inOut',
+		// 	duration: 2,
+		// 	delay: 1.5
+		// });
+
+		// gsap.to('.loader', {
+		// 	height: '0',
+		// 	ease: 'power4.inOut',
+		// 	duration: 1.5,
+		// 	delay: 2.25
+		// });
+
+		// gsap.to('.loader-bg', {
+		// 	height: '0',
+		// 	ease: 'power4.inOut',
+		// 	duration: 1.5,
+		// 	delay: 2.5
+		// });
+
+		// gsap.to('.loader-2', {
+		// 	clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+		// 	ease: 'power4.inOut',
+		// 	duration: 1,
+		// 	delay: 2.375,
+		// 	onComplete: () => {
+		// 		$animationDone = true;
+		// 	}
+		// });
+
+		gsap.registerPlugin(ScrollTrigger);
+
+		ScrollTrigger.create({
+			trigger: '#prize-transition',
+			start: 'top 5%',
+			end: 'bottom 5%',
+			markers: false,
+			onEnter: () => {
+				gsap.to('main', { background: '#1d1d1d', duration: 0.5 });
+			},
+			onEnterBack: () => {
+				gsap.to('main', { background: '#1d1d1d', duration: 0.5 });
+			},
+			onLeave: () => gsap.to('main', { background: '#FFFFFF', duration: 0.5 }),
+			onLeaveBack: () => gsap.to('main', { background: '#FFFFFF', duration: 0.5 })
+		});
+	});
 </script>
 
-<svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
+<svelte:window bind:innerWidth={$screenWidth} bind:innerHeight={$screenHeight} />
 
 <svelte:head>
 	<meta charset="utf-8" />
@@ -48,9 +155,10 @@
 	<div class="loader-2"></div>
 </div> -->
 
-<Marquee {screenWidth} />
-<div
-	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden overflow-x-hidden"
+<Marquee />
+<main
+	id="all"
+	class="color-light relative h-full w-full font-poppins max-w-[2000px] mx-auto overflow-y-hidden overflow-x-hidden"
 >
 	<a
 		id="mlh-trust-badge"
@@ -106,15 +214,18 @@
 			line for students who are not accepted. After 11AM, we will admit people from the waitlist line
 			until the MSC capacity has been reached.
 		</p>
-		<div class="mt-32">
+		<div class="my-32">
 			<Tiger />
 		</div>
-		<div id="under-construction" class="my-32">
+		<div id="prize-transition" class="my-32">
+			<PrizesTransition />
+		</div>
+		<div id="under-construction" class="my-64">
 			<Construction />
 		</div>
 	</div>
 	<Footer />
-</div>
+</main>
 
 <!-- FIXED BOTTOM NAV  -->
 <Navbar />
