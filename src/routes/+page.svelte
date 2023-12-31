@@ -19,6 +19,7 @@
 	import Tiger from '$lib/components/common/Tiger.svelte';
 	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
 	import PrizesTransition from '$lib/components/landing/PrizesTransition.svelte';
+	import Schedule from '$lib/components/schedule/Schedule.svelte';
 
 	function startLoader() {
 		let counterElement = document.querySelector('.count p');
@@ -187,7 +188,9 @@
 				class="underline">Learn more.</a
 			> -->
 		</p>
-		<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 md:gap-x-4 gap-y-4 mt-12">
+		<div
+			class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 md:gap-x-4 gap-y-4 mt-12 min-h-[1148px] md:min-h-[932px] xl:min-h-[500px]"
+		>
 			<div
 				id="bruhamburger"
 				class="relative flex justify-center col-span-2 md:col-span-1 min-h-[200px] rounded-xl bg-blue xl:max-h-[275px]"
@@ -203,7 +206,7 @@
 				<Phone />
 			</div>
 			<div
-				class="relative h-full col-span-3 min-h-[200px] rounded-xl bg-[#1d1d1d] overflow-hidden max-h-[275px]"
+				class="relative h-full col-span-3 min-h-[200px] rounded-xl bg-dark overflow-hidden max-h-[275px]"
 			>
 				<Anniversary />
 			</div>
@@ -214,16 +217,20 @@
 			line for students who are not accepted. After 11AM, we will admit people from the waitlist line
 			until the MSC capacity has been reached.
 		</p>
-		<div class="my-32">
+		<div class="hidden md:flex mt-16 h-[300px] overflow-x-hidden">
 			<Tiger />
+		</div>
+		<div class="mt-16">
+			<Schedule />
 		</div>
 		<div id="prize-transition" class="my-32">
 			<PrizesTransition />
 		</div>
-		<div id="under-construction" class="my-64">
+		<div id="under-construction" class="my-32">
 			<Construction />
 		</div>
 	</div>
+
 	<Footer />
 </main>
 

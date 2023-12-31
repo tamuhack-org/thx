@@ -51,7 +51,7 @@
 	$: translateX = (scrollPosition - tigerPosY) * 1.1; // Adjust the multiplier for the desired speed
 
 	// Add dynamic styles for animation
-	$: tigerStyle = `transform: translateY(-50%) translateX(${-translateX}px);`;
+	$: tigerStyle = `transform: translateY(50%) translateX(${-translateX}px);`;
 </script>
 
 
