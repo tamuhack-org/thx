@@ -70,8 +70,10 @@
 
 	<div class="mx-8 mt-32">
 		<p class="text-dark font-poppins font-light text-xl md:text-3xl md:w-2/3">
-			TAMUhack is a 24-hour event where teams create innovative software and hardware solutions to
-			real-world problems in a community of mentorship.
+			TAMUhack is a <span class="font-semibold text-[#FF5799]">24-hour</span> event where teams
+			create innovative <span class="font-semibold text-[#FF5799]">software and hardware</span>
+			solutions to real-world problems in a
+			<span class="font-semibold text-[#FF5799]">community of mentorship</span>.
 			<!-- <a
 				href="https://tamuhack.org/"
 				class="underline">Learn more.</a
@@ -86,7 +88,7 @@
 			>
 				<Eyes />
 			</div>
-			<div class="relative h-full col-span-2 min-h-[200px] rounded-xl bg-[#1d1d1d] max-h-[275px]">
+			<div class="relative h-full col-span-2 min-h-[200px] rounded-xl bg-[#000044] max-h-[275px]">
 				<Prizes />
 			</div>
 			<div
