@@ -21,7 +21,7 @@
 	import PrizesContainer from '$lib/components/prizes/PrizesContainer.svelte';
 
 	function startLoader() {
-		let counterElement = document.querySelector('.count p');
+		let counterElement = document.querySelector('.count p') as HTMLElement;
 		let currentValue = 0;
 
 		function updateCounter() {
@@ -152,8 +152,10 @@
 
 	<div class="mx-8 mt-32">
 		<p class="text-dark font-poppins font-light text-xl md:text-3xl md:w-2/3">
-			TAMUhack is a 24-hour event where teams create innovative software and hardware solutions to
-			real-world problems in a community of mentorship.
+			TAMUhack is a <span class="font-semibold text-[#FF5799]">24-hour</span> event where teams
+			create innovative <span class="font-semibold text-[#FF5799]">software and hardware</span>
+			solutions to real-world problems in a
+			<span class="font-semibold text-[#FF5799]">community of mentorship</span>.
 			<!-- <a
 				href="https://tamuhack.org/"
 				class="underline">Learn more.</a
@@ -188,7 +190,7 @@
 			line for students who are not accepted. After 11AM, we will admit people from the waitlist line
 			until the MSC capacity has been reached.
 		</p>
-		<div class="hidden md:flex mt-16 h-[300px] overflow-x-hidden">
+		<div class="hidden md:flex h-[300px] overflow-x-hidden">
 			<Tiger />
 		</div>
 		<div class="mt-16">

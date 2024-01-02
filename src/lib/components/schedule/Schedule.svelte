@@ -89,7 +89,7 @@
 <p class="text-center font-medium text-[30px] text-dark font-poppins">Next Up</p>
 <div class="mx-auto w-[50px] h-1 bg-dark rounded-full"></div>
 
-<div class="flex justify-center gap-4 mt-4 md:mt-8 md:gap-8 overflow-scroll">
+<div class="flex justify-center gap-4 mt-4 md:mt-8 overflow-scroll">
 	<NextUpCard
 		title={events[currentEventIndex - 1]?.event_name || 'Loading'}
 		description={events[currentEventIndex - 1]?.description || ''}
@@ -134,7 +134,7 @@
 		</div>
 	</div>
 	<div class="lg:w-1/2">
-		<p class="text-4xl text-[#FF5799] font-poppins font-semibold mb-4">Day 1: Saturday</p>
+		<p class="text-3xl text-[#FF5799] font-poppins font-semibold mb-4">Day 1: Saturday</p>
 		<div class="rounded-md border border-dark p-4">
 			{#each events.filter((event) => event.day == '27') as event, index}
 				<div class="group">
@@ -165,7 +165,7 @@
 				</div>
 			{/each}
 		</div>
-		<p class="text-4xl text-[#FF5799] font-poppins font-semibold mb-4 mt-8">Day 2: Sunday</p>
+		<p class="text-3xl text-[#FF5799] font-poppins font-semibold mb-4 mt-8">Day 2: Sunday</p>
 		<div class="rounded-md border border-dark p-4">
 			{#each events.filter((event) => event.day == '28') as event, index}
 				<div class="group">

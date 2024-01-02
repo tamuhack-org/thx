@@ -94,10 +94,10 @@
 			end: 'bottom 5%',
 			markers: true,
 			onEnter: () => {
-				gsap.to('main', { background: '#111127', duration: 0.5 });
+				gsap.to('main', { background: '#0C0C19', duration: 0.5 });
 			},
 			onEnterBack: () => {
-				gsap.to('main', { background: '#111127', duration: 0.5 });
+				gsap.to('main', { background: '#0C0C19', duration: 0.5 });
 			},
 			onLeave: () => gsap.to('main', { background: '#FFFFFF', duration: 0.5 }),
 			onLeaveBack: () => gsap.to('main', { background: '#FFFFFF', duration: 0.5 })
