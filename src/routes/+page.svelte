@@ -88,7 +88,7 @@
 			>
 				<Eyes />
 			</div>
-			<div class="relative h-full col-span-2 min-h-[200px] rounded-xl bg-[#000044] max-h-[275px]">
+			<div class="relative h-full col-span-2 min-h-[200px] rounded-xl bg-dark max-h-[275px]">
 				<Prizes />
 			</div>
 			<div

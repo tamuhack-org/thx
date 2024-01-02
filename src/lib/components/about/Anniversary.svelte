@@ -54,7 +54,7 @@
 	on:mouseenter={() => (hovering = true)}
 	on:mouseleave={() => (hovering = false)}
 	role="banner"
-	class="absolute text-white font-medium text-xl sm:text-3xl bg-[rgba(0,0,68,0.5)] w-full h-full flex justify-center items-center z-10 text-center"
+	class="absolute text-white font-medium text-xl sm:text-3xl bg-[rgba(34,36,84,0.6)] w-full h-full flex justify-center items-center z-10 text-center"
 >
 	<h1>
 		Celebrating 10 years of&nbsp;<span class="text-blue">TAMU</span><span class="text-pink"
@@ -62,7 +62,7 @@
 		>
 	</h1>
 </div>
-<div id="anniversary" class="bg-[rgb(0,0,68)] overflow-hidden w-full h-full relative">
+<div id="anniversary" class="bg-dark overflow-hidden w-full h-full relative">
 	<img
 		class="image"
 		data-index="0"
