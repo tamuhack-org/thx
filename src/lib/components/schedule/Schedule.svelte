@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import NextUpCard from './NextUpCard.svelte';
+	import { scheduleLoaded } from '$lib/stores';
 
 	let events: ScheduledEvent[] = [];
 	let filters = ['Required', 'Company Events', 'Food', 'Workshops', 'For Fun'];
@@ -81,6 +82,7 @@
 	onMount(async () => {
 		events = await getEvents();
 		currentEventIndex = getCurrentEventIndex(events);
+		$scheduleLoaded = true;
 	});
 </script>
 

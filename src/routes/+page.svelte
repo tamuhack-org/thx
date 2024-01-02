@@ -5,21 +5,20 @@
 	import Marquee from '$lib/components/marquee/Marquee.svelte';
 	import TopNavbar from '$lib/components/common/TopNavbar.svelte';
 	import Eyes from '$lib/components/about/Eyes.svelte';
-	import Prizes from '$lib/components/about/Prizes.svelte';
+	import PrizesAmount from '$lib/components/about/PrizesAmount.svelte';
 	import Phone from '$lib/components/about/Phone.svelte';
 	import Construction from '$lib/components/common/Construction.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
 	import Anniversary from '$lib/components/about/Anniversary.svelte';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import anime from 'animejs';
-	import { animationDone, screenWidth, screenHeight } from '$lib/stores';
+	import { animationDone, screenWidth, screenHeight, scheduleLoaded } from '$lib/stores';
 	import { fly } from 'svelte/transition';
 	import Tiger from '$lib/components/common/Tiger.svelte';
 	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
-	import PrizesTransition from '$lib/components/landing/PrizesTransition.svelte';
 	import Schedule from '$lib/components/schedule/Schedule.svelte';
+	import PrizesContainer from '$lib/components/prizes/PrizesContainer.svelte';
 
 	function startLoader() {
 		let counterElement = document.querySelector('.count p');
@@ -47,17 +46,13 @@
 		// 		behavior: 'instant'
 		// 	});
 		// }, 1);
-
 		// startLoader();
-
 		// gsap.to('.count', { opacity: 0, delay: 1.5, duration: 0.5 });
-
 		// let textWrapper = document.querySelector('.ml16');
 		// textWrapper.innerHTML = textWrapper?.textContent?.replace(
 		// 	/\S/g,
 		// 	"<span class='inline-block leading-4 text-dark'>$&</span>"
 		// );
-
 		// anime
 		// 	.timeline({ loop: false })
 		// 	.add({
@@ -74,28 +69,24 @@
 		// 		duration: 5000,
 		// 		delay: (el, i) => 500 + 30 * i
 		// 	});
-
 		// gsap.to('.pre-loader', {
 		// 	scale: 0.5,
 		// 	ease: 'power4.inOut',
 		// 	duration: 2,
 		// 	delay: 1.5
 		// });
-
 		// gsap.to('.loader', {
 		// 	height: '0',
 		// 	ease: 'power4.inOut',
 		// 	duration: 1.5,
 		// 	delay: 2.25
 		// });
-
 		// gsap.to('.loader-bg', {
 		// 	height: '0',
 		// 	ease: 'power4.inOut',
 		// 	duration: 1.5,
 		// 	delay: 2.5
 		// });
-
 		// gsap.to('.loader-2', {
 		// 	clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
 		// 	ease: 'power4.inOut',
@@ -105,23 +96,6 @@
 		// 		$animationDone = true;
 		// 	}
 		// });
-
-		gsap.registerPlugin(ScrollTrigger);
-
-		ScrollTrigger.create({
-			trigger: '#prize-transition',
-			start: 'top 5%',
-			end: 'bottom 5%',
-			markers: false,
-			onEnter: () => {
-				gsap.to('main', { background: '#1d1d1d', duration: 0.5 });
-			},
-			onEnterBack: () => {
-				gsap.to('main', { background: '#1d1d1d', duration: 0.5 });
-			},
-			onLeave: () => gsap.to('main', { background: '#FFFFFF', duration: 0.5 }),
-			onLeaveBack: () => gsap.to('main', { background: '#FFFFFF', duration: 0.5 })
-		});
 	});
 </script>
 
@@ -157,10 +131,7 @@
 </div> -->
 
 <Marquee />
-<main
-	id="all"
-	class="color-light relative h-full w-full font-poppins max-w-[2000px] mx-auto overflow-y-hidden overflow-x-hidden"
->
+<main id="all" class="h-full w-full font-poppins max-w-[2000px] mx-auto">
 	<a
 		id="mlh-trust-badge"
 		style="display:block;max-width:100px;min-width:60px;position:absolute;right:20px;top:40px;width:10%;z-index:40"
@@ -198,7 +169,7 @@
 				<Eyes />
 			</div>
 			<div class="relative h-full col-span-2 min-h-[200px] rounded-xl bg-[#1d1d1d] max-h-[275px]">
-				<Prizes />
+				<PrizesAmount />
 			</div>
 			<div
 				class="relative h-full col-span-2 md:col-span-3 xl:col-span-2 row-span-2 min-h-[200px] rounded-xl bg-pink overflow-hidden max-h-[500px]"
@@ -223,9 +194,9 @@
 		<div class="mt-16">
 			<Schedule />
 		</div>
-		<div id="prize-transition" class="my-32">
-			<PrizesTransition />
-		</div>
+		{#if $scheduleLoaded}
+			<PrizesContainer />
+		{/if}
 		<div id="under-construction" class="my-32">
 			<Construction />
 		</div>
