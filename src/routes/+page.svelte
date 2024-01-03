@@ -170,7 +170,7 @@
 			>
 				<Eyes />
 			</div>
-			<div class="relative h-full col-span-2 min-h-[200px] rounded-xl bg-[#1d1d1d] max-h-[275px]">
+			<div class="relative h-full col-span-2 min-h-[200px] rounded-xl bg-dark max-h-[275px]">
 				<PrizesAmount />
 			</div>
 			<div
