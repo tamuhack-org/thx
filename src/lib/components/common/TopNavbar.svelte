@@ -12,13 +12,15 @@
 				href="https://tamuhack.org"
 				target="_blank"
 				rel="noreferrer noopener"
-				class="text-3xl font-poppins font-semibold text-dark"
+				class="text-3xl font-poppins font-semibold"
 				in:scale={{
 					duration: 500,
 					opacity: 1,
 					delay: $screenWidth > 768 ? 2500 : 1500
-				}}>th</a
+				}}
 			>
+				<img src="/assets/logoy.png" alt="TAMUhack Logo" class="h-[50px] md:h-[60px]" />
+			</a>
 		{/if}
 	</div>
 	<div class="hidden sm:flex justify-end gap-2 lg:pr-[108px]">

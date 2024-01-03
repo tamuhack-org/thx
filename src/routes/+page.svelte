@@ -16,7 +16,7 @@
 	import { animationDone, screenWidth } from '$lib/stores';
 	import { fly } from 'svelte/transition';
 	import Tiger from '$lib/components/common/Tiger.svelte';
-	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
+	import Schedule from '$lib/components/schedule/Schedule.svelte';
 
 	let screenHeight: number;
 
@@ -136,11 +136,8 @@
 	<div class="loader-2"></div>
 </div>
 
-<!-- LANDING -->
-<Marquee />
-<div
-	class="relative h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto overflow-y-hidden overflow-x-hidden"
->
+<Marquee {screenWidth} />
+<div class="h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto">
 	{#if $animationDone}
 		<a
 			id="mlh-trust-badge"
@@ -170,21 +167,25 @@
 
 	<div class="mx-8 mt-32">
 		<p class="text-dark font-poppins font-light text-xl md:text-3xl md:w-2/3">
-			TAMUhack is a 24-hour event where teams create innovative software and hardware solutions to
-			real-world problems in a community of mentorship.
+			TAMUhack is a <span class="font-semibold text-[#FF5799]">24-hour</span> event where teams
+			create innovative <span class="font-semibold text-[#FF5799]">software and hardware</span>
+			solutions to real-world problems in a
+			<span class="font-semibold text-[#FF5799]">community of mentorship</span>.
 			<!-- <a
 				href="https://tamuhack.org/"
 				class="underline">Learn more.</a
 			> -->
 		</p>
-		<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 md:gap-x-4 gap-y-4 mt-12">
+		<div
+			class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 md:gap-x-4 gap-y-4 mt-12 min-h-[1148px] md:min-h-[932px] xl:min-h-[500px]"
+		>
 			<div
 				id="eyecontainer"
 				class="relative flex justify-center col-span-2 md:col-span-1 min-h-[200px] rounded-xl bg-blue xl:max-h-[275px]"
 			>
 				<Eyes />
 			</div>
-			<div class="relative h-full col-span-2 min-h-[200px] rounded-xl bg-[#1d1d1d] max-h-[275px]">
+			<div class="relative h-full col-span-2 min-h-[200px] rounded-xl bg-dark max-h-[275px]">
 				<Prizes />
 			</div>
 			<div
@@ -193,7 +194,7 @@
 				<Phone />
 			</div>
 			<div
-				class="relative h-full col-span-3 min-h-[200px] rounded-xl bg-[#1d1d1d] overflow-hidden max-h-[275px]"
+				class="relative h-full col-span-3 min-h-[200px] rounded-xl bg-dark overflow-hidden max-h-[275px]"
 			>
 				<Anniversary />
 			</div>
@@ -204,13 +205,17 @@
 			line for students who are not accepted. After 11AM, we will admit people from the waitlist line
 			until the MSC capacity has been reached.
 		</p>
-		<div class="mt-32">
+		<div class="hidden md:flex h-[300px] overflow-x-hidden">
 			<Tiger />
+		</div>
+		<div class="mt-16">
+			<Schedule />
 		</div>
 		<div id="under-construction" class="my-32">
 			<Construction />
 		</div>
 	</div>
+
 	<Footer />
 </div>
 
