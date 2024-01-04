@@ -17,6 +17,7 @@
 		IconTrophy,
 		IconCategory
 	} from '@tabler/icons-svelte';
+	import { sectionInView } from '$lib/stores';
 
 	let loaded = false;
 	let open = false;

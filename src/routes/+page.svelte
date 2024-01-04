@@ -12,6 +12,8 @@
 	import Anniversary from '$lib/components/about/Anniversary.svelte';
 	import Tiger from '$lib/components/common/Tiger.svelte';
 	import Schedule from '$lib/components/schedule/Schedule.svelte';
+	import { inview } from 'svelte-inview';
+	import { sectionInView } from '$lib/stores';
 
 	let screenWidth: number;
 	let screenHeight: number;
@@ -111,7 +113,15 @@
 		<div class="hidden md:flex h-[300px] overflow-x-hidden">
 			<Tiger />
 		</div>
-		<div class="mt-16">
+		<div
+			use:inview
+			on:inview_change={(event) => {
+				const { inView } = event.detail;
+				$sectionInView = inView ? 'Schedule' : '';
+			}}
+			id="schedule"
+			class="mt-16"
+		>
 			<Schedule />
 		</div>
 		<div id="under-construction" class="my-32">
