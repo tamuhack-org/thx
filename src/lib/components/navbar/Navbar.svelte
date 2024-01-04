@@ -95,15 +95,42 @@
 				class:delay-[200ms]={!open}
 				class="flex items-center gap-4 rounded-b-xl bg-black bg-opacity-70 backdrop-blur-sm p-4 text-white"
 			>
-				<button on:click={() => (open = !open)} class="p-1 bg-white rounded-sm text-black">
+				<button
+					on:click={() => (open = !open)}
+					class="p-1 bg-white rounded-sm text-black border border-white"
+				>
 					<IconCategory class="w-5 h-5" />
 				</button>
-				<a href="#schedule">
+				<a
+					href="#schedule"
+					class={`p-1 border ${
+						$sectionInView === 'Schedule' ? 'border-gray-400' : 'border-transparent'
+					} rounded-sm transition-all`}
+				>
 					<IconCalendar class="w-5 h-5" />
 				</a>
-				<IconUserQuestion class="w-5 h-5 opacity-50" />
-				<IconTrophy class="w-5 h-5 opacity-50" />
-				<a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer">
+				<a
+					href="#under-construction"
+					class={`p-1 border ${
+						false ? 'border-gray-400' : 'border-transparent'
+					} rounded-sm transition-all`}
+				>
+					<IconUserQuestion class="w-5 h-5" />
+				</a>
+				<a
+					href="#under-construction"
+					class={`p-1 border ${
+						false ? 'border-gray-400' : 'border-transparent'
+					} rounded-sm transition-all`}
+				>
+					<IconTrophy class="w-5 h-5" />
+				</a>
+				<a
+					href="https://register.tamuhack.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="p-1 border border-transparent rounded-sm"
+				>
 					<IconEdit class="w-5 h-5" />
 				</a>
 			</div>

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Title from '$lib/components/landing/Title.svelte';
 	import PhysicsContainer from '$lib/components/landing/PhysicsContainer.svelte';
-	import Navbar from '$lib/components/common/Navbar.svelte';
+	import Navbar from '$lib/components/navbar/Navbar.svelte';
 	import Marquee from '$lib/components/marquee/Marquee.svelte';
-	import TopNavbar from '$lib/components/common/TopNavbar.svelte';
+	import TopNavbar from '$lib/components/navbar/TopNavbar.svelte';
 	import Eyes from '$lib/components/about/Eyes.svelte';
 	import Prizes from '$lib/components/about/Prizes.svelte';
 	import Phone from '$lib/components/about/Phone.svelte';
