@@ -11,7 +11,6 @@
 		IconLicense,
 		IconNotebook,
 		IconScale,
-		IconMenu2,
 		IconEdit,
 		IconCalendar,
 		IconUserQuestion,
@@ -30,71 +29,6 @@
 
 {#if loaded}
 	<div
-		class:opacity-0={!open}
-		class:pointer-events-none={!open}
-		class="fixed font-poppins w-full h-dscreen bg-[#2b2b2b] bg-opacity-70 backdrop-blur-sm top-0 left-0 flex sm:hidden text-2xl z-50 transition-opacity p-[6px] overflow-y-hidden"
-	>
-		<div
-			class="flex flex-col rounded-xl bg-[#2b2b2b] w-full h-full text-white px-8 pt-8 pb-32 text-lg gap-6"
-		>
-			<a href="/" class="flex flex-row items-center gap-4 hover:opacity-75 transition-opacity">
-				<IconEdit class="w-5 h-5" />
-				<p>Apply</p>
-			</a>
-			<a href="/" class="flex flex-row items-center gap-4 hover:opacity-75 transition-opacity">
-				<IconCalendar class="w-5 h-5" />
-				<p>Schedule</p>
-			</a>
-			<a href="/" class="flex flex-row items-center gap-4 hover:opacity-75 transition-opacity">
-				<IconUserQuestion class="w-5 h-5" />
-				<p>FAQ</p>
-			</a>
-			<a href="/" class="flex flex-row items-center gap-4 hover:opacity-75 transition-opacity">
-				<IconTrophy class="w-5 h-5" />
-				<p>Prizes</p>
-			</a>
-			<span class="flex flex-row items-center gap-4 hover:opacity-75 transition-opacity">
-				<IconCategory class="w-5 h-5" />
-				<p>Resources</p>
-			</span>
-			<div class="flex flex-col gap-4 ml-2 font-light text-sm border-l border-[#626262] pl-4 py-1">
-				<a href="/" class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
-					<IconNotebook class="w-5 h-5" />
-					<p>Hacker Guide</p>
-				</a>
-				<a
-					href="https://discord.gg/VZyKP4JcC3"
-					class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
-				>
-					<IconBrandDiscord class="w-5 h-5" />
-					<p>Discord</p>
-				</a>
-				<a href="/" class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
-					<IconBrandSpotify class="w-5 h-5" />
-					<p>Spotify Queue</p>
-				</a>
-				<a href="/" class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity">
-					<IconScale class="w-5 h-5" />
-					<p>Devpost</p>
-				</a>
-				<a
-					href="https://helpr.tamuhack.org"
-					class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
-				>
-					<IconHelp class="w-5 h-5" />
-					<p>HelpR</p>
-				</a>
-				<a
-					href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf?_gl=1*19bpx84*_ga*NDgxNjY1Mzk0LjE3MDIxODA5Njk.*_ga_E5KT6TC4TK*MTcwMjcwNzc3NC40LjAuMTcwMjcwNzc3NC4wLjAuMA.."
-					class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
-				>
-					<IconLicense class="w-5 h-5" />
-					<p>Code of Conduct</p>
-				</a>
-			</div>
-		</div>
-	</div>
-	<div
 		in:fly={{
 			duration: 500,
 			x: 0,
@@ -104,12 +38,76 @@
 		}}
 		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50 pointer-events-none"
 	>
-		<button
-			class="hidden sm:hidden justify-center rounded-xl bg-black bg-opacity-70 backdrop-blur-sm p-4 text-white z-50 pointer-events-auto"
-			on:click={() => (open = !open)}
-		>
-			<IconMenu2 class="w-5 h-5" />
-		</button>
+		<!-- MOBILE -->
+		<div class="flex flex-col sm:hidden justify-center z-50 pointer-events-auto">
+			<div
+				class:active
+				class="flex flex-col items-center justify-center gap-[6px] bg-black bg-opacity-70 backdrop-blur-sm rounded-t-xl expand-container px-[6px]"
+			>
+				<div
+					class="flex flex-col justify-center items-center mt-[6px] bg-[#2b2b2b] bg-opacity-70 px-6 backdrop-blur-sm rounded-lg w-full h-full text-white text-sm text-left gap-8"
+				>
+					<div
+						class:opacity-100={open}
+						class:opacity-0={!open}
+						class="flex flex-col gap-4 transition-opacity duration-150 justify-between"
+					>
+						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
+							<IconNotebook class="w-5 h-5" />
+							<p>Hacker Guide</p>
+						</a>
+						<a
+							href="https://discord.gg/VZyKP4JcC3"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
+							<IconBrandDiscord class="w-5 h-5" />
+							<p>Discord</p>
+						</a>
+						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
+							<IconBrandSpotify class="w-5 h-5" />
+							<p>Spotify Queue</p>
+						</a>
+						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
+							<IconScale class="w-5 h-5" />
+							<p>Devpost</p>
+						</a>
+						<a
+							href="https://helpr.tamuhack.org"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
+							<IconHelp class="w-5 h-5" />
+							<p>HelpR</p>
+						</a>
+						<a
+							href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf?_gl=1*19bpx84*_ga*NDgxNjY1Mzk0LjE3MDIxODA5Njk.*_ga_E5KT6TC4TK*MTcwMjcwNzc3NC40LjAuMTcwMjcwNzc3NC4wLjAuMA.."
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
+							<IconLicense class="w-5 h-5" />
+							<p>Code of Conduct</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div
+				class:rounded-t-xl={!open}
+				class:transition-all={!open}
+				class:delay-[200ms]={!open}
+				class="flex items-center gap-4 rounded-b-xl bg-black bg-opacity-70 backdrop-blur-sm p-4 text-white"
+			>
+				<button on:click={() => (open = !open)} class="p-1 bg-white rounded-sm text-black">
+					<IconCategory class="w-5 h-5" />
+				</button>
+				<a href="#schedule">
+					<IconCalendar class="w-5 h-5" />
+				</a>
+				<IconUserQuestion class="w-5 h-5 opacity-50" />
+				<IconTrophy class="w-5 h-5 opacity-50" />
+				<a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer">
+					<IconEdit class="w-5 h-5" />
+				</a>
+			</div>
+		</div>
+		<!-- DESKTOP -->
 		<div class="hidden sm:flex flex-col justify-center w-max pointer-events-auto">
 			<div
 				class:active
@@ -204,6 +202,12 @@
 
 	.expand-container.active {
 		height: 140px;
+	}
+
+	@media (max-width: 640px) {
+		.expand-container.active {
+			height: 250px;
+		}
 	}
 
 	.arrow-close {
