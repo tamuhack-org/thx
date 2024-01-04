@@ -4,3 +4,4 @@ import { writable } from 'svelte/store';
 export const animationDone = writable(false);
 
 export const screenWidth = writable(0);
+export const sectionInView = writable('');
