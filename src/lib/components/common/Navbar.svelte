@@ -180,7 +180,7 @@
 						</span>
 					</button>
 					<div class="flex p-[6px] gap-[6px] ml-[6px] bg-[#2b2b2b] rounded-lg scroll-smooth">
-						<NavButton text="Schedule" />
+						<NavButton text="Schedule" link="#schedule" />
 						<NavButton text="FAQ" />
 						<NavButton text="Prizes" />
 						<CTANavButton text="Apply" link="https://register.tamuhack.com/" />
