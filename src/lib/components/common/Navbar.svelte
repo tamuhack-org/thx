@@ -17,6 +17,7 @@
 		IconTrophy,
 		IconCategory
 	} from '@tabler/icons-svelte';
+	import { sectionInView } from '$lib/stores';
 
 	let loaded = false;
 	let open = false;
@@ -180,9 +181,9 @@
 						</span>
 					</button>
 					<div class="flex p-[6px] gap-[6px] ml-[6px] bg-[#2b2b2b] rounded-lg scroll-smooth">
-						<NavButton text="Schedule" link="#schedule" />
-						<NavButton text="FAQ" />
-						<NavButton text="Prizes" />
+						<NavButton text="Schedule" link="#schedule" inView={$sectionInView} />
+						<NavButton text="FAQ" inView={$sectionInView} />
+						<NavButton text="Prizes" inView={$sectionInView} />
 						<CTANavButton text="Apply" link="https://register.tamuhack.com/" />
 					</div>
 				</div>
