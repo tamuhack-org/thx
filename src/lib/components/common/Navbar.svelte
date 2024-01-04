@@ -41,7 +41,10 @@
 				<IconEdit class="w-5 h-5" />
 				<p>Apply</p>
 			</a>
-			<a href="/" class="flex flex-row items-center gap-4 hover:opacity-75 transition-opacity">
+			<a
+				href="#schedule"
+				class="flex flex-row items-center gap-4 hover:opacity-75 transition-opacity"
+			>
 				<IconCalendar class="w-5 h-5" />
 				<p>Schedule</p>
 			</a>
@@ -182,7 +185,7 @@
 						</span>
 					</button>
 					<div class="flex p-[6px] gap-[6px] ml-[6px] bg-[#2b2b2b] rounded-lg scroll-smooth">
-						<NavButton text="Schedule" />
+						<NavButton text="Schedule" link="#schedule" />
 						<NavButton text="FAQ" />
 						<NavButton text="Prizes" />
 						<CTANavButton text="Apply" link="https://register.tamuhack.com/" />
