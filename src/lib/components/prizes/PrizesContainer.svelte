@@ -4,6 +4,8 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import { inview } from 'svelte-inview';
+	import { sectionInView } from '$lib/stores';
 
 	const prizeAssets = [
 		{
@@ -94,13 +96,13 @@
 			end: 'bottom 5%',
 			markers: true,
 			onEnter: () => {
-				gsap.to('main', { background: '#0C0C19', duration: 0.5 });
+				gsap.to(['main', 'body'], { background: '#0C0C19', duration: 0.5 });
 			},
 			onEnterBack: () => {
-				gsap.to('main', { background: '#0C0C19', duration: 0.5 });
+				gsap.to(['main', 'body'], { background: '#0C0C19', duration: 0.5 });
 			},
-			onLeave: () => gsap.to('main', { background: '#FFFFFF', duration: 0.5 }),
-			onLeaveBack: () => gsap.to('main', { background: '#FFFFFF', duration: 0.5 })
+			onLeave: () => gsap.to(['main', 'body'], { background: '#FFFFFF', duration: 0.5 }),
+			onLeaveBack: () => gsap.to(['main', 'body'], { background: '#FFFFFF', duration: 0.5 })
 		});
 
 		const postsSection = document.querySelector('#prize-images')!;
@@ -119,7 +121,23 @@
 	});
 </script>
 
-<div id="prizes" class="pt-[calc(100dvh_/_2)]">
+<div
+	id="prizes"
+	class="pt-[calc(100dvh_/_2)]"
+	use:inview
+	on:inview_enter={(event) => {
+		const { inView } = event.detail;
+		if (inView) $sectionInView = 'Prizes';
+	}}
+	on:inview_leave={(event) => {
+		const { scrollDirection } = event.detail;
+		if (scrollDirection.vertical === 'down') {
+			$sectionInView = 'Schedule';
+		} else {
+			$sectionInView = '';
+		}
+	}}
+>
 	<div class="relative">
 		<div id="prize-images" class="absolute top-32 left-0 w-full h-[1000px]">
 			{#each prizeAssets as prize}

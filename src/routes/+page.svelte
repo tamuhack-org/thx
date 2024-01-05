@@ -197,9 +197,17 @@
 		</div>
 		<div
 			use:inview
-			on:inview_change={(event) => {
+			on:inview_enter={(event) => {
 				const { inView } = event.detail;
-				$sectionInView = inView ? 'Schedule' : '';
+				if (inView) $sectionInView = 'Schedule';
+			}}
+			on:inview_leave={(event) => {
+				const { inView, scrollDirection } = event.detail;
+				if (scrollDirection.vertical === 'down') {
+					$sectionInView = '';
+				} else {
+					$sectionInView = 'Prizes';
+				}
 			}}
 			id="schedule"
 			class="mt-16"
