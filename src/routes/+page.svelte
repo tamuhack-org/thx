@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Title from '$lib/components/landing/Title.svelte';
 	import PhysicsContainer from '$lib/components/landing/PhysicsContainer.svelte';
-	import Navbar from '$lib/components/common/Navbar.svelte';
+	import Navbar from '$lib/components/navbar/Navbar.svelte';
 	import Marquee from '$lib/components/marquee/Marquee.svelte';
-	import TopNavbar from '$lib/components/common/TopNavbar.svelte';
+	import TopNavbar from '$lib/components/navbar/TopNavbar.svelte';
 	import Eyes from '$lib/components/about/Eyes.svelte';
 	import PrizesAmount from '$lib/components/about/PrizesAmount.svelte';
 	import Phone from '$lib/components/about/Phone.svelte';
@@ -19,6 +19,8 @@
 	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
 	import Schedule from '$lib/components/schedule/Schedule.svelte';
 	import PrizesContainer from '$lib/components/prizes/PrizesContainer.svelte';
+	import { inview } from 'svelte-inview';
+	import { sectionInView } from '$lib/stores';
 
 	function startLoader() {
 		let counterElement = document.querySelector('.count p') as HTMLElement;
@@ -193,7 +195,15 @@
 		<div class="hidden md:flex h-[300px] overflow-x-hidden">
 			<Tiger />
 		</div>
-		<div class="mt-16">
+		<div
+			use:inview
+			on:inview_change={(event) => {
+				const { inView } = event.detail;
+				$sectionInView = inView ? 'Schedule' : '';
+			}}
+			id="schedule"
+			class="mt-16"
+		>
 			<Schedule />
 		</div>
 		{#if $scheduleLoaded}
