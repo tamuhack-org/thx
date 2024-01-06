@@ -41,7 +41,7 @@
 		property="og:description"
 		content="[January 27th, 2024] - At TAMUhack, teams spend the weekend working on innovative software and hardware solutions to real-world problems in a community full of mentorship."
 	/>
-	<meta property="og:image" content="%sveltekit.assets%/meta.png" />
+	<meta property="og:image" content="<%= require('/assets/meta.png') %>" />
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -52,7 +52,7 @@
 		name="twitter:description"
 		content="[January 27th, 2024] - At TAMUhack, teams spend the weekend working on innovative software and hardware solutions to real-world problems in a community full of mentorship."
 	/>
-	<meta name="twitter:image" content="%sveltekit.assets%/meta.png" />
+	<meta name="twitter:image" content="<%= require('/assets/meta.png') %>" />
 	<title>TAMUhack X</title>
 </svelte:head>
 
