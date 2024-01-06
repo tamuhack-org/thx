@@ -32,6 +32,27 @@
 		name="keywords"
 		content="[January 27th, 2024] - At TAMUhack, teams spend the weekend working on innovative software and hardware solutions to real-world problems in a community full of mentorship."
 	/>
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url" content="https://x.tamuhack.org" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="TAMUhack X" />
+	<meta
+		property="og:description"
+		content="[January 27th, 2024] - At TAMUhack, teams spend the weekend working on innovative software and hardware solutions to real-world problems in a community full of mentorship."
+	/>
+	<meta property="og:image" content="%sveltekit.assets%/meta.png" />
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="twitter:domain" content="x.tamuhack.org" />
+	<meta property="twitter:url" content="https://x.tamuhack.org" />
+	<meta name="twitter:title" content="TAMUhack X" />
+	<meta
+		name="twitter:description"
+		content="[January 27th, 2024] - At TAMUhack, teams spend the weekend working on innovative software and hardware solutions to real-world problems in a community full of mentorship."
+	/>
+	<meta name="twitter:image" content="%sveltekit.assets%/meta.png" />
 	<title>TAMUhack X</title>
 </svelte:head>
 
