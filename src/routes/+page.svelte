@@ -92,8 +92,6 @@
 	>
 	<TopNavbar />
 
-	<img class="hidden" src="/assets/meta.png" alt="meta" />
-
 	<div class="mb-2">
 		<Title />
 		<PhysicsContainer />
