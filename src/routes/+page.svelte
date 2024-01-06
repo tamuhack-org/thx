@@ -43,7 +43,7 @@
 	/>
 	<meta
 		property="og:image"
-		content="https://opengraph.b-cdn.net/production/documents/5f99480e-e5d8-442d-a0ca-1d3a87d34fa3.png?token=u1JcrMZyvAnDp8mdCFL9ieksFIiKV7jP-jdhSR_jsuA&height=630&width=1200&expires=33240556258"
+		content="https://opengraph.b-cdn.net/production/documents/9bedb1b9-4c30-4ed5-901e-d7dca7365da7.png?token=MiAKlztSFMNTTwUrn3xz2SUwthNUAl-WnF0nH7DOGBE&height=630&width=1200&expires=33240558356"
 	/>
 
 	<!-- Twitter Meta Tags -->
@@ -57,7 +57,7 @@
 	/>
 	<meta
 		name="twitter:image"
-		content="https://opengraph.b-cdn.net/production/documents/5f99480e-e5d8-442d-a0ca-1d3a87d34fa3.png?token=u1JcrMZyvAnDp8mdCFL9ieksFIiKV7jP-jdhSR_jsuA&height=630&width=1200&expires=33240556258"
+		content="https://opengraph.b-cdn.net/production/documents/9bedb1b9-4c30-4ed5-901e-d7dca7365da7.png?token=MiAKlztSFMNTTwUrn3xz2SUwthNUAl-WnF0nH7DOGBE&height=630&width=1200&expires=33240558356"
 	/>
 	<title>TAMUhack X</title>
 </svelte:head>
