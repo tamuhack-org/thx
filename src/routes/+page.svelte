@@ -41,7 +41,10 @@
 		property="og:description"
 		content="[January 27th, 2024] - At TAMUhack, teams spend the weekend working on innovative software and hardware solutions to real-world problems in a community full of mentorship."
 	/>
-	<meta property="og:image" content="https://x.tamuhack.org/assets/meta.png" />
+	<meta
+		property="og:image"
+		content="https://opengraph.b-cdn.net/production/documents/9bedb1b9-4c30-4ed5-901e-d7dca7365da7.png?token=MiAKlztSFMNTTwUrn3xz2SUwthNUAl-WnF0nH7DOGBE&height=630&width=1200&expires=33240558356"
+	/>
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -52,7 +55,10 @@
 		name="twitter:description"
 		content="[January 27th, 2024] - At TAMUhack, teams spend the weekend working on innovative software and hardware solutions to real-world problems in a community full of mentorship."
 	/>
-	<meta name="twitter:image" content="https://x.tamuhack.org/assets/meta.png" />
+	<meta
+		name="twitter:image"
+		content="https://opengraph.b-cdn.net/production/documents/9bedb1b9-4c30-4ed5-901e-d7dca7365da7.png?token=MiAKlztSFMNTTwUrn3xz2SUwthNUAl-WnF0nH7DOGBE&height=630&width=1200&expires=33240558356"
+	/>
 	<title>TAMUhack X</title>
 </svelte:head>
 
