@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { screenHeight, screenWidth } from '$lib/stores';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
@@ -19,7 +18,7 @@
 					start: 'top 45%',
 					end: '+=1000',
 					scrub: true,
-					markers: true
+					markers: false
 				}
 			})
 			.to(num, {
@@ -36,14 +35,6 @@
 	});
 </script>
 
-<!-- <div class="scroll-smooth-effects">
-	<div class="box">
-		<div class="scroll-smooth-effects__wrapper">
-			<div class="scroll-smooth-effects__container h-dscreen"></div>
-		</div>
-	</div>
-</div> -->
-
 <div
 	id="transition-container"
 	class="relative flex flex-col items-center justify-start text-white font-bold gap-4 h-full w-full"
@@ -53,8 +44,3 @@
 	</h1>
 	<h2 class="text-2xl md:text-4xl">in prizes!</h2>
 </div>
-
-<style>
-	img {
-	}
-</style>
