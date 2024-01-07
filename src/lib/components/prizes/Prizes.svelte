@@ -13,8 +13,10 @@
 	}}
 	class="flex flex-col min-h-[4000px] text-white container mt-64 w-full"
 >
-	<div class="flex gap-4 w-full">
-		<div class="flex flex-col justify-between items-center w-1/3">
+	<div class="grid grid-cols-6 gap-4 w-full">
+		<div
+			class="flex flex-col justify-between items-center col-span-6 w-full md:w-2/3 lg:col-span-2 lg:w-full mx-auto"
+		>
 			<div class="relative green-gradient w-full h-[250px] rounded-t-md">
 				{#if isInView}
 					<img
@@ -23,7 +25,7 @@
 							delay: 1000,
 							easing: quintInOut
 						}}
-						class="rotate-[20deg] scale-125 xl:-translate-y-24"
+						class="rotate-[20deg] sm:-translate-y-32 lg:-translate-y-0 xl:-translate-y-24"
 						alt="Scooter Graphic"
 						src="/assets/prizes/svgs/scooter-sparkle.svg"
 					/>
@@ -37,8 +39,10 @@
 				<p class="text-xl font-poppins copy-on-dark">Prize: Electric Scooter</p>
 			</div>
 		</div>
-		<div class="flex flex-col justify-between items-center w-1/3">
-			<div class="relative blue-gradient w-full h-[250px] rounded-t-md">
+		<div class="flex flex-col justify-between items-center col-span-6 md:col-span-3 lg:col-span-2">
+			<div
+				class="relative blue-gradient w-full h-[250px] rounded-t-md overflow-hidden md:overflow-visible"
+			>
 				{#if isInView}
 					<img
 						in:scale={{
@@ -46,7 +50,7 @@
 							delay: 1100,
 							easing: quintInOut
 						}}
-						class="rotate-[20deg] xl:-translate-y-24"
+						class="rotate-[20deg] sm:w-1/2 mx-auto md:w-full scale-75 sm:-translate-y-8 md:-tranlate-y-12 lg:-translate-y-0 xl:-translate-y-24"
 						alt="iPad Graphic"
 						src="/assets/prizes/svgs/ipad-sparkle.svg"
 					/>
@@ -60,8 +64,10 @@
 				<p class="text-xl font-light font-poppins copy-on-dark">Prize: iPad 10th Gen</p>
 			</div>
 		</div>
-		<div class="flex flex-col justify-between items-center w-1/3">
-			<div class="relative pink-gradient w-full h-[250px] rounded-t-md">
+		<div class="flex flex-col justify-between items-center col-span-6 md:col-span-3 lg:col-span-2">
+			<div
+				class="relative pink-gradient w-full h-[250px] rounded-t-md overflow-hidden md:overflow-visible"
+			>
 				{#if isInView}
 					<img
 						in:scale={{
@@ -69,7 +75,7 @@
 							delay: 1200,
 							easing: quintInOut
 						}}
-						class="rotate-[20deg] xl:-translate-y-24 bg-none"
+						class="rotate-[20deg] sm:w-1/2 mx-auto md:w-full scale-75 md:-translate-y-12 lg:-translate-y-0 xl:-translate-y-24 bg-transparent"
 						alt="Headphones Graphic"
 						src="/assets/prizes/headphones-sparkle.png"
 					/>
