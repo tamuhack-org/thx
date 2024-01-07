@@ -69,8 +69,8 @@
 							delay: 1200,
 							easing: quintInOut
 						}}
-						class="rotate-[20deg] xl:-translate-y-24"
-						alt="iPad Graphic"
+						class="rotate-[20deg] xl:-translate-y-24 bg-none"
+						alt="Headphones Graphic"
 						src="/assets/prizes/headphones-sparkle.png"
 					/>
 				{/if}

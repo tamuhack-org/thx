@@ -40,7 +40,9 @@
 		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50 pointer-events-none"
 	>
 		<!-- MOBILE -->
-		<div class="flex flex-col sm:hidden justify-center z-50 pointer-events-auto">
+		<div
+			class="flex flex-col sm:hidden justify-center z-50 pointer-events-auto border border-opacity-25 rounded-xl overflow-hidden"
+		>
 			<div
 				class:active
 				class="flex flex-col items-center justify-center gap-[6px] bg-black bg-opacity-70 backdrop-blur-sm rounded-t-xl expand-container px-[6px]"
@@ -136,7 +138,9 @@
 			</div>
 		</div>
 		<!-- DESKTOP -->
-		<div class="hidden sm:flex flex-col justify-center w-max pointer-events-auto">
+		<div
+			class="hidden sm:flex flex-col justify-center w-max pointer-events-auto border border-white border-opacity-25 rounded-xl overflow-hidden"
+		>
 			<div
 				class:active
 				class="flex flex-col items-center justify-center gap-[6px] bg-black bg-opacity-70 backdrop-blur-sm rounded-t-xl expand-container px-[6px]"
