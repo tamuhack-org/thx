@@ -143,7 +143,7 @@
 			{#each prizeAssets as prize}
 				<img
 					src={`/assets/prizes/svgs/${prize.file}`}
-					alt="prize"
+					alt=""
 					class={`absolute opacity-75 -translate-x-1/2 -translate-y-1/2 w-[80px] ${prize.width} ${prize.topPosition} ${prize.leftPosition}`}
 					data-speed={`${prize.speed}`}
 				/>
