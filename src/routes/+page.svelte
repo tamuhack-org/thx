@@ -133,7 +133,7 @@
 </div> -->
 
 <Marquee />
-<main id="all" class="h-full w-full font-poppins max-w-[2000px] mx-auto">
+<main id="all" class="h-full w-full font-poppins max-w-[2000px] mx-auto bg-transparent">
 	<a
 		id="mlh-trust-badge"
 		style="display:block;max-width:100px;min-width:60px;position:absolute;right:20px;top:40px;width:10%;z-index:40"
