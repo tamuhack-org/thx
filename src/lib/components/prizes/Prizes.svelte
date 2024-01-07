@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { scale } from 'svelte/transition';
 	import { inview } from 'svelte-inview';
+	import { quintInOut } from 'svelte/easing';
 
 	let isInView: boolean;
 </script>
@@ -18,8 +19,9 @@
 				{#if isInView}
 					<img
 						in:scale={{
-							duration: 250,
-							delay: 500
+							duration: 750,
+							delay: 1000,
+							easing: quintInOut
 						}}
 						class="rotate-[20deg] scale-125 xl:-translate-y-24"
 						alt="Scooter Graphic"
@@ -40,8 +42,9 @@
 				{#if isInView}
 					<img
 						in:scale={{
-							duration: 250,
-							delay: 600
+							duration: 750,
+							delay: 1100,
+							easing: quintInOut
 						}}
 						class="rotate-[20deg] xl:-translate-y-24"
 						alt="iPad Graphic"
@@ -62,8 +65,9 @@
 				{#if isInView}
 					<img
 						in:scale={{
-							duration: 250,
-							delay: 700
+							duration: 750,
+							delay: 1200,
+							easing: quintInOut
 						}}
 						class="rotate-[20deg] xl:-translate-y-24"
 						alt="iPad Graphic"
@@ -96,7 +100,7 @@
 	}
 
 	.blue-gradient {
-		background: linear-gradient(180deg, #d8f9e9 0.09%, #fff 151.34%);
+		background: #a7ccff;
 	}
 
 	.pink-gradient {
