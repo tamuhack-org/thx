@@ -43,7 +43,7 @@
 					<img
 						in:scale={{
 							duration: 750,
-							delay: 1000,
+							delay: 500,
 							easing: quintInOut
 						}}
 						class="rotate-[20deg] scale-75 md:scale-100 sm:-translate-y-32 lg:-translate-y-0 xl:-translate-y-24"
@@ -70,7 +70,7 @@
 					<img
 						in:scale={{
 							duration: 750,
-							delay: 1100,
+							delay: 600,
 							easing: quintInOut
 						}}
 						class="rotate-[20deg] sm:w-1/2 mx-auto md:w-full scale-75 -translate-y-8 md:-tranlate-y-12 lg:-translate-y-0 xl:-translate-y-24"
@@ -97,7 +97,7 @@
 					<img
 						in:scale={{
 							duration: 750,
-							delay: 1200,
+							delay: 700,
 							easing: quintInOut
 						}}
 						class="rotate-[20deg] sm:w-1/2 mx-auto md:w-full scale-75 -translate-y-12 sm:-translate-y-12 lg:-translate-y-0 xl:-translate-y-24 bg-transparent"

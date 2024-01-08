@@ -209,8 +209,8 @@
 </div>
 
 <div class="bottom-0">
-	<div class="h-[3px] mx-8 bg-dark rounded-xl bg-opacity-5"></div>
-	<p class="mx-8 py-3 text-sm text-dark font-light">
+	<div class="h-[3px] mx-8 bg-white blender rounded-xl bg-opacity-5"></div>
+	<p class="mx-8 py-3 text-sm text-white blender font-light">
 		Interested in sponsoring? Reach out to us at <a
 			class="underline"
 			href="mailto:sponsor@tamuhack.com">sponsor@tamuhack.com</a
