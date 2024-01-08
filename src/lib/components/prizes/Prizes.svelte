@@ -20,7 +20,7 @@
 		{
 			title: 'Best Beginner Hack',
 			desc: 'Best hack created by first-time hackers at TAMUhack. (Must have at least 2 first-timers to qualify)',
-			prize: 'Mini-Projecter'
+			prize: 'Mini-Projector'
 		}
 	];
 </script>
