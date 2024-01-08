@@ -96,13 +96,13 @@
 			end: 'bottom 5%',
 			markers: false,
 			onEnter: () => {
-				gsap.to(['main', 'body'], { background: '#0C0C19', duration: 0.5 });
+				gsap.to('body', { background: '#0C0C19', duration: 0.2 });
 			},
 			onEnterBack: () => {
-				gsap.to(['main', 'body'], { background: '#0C0C19', duration: 0.5 });
+				gsap.to('body', { background: '#0C0C19', duration: 0.2 });
 			},
-			onLeave: () => gsap.to(['main', 'body'], { background: '#FFFFFF', duration: 0.5 }),
-			onLeaveBack: () => gsap.to(['main', 'body'], { background: '#FFFFFF', duration: 0.5 })
+			onLeave: () => gsap.to('body', { background: '#FFFFFF', duration: 0.2 }),
+			onLeaveBack: () => gsap.to('body', { background: '#FFFFFF', duration: 0.2 })
 		});
 
 		const postsSection = document.querySelector('#prize-images')!;
