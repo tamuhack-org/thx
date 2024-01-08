@@ -199,7 +199,9 @@
 			use:inview
 			on:inview_enter={(event) => {
 				const { inView } = event.detail;
-				if (inView) $sectionInView = 'Schedule';
+				if (inView) {
+					$sectionInView = 'Schedule';
+				}
 			}}
 			on:inview_leave={(event) => {
 				const { inView, scrollDirection } = event.detail;

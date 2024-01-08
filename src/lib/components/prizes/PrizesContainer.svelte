@@ -50,13 +50,13 @@
 			topPosition: 'top-[90%]',
 			leftPosition: 'left-[25%]'
 		},
-		// {
-		// 	file: 'polaroid.svg',
-		// 	speed: '0.4',
-		// 	width: 'sm:w-[125px]',
-		// 	topPosition: 'top-[45%]',
-		// 	leftPosition: 'left-[10%]'
-		// },
+		{
+			file: 'polaroid.svg',
+			speed: '0.4',
+			width: 'sm:w-[125px]',
+			topPosition: 'top-[45%]',
+			leftPosition: 'left-[10%]'
+		},
 		{
 			file: 'raspberry-pi.svg',
 			speed: '0.2',
@@ -132,7 +132,10 @@
 	on:inview_leave={(event) => {
 		const { scrollDirection } = event.detail;
 		if (scrollDirection.vertical === 'down') {
-			$sectionInView = 'Schedule';
+			// if statement to fix bug that causes sectionInView to be Schedule when first loading page
+			if (window.scrollY !== 0) {
+				$sectionInView = 'Schedule';
+			}
 		} else {
 			$sectionInView = '';
 		}
