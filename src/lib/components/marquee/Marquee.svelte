@@ -2,7 +2,7 @@
 	import Marquee from 'svelte-fast-marquee';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import { screenWidth } from '$lib/stores';
+	import { animationDone, screenWidth } from '$lib/stores';
 
 	let childWidth: number;
 	let loaded = false;
@@ -13,7 +13,7 @@
 	});
 </script>
 
-{#if loaded}
+{#if $animationDone}
 	<a
 		href="https://register.tamuhack.com/"
 		rel="noopener noreferrer"
@@ -23,7 +23,8 @@
 			duration: 500,
 			x: 0,
 			y: -200,
-			opacity: 1
+			opacity: 1,
+			delay: $screenWidth > 768 ? 2250 : 1250
 		}}
 	>
 		<Marquee class="py-2 bg-dark text-white font-semibold" speed={30}>

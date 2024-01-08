@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Matter from 'matter-js';
+	import { gsap } from 'gsap';
 	import { screenWidth } from '$lib/stores';
-	let visibleWalls = false;
 
-	let screenHeight: number;
+	let visibleWalls = false;
 
 	const renderEngine = () => {
 		var Engine = Matter.Engine,
@@ -197,15 +197,24 @@
 		if ($screenWidth > 768) {
 			renderEngine();
 		}
+
+		gsap.from('#physics-container', {
+			y: '25%',
+			opacity: 0,
+			duration: 1,
+			ease: 'power4.out',
+			delay: $screenWidth > 768 ? 6 : 5,
+			onComplete: () => {
+				document.querySelector('body')!.style.overflow = 'auto';
+			}
+		});
 	});
 </script>
-
-<svelte:window bind:innerHeight={screenHeight} />
 
 <div class="flex justify-center w-full px-8 pb-8 max-h-[500px]">
 	<div
 		id="physics-container"
-		class="w-full max-w-[2000px] min-h-[300px] xl:min-h-[400px] 2xl:min-h-[500px] h-full rounded-xl border-blue-200 overflow-hidden border-[2px]"
+		class="w-full max-w-[2000px] min-h-[300px] xl:min-h-[400px] 2xl:min-h-[500px] h-full rounded-xl border-blue-200 overflow-hidden border-[2px] inline-block"
 	/>
 </div>
 

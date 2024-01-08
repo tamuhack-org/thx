@@ -54,7 +54,6 @@
 	$: tigerStyle = `transform: translateY(50%) translateX(${-translateX}px);`;
 </script>
 
-
 <video muted id="tiger" style={tigerStyle}>
 	<source src="/assets/tiger.webm" type="video/webm" />
 </video>

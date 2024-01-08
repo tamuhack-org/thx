@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import CTANavButton from './CTANavButton.svelte';
 	import NavButton from './NavButton.svelte';
 	import { onMount } from 'svelte';
@@ -17,6 +17,7 @@
 		IconTrophy,
 		IconCategory
 	} from '@tabler/icons-svelte';
+	import { animationDone } from '$lib/stores';
 	import { sectionInView } from '$lib/stores';
 
 	let loaded = false;
@@ -28,14 +29,14 @@
 	});
 </script>
 
-{#if loaded}
+{#if $animationDone}
 	<div
 		in:fly={{
 			duration: 500,
 			x: 0,
 			y: 200,
 			opacity: 1,
-			delay: 500
+			delay: 3000
 		}}
 		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50 pointer-events-none"
 	>
