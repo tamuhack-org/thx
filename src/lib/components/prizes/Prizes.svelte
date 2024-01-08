@@ -73,9 +73,9 @@
 							delay: 600,
 							easing: quintInOut
 						}}
-						class="rotate-[20deg] sm:w-1/2 mx-auto md:w-full scale-75 -translate-y-8 md:-tranlate-y-12 lg:-translate-y-0 xl:-translate-y-24"
+						class="sm:w-1/2 mx-auto md:w-full scale-[0.8] -translate-y-8 md:-tranlate-y-12 lg:-translate-y-0 xl:-translate-y-12"
 						alt="iPad Graphic"
-						src="/assets/prizes/svgs/ipad-sparkle.svg"
+						src="/assets/prizes/monitor.png"
 					/>
 				{/if}
 			</div>
@@ -86,7 +86,7 @@
 						2nd place overall prize.
 					</p>
 				</div>
-				<p class="text-xl font-light font-poppins copy-on-dark">Prize: iPad 10th Gen</p>
+				<p class="text-xl font-light font-poppins copy-on-dark">Prize: 165Hz Monitor</p>
 			</div>
 		</div>
 		<div class="flex flex-col justify-between items-center col-span-6 md:col-span-3 lg:col-span-2">
@@ -151,7 +151,7 @@
 	}
 
 	.blue-gradient {
-		background: #a7ccff;
+		background: #cabcff;
 	}
 
 	.pink-gradient {
