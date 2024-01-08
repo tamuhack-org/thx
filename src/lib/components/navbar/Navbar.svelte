@@ -41,7 +41,9 @@
 		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50 pointer-events-none"
 	>
 		<!-- MOBILE -->
-		<div class="flex flex-col sm:hidden justify-center z-50 pointer-events-auto">
+		<div
+			class="flex flex-col sm:hidden justify-center z-50 pointer-events-auto border border-opacity-25 rounded-xl overflow-hidden"
+		>
 			<div
 				class:active
 				class="flex flex-col items-center justify-center gap-[6px] bg-black bg-opacity-70 backdrop-blur-sm rounded-t-xl expand-container px-[6px]"
@@ -113,10 +115,10 @@
 				<a
 					href="#under-construction"
 					class={`p-1 border ${
-						false ? 'border-gray-400' : 'border-transparent'
+						$sectionInView === 'Prizes' ? 'border-gray-400' : 'border-transparent'
 					} rounded-sm transition-all`}
 				>
-					<IconUserQuestion class="w-5 h-5" />
+					<IconTrophy class="w-5 h-5" />
 				</a>
 				<a
 					href="#under-construction"
@@ -124,20 +126,22 @@
 						false ? 'border-gray-400' : 'border-transparent'
 					} rounded-sm transition-all`}
 				>
-					<IconTrophy class="w-5 h-5" />
+					<IconUserQuestion class="w-5 h-5" />
 				</a>
-				<a
-					href="https://register.tamuhack.com/"
-					target="_blank"
-					rel="noopener noreferrer"
+				<button
+					on:click={() => {
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+					}}
 					class="p-1 border border-transparent rounded-sm"
 				>
 					<IconEdit class="w-5 h-5" />
-				</a>
+				</button>
 			</div>
 		</div>
 		<!-- DESKTOP -->
-		<div class="hidden sm:flex flex-col justify-center w-max pointer-events-auto">
+		<div
+			class="hidden sm:flex flex-col justify-center w-max pointer-events-auto border border-white border-opacity-25 rounded-xl overflow-hidden"
+		>
 			<div
 				class:active
 				class="flex flex-col items-center justify-center gap-[6px] bg-black bg-opacity-70 backdrop-blur-sm rounded-t-xl expand-container px-[6px]"
@@ -210,8 +214,8 @@
 					</button>
 					<div class="flex p-[6px] gap-[6px] ml-[6px] bg-[#2b2b2b] rounded-lg scroll-smooth">
 						<NavButton text="Schedule" link="#schedule" />
-						<NavButton text="FAQ" />
 						<NavButton text="Prizes" />
+						<NavButton text="FAQ" />
 						<CTANavButton text="Apply" link="https://register.tamuhack.com/" />
 					</div>
 				</div>

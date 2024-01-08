@@ -5,7 +5,7 @@
 	import Marquee from '$lib/components/marquee/Marquee.svelte';
 	import TopNavbar from '$lib/components/navbar/TopNavbar.svelte';
 	import Eyes from '$lib/components/about/Eyes.svelte';
-	import Prizes from '$lib/components/about/Prizes.svelte';
+	import PrizesAmount from '$lib/components/about/PrizesAmount.svelte';
 	import Phone from '$lib/components/about/Phone.svelte';
 	import Construction from '$lib/components/common/Construction.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
@@ -13,17 +13,17 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import anime from 'animejs';
-	import { animationDone, screenWidth } from '$lib/stores';
+	import { animationDone, screenWidth, screenHeight, scheduleLoaded } from '$lib/stores';
 	import { fly } from 'svelte/transition';
 	import Tiger from '$lib/components/common/Tiger.svelte';
+	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
 	import Schedule from '$lib/components/schedule/Schedule.svelte';
+	import PrizesContainer from '$lib/components/prizes/PrizesContainer.svelte';
 	import { inview } from 'svelte-inview';
 	import { sectionInView } from '$lib/stores';
 
-	let screenHeight: number;
-
 	function startLoader() {
-		let counterElement = document.querySelector('.count p');
+		let counterElement = document.querySelector('.count p') as HTMLElement;
 		let currentValue = 0;
 
 		function updateCounter() {
@@ -109,7 +109,7 @@
 	});
 </script>
 
-<svelte:window bind:innerWidth={$screenWidth} bind:innerHeight={screenHeight} />
+<svelte:window bind:innerWidth={$screenWidth} bind:innerHeight={$screenHeight} />
 
 <svelte:head>
 	<meta charset="utf-8" />
@@ -165,8 +165,8 @@
 	<div class="loader-2"></div>
 </div>
 
-<Marquee {screenWidth} />
-<div class="h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto">
+<Marquee />
+<main id="all" class="h-full w-full font-poppins max-w-[2000px] mx-auto bg-transparent">
 	{#if $animationDone}
 		<a
 			id="mlh-trust-badge"
@@ -215,7 +215,7 @@
 				<Eyes />
 			</div>
 			<div class="relative h-full col-span-2 min-h-[200px] rounded-xl bg-dark max-h-[275px]">
-				<Prizes />
+				<PrizesAmount />
 			</div>
 			<div
 				class="relative h-full col-span-2 md:col-span-3 xl:col-span-2 row-span-2 min-h-[200px] rounded-xl bg-pink overflow-hidden max-h-[500px]"
@@ -239,22 +239,35 @@
 		</div>
 		<div
 			use:inview
-			on:inview_change={(event) => {
+			on:inview_enter={(event) => {
 				const { inView } = event.detail;
-				$sectionInView = inView ? 'Schedule' : '';
+				if (inView) {
+					$sectionInView = 'Schedule';
+				}
+			}}
+			on:inview_leave={(event) => {
+				const { inView, scrollDirection } = event.detail;
+				if (scrollDirection.vertical === 'down') {
+					$sectionInView = '';
+				} else {
+					$sectionInView = 'Prizes';
+				}
 			}}
 			id="schedule"
 			class="mt-16"
 		>
 			<Schedule />
 		</div>
+		{#if $scheduleLoaded}
+			<PrizesContainer />
+		{/if}
 		<div id="under-construction" class="my-32">
 			<Construction />
 		</div>
 	</div>
 
 	<Footer />
-</div>
+</main>
 
 <!-- FIXED BOTTOM NAV  -->
 <Navbar />

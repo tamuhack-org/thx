@@ -2,7 +2,7 @@
 	import Messages from './Messages.svelte';
 	import { inview } from 'svelte-inview';
 	import { fly } from 'svelte/transition';
-	import { IconChevronLeft, IconChevronRight, IconInfoCircle } from '@tabler/icons-svelte';
+	import { IconChevronLeft, IconInfoCircle } from '@tabler/icons-svelte';
 
 	let isInView: boolean;
 </script>
