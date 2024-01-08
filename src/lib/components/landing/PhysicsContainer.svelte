@@ -203,10 +203,7 @@
 			opacity: 0,
 			duration: 1,
 			ease: 'power4.out',
-			delay: $screenWidth > 768 ? 6 : 5,
-			onComplete: () => {
-				document.querySelector('body')!.style.overflow = 'auto';
-			}
+			delay: $screenWidth > 768 ? 6 : 5
 		});
 	});
 </script>

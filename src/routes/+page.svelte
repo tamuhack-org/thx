@@ -104,6 +104,7 @@
 			delay: 2.375,
 			onComplete: () => {
 				$animationDone = true;
+				document.querySelector('body')!.style.overflow = 'auto';
 			}
 		});
 	});
