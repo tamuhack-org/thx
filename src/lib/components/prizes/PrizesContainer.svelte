@@ -50,13 +50,13 @@
 			topPosition: 'top-[90%]',
 			leftPosition: 'left-[25%]'
 		},
-		{
-			file: 'polaroid.svg',
-			speed: '0.4',
-			width: 'sm:w-[125px]',
-			topPosition: 'top-[45%]',
-			leftPosition: 'left-[10%]'
-		},
+		// {
+		// 	file: 'polaroid.svg',
+		// 	speed: '0.4',
+		// 	width: 'sm:w-[125px]',
+		// 	topPosition: 'top-[45%]',
+		// 	leftPosition: 'left-[10%]'
+		// },
 		{
 			file: 'raspberry-pi.svg',
 			speed: '0.2',
