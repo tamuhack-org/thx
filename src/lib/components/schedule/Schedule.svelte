@@ -89,7 +89,7 @@
 <p class="text-center font-medium text-[30px] text-dark font-poppins">Next Up</p>
 <div class="mx-auto w-[50px] h-1 bg-dark rounded-full"></div>
 
-<div class="flex justify-center gap-4 mt-4 md:mt-8 overflow-scroll">
+<div class="flex justify-center gap-4 mt-4 md:mt-8 overflow-hidden">
 	<NextUpCard
 		title={events[currentEventIndex - 1]?.event_name || 'Loading'}
 		description={events[currentEventIndex - 1]?.description || ''}

@@ -116,8 +116,7 @@
 							}
 						}
 					});
-
-					Body.setVelocity(body, { x: Common.random(-1, 1), y: Common.random(-1, 1) });
+					Body.setVelocity(body, { x: Math.random() * 2 - 1, y: Math.random() * 2 - 1 });
 					return body;
 				}
 				case 4: {
@@ -133,7 +132,7 @@
 						}
 					});
 
-					Body.setVelocity(body, { x: Common.random(-1, 1), y: Common.random(-1, 1) });
+					Body.setVelocity(body, { x: Math.random() * 2 - 1, y: Math.random() * 2 - 1 });
 					return body;
 				}
 
@@ -148,7 +147,7 @@
 					break;
 				}
 			}
-			let body = Bodies.circle(x + Common.random(100, 120), y, bodySize, {
+			let body = Bodies.circle(x + Math.random() * 20 + 100, y, bodySize, {
 				restitution: 0.4,
 				frictionAir: 0,
 				render: {
@@ -160,7 +159,7 @@
 				}
 			});
 
-			Body.setVelocity(body, { x: Common.random(-1, 1), y: Common.random(-1, 1) });
+			Body.setVelocity(body, { x: Math.random() * 2 - 1, y: Math.random() * 2 - 1 });
 			return body;
 		});
 
