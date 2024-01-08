@@ -73,7 +73,7 @@
 							delay: 100,
 							easing: quintInOut
 						}}
-						class="sm:w-1/2 mx-auto md:w-full scale-[0.8] -translate-y-8 md:-tranlate-y-12 lg:-translate-y-0 xl:-translate-y-12"
+						class="sm:w-1/2 mx-auto md:w-full scale-[0.8] md:-tranlate-y-12 lg:-translate-y-0 xl:-translate-y-12"
 						alt="iPad Graphic"
 						src="/assets/prizes/monitor.png"
 					/>
