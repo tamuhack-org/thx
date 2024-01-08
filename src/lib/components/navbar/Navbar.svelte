@@ -113,7 +113,7 @@
 					<IconCalendar class="w-5 h-5" />
 				</a>
 				<a
-					href="#under-construction"
+					href="#prizes-section"
 					class={`p-1 border ${
 						$sectionInView === 'Prizes' ? 'border-gray-400' : 'border-transparent'
 					} rounded-sm transition-all`}
@@ -214,7 +214,7 @@
 					</button>
 					<div class="flex p-[6px] gap-[6px] ml-[6px] bg-[#2b2b2b] rounded-lg scroll-smooth">
 						<NavButton text="Schedule" link="#schedule" />
-						<NavButton text="Prizes" />
+						<NavButton text="Prizes" link="#prizes-section" />
 						<NavButton text="FAQ" />
 						<CTANavButton text="Apply" link="https://register.tamuhack.com/" />
 					</div>

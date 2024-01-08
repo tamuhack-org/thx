@@ -25,6 +25,7 @@
 	];
 </script>
 
+<div id="prizes-section" />
 <div
 	use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
 	on:change={({ detail }) => {
@@ -32,7 +33,7 @@
 	}}
 	class="flex flex-col text-white mt-64 w-full md:container"
 >
-	<div class="grid grid-cols-6 gap-4 w-full">
+	<div class="grid grid-cols-6 gap-4 w-full" id="prizes">
 		<div
 			class="flex flex-col justify-between items-center col-span-6 w-full md:w-2/3 lg:col-span-2 lg:w-full mx-auto"
 		>
@@ -43,7 +44,6 @@
 					<img
 						in:scale={{
 							duration: 750,
-							delay: 500,
 							easing: quintInOut
 						}}
 						class="rotate-[20deg] scale-75 md:scale-100 sm:-translate-y-32 lg:-translate-y-0 xl:-translate-y-24"
@@ -70,7 +70,7 @@
 					<img
 						in:scale={{
 							duration: 750,
-							delay: 600,
+							delay: 100,
 							easing: quintInOut
 						}}
 						class="sm:w-1/2 mx-auto md:w-full scale-[0.8] -translate-y-8 md:-tranlate-y-12 lg:-translate-y-0 xl:-translate-y-12"
@@ -97,7 +97,7 @@
 					<img
 						in:scale={{
 							duration: 750,
-							delay: 700,
+							delay: 200,
 							easing: quintInOut
 						}}
 						class="rotate-[20deg] sm:w-1/2 mx-auto md:w-full scale-75 -translate-y-12 sm:-translate-y-12 lg:-translate-y-0 xl:-translate-y-24 bg-transparent"
