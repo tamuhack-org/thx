@@ -14,7 +14,7 @@
 
 		let lefteye = document.getElementById('left');
 		let righteye = document.getElementById('right');
-		let container = document.getElementById('bruhamburger');
+		let container = document.getElementById('eyecontainer');
 		let bounds = container?.getBoundingClientRect();
 		let staticPositionX = bounds?.left + window.scrollX;
 		let staticPositionY = bounds?.top + window.scrollY;
@@ -48,7 +48,7 @@
 			isInView = detail.inView;
 		}}
 		id="eyeContainer"
-		class="container"
+		class="eye-container"
 	>
 		{#if isInView}
 			<div
@@ -85,7 +85,7 @@
 		overflow: hidden;
 	}
 
-	.container {
+	.eye-container {
 		width: 100%;
 		display: flex;
 		flex-direction: row;

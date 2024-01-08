@@ -2,8 +2,6 @@
 	import { onMount, afterUpdate } from 'svelte';
 
 	let scrollPosition = 0;
-	let screenHeight = 0;
-	let screenWidth = 0;
 	let tigerPosY = 0;
 	let isScrolling = false;
 
@@ -55,8 +53,6 @@
 	// Add dynamic styles for animation
 	$: tigerStyle = `transform: translateY(50%) translateX(${-translateX}px);`;
 </script>
-
-<svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
 
 <video muted id="tiger" style={tigerStyle}>
 	<source src="/assets/tiger.webm" type="video/webm" />

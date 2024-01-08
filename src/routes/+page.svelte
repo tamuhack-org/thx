@@ -10,16 +10,106 @@
 	import Construction from '$lib/components/common/Construction.svelte';
 	import Footer from '$lib/components/common/Footer.svelte';
 	import Anniversary from '$lib/components/about/Anniversary.svelte';
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	import anime from 'animejs';
+	import { animationDone, screenWidth } from '$lib/stores';
+	import { fly } from 'svelte/transition';
 	import Tiger from '$lib/components/common/Tiger.svelte';
 	import Schedule from '$lib/components/schedule/Schedule.svelte';
 	import { inview } from 'svelte-inview';
 	import { sectionInView } from '$lib/stores';
 
-	let screenWidth: number;
 	let screenHeight: number;
+
+	function startLoader() {
+		let counterElement = document.querySelector('.count p');
+		let currentValue = 0;
+
+		function updateCounter() {
+			if (currentValue < 100) {
+				let increment = Math.floor(Math.random() * 10) + 1;
+				currentValue = Math.min(currentValue + increment, 100);
+				counterElement.textContent = currentValue.toString();
+
+				let delay = Math.floor(Math.random() * 50) + 25;
+				setTimeout(updateCounter, delay);
+			}
+		}
+
+		updateCounter();
+	}
+
+	onMount(() => {
+		// force scroll to top after reload
+		setTimeout(() => {
+			window.scroll({
+				top: 0,
+				behavior: 'instant'
+			});
+		}, 1);
+
+		startLoader();
+
+		gsap.to('.count', { opacity: 0, delay: 1.5, duration: 0.5 });
+
+		let textWrapper = document.querySelector('.ml16');
+		textWrapper.innerHTML = textWrapper?.textContent?.replace(
+			/\S/g,
+			"<span class='inline-block leading-4 text-dark'>$&</span>"
+		);
+
+		anime
+			.timeline({ loop: false })
+			.add({
+				targets: '.ml16 span',
+				translateY: [-100, 0],
+				easing: 'easeOutExpo',
+				duration: 1000,
+				delay: (el, i) => 10 * i
+			})
+			.add({
+				targets: '.ml16 span',
+				translateY: [0, 100],
+				easing: 'easeOutExpo',
+				duration: 5000,
+				delay: (el, i) => 500 + 30 * i
+			});
+
+		gsap.to('.pre-loader', {
+			scale: 0.5,
+			ease: 'power4.inOut',
+			duration: 2,
+			delay: 1.5
+		});
+
+		gsap.to('.loader', {
+			height: '0',
+			ease: 'power4.inOut',
+			duration: 1.5,
+			delay: 2.25
+		});
+
+		gsap.to('.loader-bg', {
+			height: '0',
+			ease: 'power4.inOut',
+			duration: 1.5,
+			delay: 2.5
+		});
+
+		gsap.to('.loader-2', {
+			clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+			ease: 'power4.inOut',
+			duration: 1,
+			delay: 2.375,
+			onComplete: () => {
+				$animationDone = true;
+			}
+		});
+	});
 </script>
 
-<svelte:window bind:innerWidth={screenWidth} bind:innerHeight={screenHeight} />
+<svelte:window bind:innerWidth={$screenWidth} bind:innerHeight={screenHeight} />
 
 <svelte:head>
 	<meta charset="utf-8" />
@@ -62,34 +152,41 @@
 	<title>TAMUhack X</title>
 </svelte:head>
 
-<!-- LANDING -->
-
-<!-- LOADER ANIMATION STUFF -->
-<!-- <div class="container">
+<!-- LOADER ANIMATION -->
+<div class="loader-container">
 	<div class="pre-loader">
 		<div class="loader"></div>
 		<div class="loader-bg"></div>
 	</div>
 	<div class="loader-content">
 		<div class="count"><p>0</p></div>
-		<div class="copy"><p class="ml16">TAMUhack X</p></div>
+		<div class="copy"><p class="ml16">TAMUHACK X</p></div>
 	</div>
 	<div class="loader-2"></div>
-</div> -->
+</div>
 
 <Marquee {screenWidth} />
 <div class="h-full w-full font-poppins bg-opacity-50 max-w-[2000px] mx-auto">
-	<a
-		id="mlh-trust-badge"
-		style="display:block;max-width:100px;min-width:60px;position:absolute;right:20px;top:40px;width:10%;z-index:40"
-		href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=black"
-		target="_blank"
-		><img
-			src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-black.svg"
-			alt="Major League Hacking 2024 Hackathon Season"
-			style="width:100%"
-		/></a
-	>
+	{#if $animationDone}
+		<a
+			id="mlh-trust-badge"
+			style="display:block;max-width:100px;min-width:60px;position:absolute;right:20px;top:40px;width:10%;z-index:40"
+			href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=black"
+			target="_blank"
+			in:fly={{
+				duration: 500,
+				x: 0,
+				y: -300,
+				opacity: 1,
+				delay: $screenWidth > 768 ? 2500 : 1500
+			}}
+			><img
+				src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-black.svg"
+				alt="Major League Hacking 2024 Hackathon Season"
+				style="width:100%"
+			/></a
+		>
+	{/if}
 	<TopNavbar />
 
 	<div class="mb-2">
@@ -112,7 +209,7 @@
 			class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 md:gap-x-4 gap-y-4 mt-12 min-h-[1148px] md:min-h-[932px] xl:min-h-[500px]"
 		>
 			<div
-				id="bruhamburger"
+				id="eyecontainer"
 				class="relative flex justify-center col-span-2 md:col-span-1 min-h-[200px] rounded-xl bg-blue xl:max-h-[275px]"
 			>
 				<Eyes />
@@ -163,13 +260,18 @@
 <Navbar />
 
 <style>
-	/* LOADER ANIMATION STUFF */
-	/* .pre-loader {
+	/* LOADER ANIMATION CSS */
+	.loader-container {
+		pointer-events: none;
+	}
+
+	.pre-loader {
 		position: fixed;
 		top: 0;
 		width: 100%;
 		height: 100%;
 		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+		z-index: 100;
 	}
 
 	.loader {
@@ -177,7 +279,7 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: #e9e9e9;
+		background: white;
 		color: white;
 		display: flex;
 		justify-content: center;
@@ -185,14 +287,14 @@
 	}
 
 	.loader-content {
-		position: absolute;
+		position: fixed;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		display: flex;
-		width: 400px;
-		z-index: 100;
-		color: white;
+		width: 300px;
+		z-index: 200;
+		color: #222454;
 	}
 
 	.count {
@@ -206,15 +308,12 @@
 		flex: 6;
 		font-size: 30px;
 		line-height: 1;
+		font-weight: 600;
 	}
 
 	.ml16 {
+		color: transparent;
 		overflow: hidden;
-	}
-
-	.ml16 .letter {
-		display: inline-block;
-		line-height: 1em;
 	}
 
 	.loader-bg {
@@ -223,7 +322,7 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: #e9e9e9;
+		background: #222454;
 		z-index: -1;
 	}
 
@@ -232,5 +331,25 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-	} */
+		background: #222454;
+		z-index: 60;
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+	}
+
+	@media (max-width: 640px) {
+		.loader-content {
+			flex-direction: column;
+		}
+
+		.count {
+			flex: 1;
+			text-align: center;
+			margin-bottom: 0.5em;
+		}
+
+		.copy {
+			text-align: center;
+			font-size: x-large;
+		}
+	}
 </style>

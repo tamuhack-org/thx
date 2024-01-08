@@ -20,6 +20,6 @@
 <style>
 	:global(body) {
 		background: #ffffff;
-		overflow-x: hidden;
+		overflow: hidden;
 	}
 </style>
