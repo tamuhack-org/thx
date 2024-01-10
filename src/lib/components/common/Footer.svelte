@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Friend from "../friend/Friend.svelte";
+
 	let resources = [
 		// {
 		// 	name: 'Hacker Guide',
@@ -147,6 +149,9 @@
 		<p class="font-poppins font-semibold text-3xl mb-8">TAMUhack X</p>
 		<p class="font-poppins font-base text-xl mb-8">Celebrating 10 years of TAMUhack!</p>
 		<div id="3d-friend" class="mb-8 hidden xl:block absolute right-5 bottom-5"></div>
+	</div>
+	<div>
+		<Friend />
 	</div>
 	<div class="flex flex-wrap justify-start lg:justify-end flex-grow gap-12">
 		<div>
