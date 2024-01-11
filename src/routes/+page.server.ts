@@ -1,7 +1,5 @@
 export async function load() {
 
-  console.log("server running")
-
 	type ScheduledEvent = {
 		event_name: string;
 		id: string;
@@ -63,9 +61,6 @@ export async function load() {
 
   const events = await getEvents();
   const currentEventIndex = getCurrentEventIndex(events);
-
-  console.log(events)
-  console.log(currentEventIndex)
 
 	return {
 		events: events,
