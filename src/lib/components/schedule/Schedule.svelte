@@ -3,12 +3,6 @@
 	import NextUpCard from './NextUpCard.svelte';
 	import { scheduleLoaded } from '$lib/stores';
 
-	let events: ScheduledEvent[] = [];
-	let filters = ['Required', 'Company Events', 'Food', 'Workshops', 'For Fun'];
-	let activeFilters: string[] = [];
-
-	let currentEventIndex = 0;
-
 	type ScheduledEvent = {
 		event_name: string;
 		id: string;
@@ -19,54 +13,10 @@
 		tags?: string[];
 	};
 
-	//fetch and format schedule data
-	const getEvents = async () => {
-		const res = await fetch('https://hum-console.vercel.app/api/th24').then((res) => res.json());
-
-		const events: ScheduledEvent[] = res.Items.sort((a: ScheduledEvent, b: ScheduledEvent) => {
-			let dateA = new Date(a.date).getTime();
-			let dateB = new Date(b.date).getTime();
-			return dateA - dateB;
-		});
-
-		events.forEach((event) => {
-			const date = new Date(event.date);
-			event.day = date.toLocaleDateString('en-US', {
-				day: 'numeric'
-			});
-			event.time = date.toLocaleTimeString('en-US', {
-				hour: 'numeric',
-				minute: '2-digit',
-				hour12: true
-			});
-
-			if (event.description != '') {
-				//event.description is a string with the format "description | tags", where tags is a comma separated list of tags
-				let eventInfo = event.description.split('|');
-				event.description = eventInfo[0].trim();
-
-				if (eventInfo.length > 1) {
-					event.tags = eventInfo[1].split(',').map((tag) => tag.trim());
-				}
-			}
-		});
-
-		return events;
-	};
-
-	const getCurrentEventIndex = (events: ScheduledEvent[]) => {
-		const now = new Date().getTime();
-		let index = 0;
-		for (let i = 0; i < events.length; i++) {
-			const event = events[i];
-			const eventTime = new Date(event.time).getTime();
-			if (eventTime > now) {
-				index = i;
-				break;
-			}
-		}
-		return index;
-	};
+	export let events: ScheduledEvent[] = [];
+	export let currentEventIndex = 0;
+	let filters = ['Required', 'Company Events', 'Food', 'Workshops', 'For Fun'];
+	let activeFilters: string[] = [];
 
 	const handleFilter = (filter: string) => {
 		if (activeFilters.includes(filter)) {
@@ -80,8 +30,6 @@
 	};
 
 	onMount(async () => {
-		events = await getEvents();
-		currentEventIndex = getCurrentEventIndex(events);
 		$scheduleLoaded = true;
 	});
 </script>

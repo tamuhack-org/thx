@@ -22,6 +22,8 @@
 	import { inview } from 'svelte-inview';
 	import { sectionInView } from '$lib/stores';
 
+	export let data;
+
 	function startLoader() {
 		let counterElement = document.querySelector('.count p') as HTMLElement;
 		let currentValue = 0;
@@ -257,7 +259,7 @@
 			id="schedule"
 			class="mt-16"
 		>
-			<Schedule />
+			<Schedule events={data.events} currentEventIndex={data.currentEventIndex} />
 		</div>
 		{#if $scheduleLoaded}
 			<PrizesContainer />
