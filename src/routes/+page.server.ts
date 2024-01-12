@@ -36,6 +36,7 @@ export async function load() {
 			event.time = date.toLocaleTimeString('en-US', {
 				hour: 'numeric',
 				minute: '2-digit',
+				timeZone: 'America/Chicago',
 				hour12: true
 			});
 
