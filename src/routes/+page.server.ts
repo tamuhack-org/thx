@@ -15,9 +15,16 @@ export async function load() {
 		const res = await fetch('https://hum-console.vercel.app/api/th24').then((res) => res.json());
 
 		const events: ScheduledEvent[] = res.Items.sort((a: ScheduledEvent, b: ScheduledEvent) => {
-			const dateA = new Date(a.date).getTime();
-			const dateB = new Date(b.date).getTime();
-			return dateA - dateB;
+			const dateA = new Date(a.date);
+			const dateB = new Date(b.date);
+	
+			// Convert UTC to Central Time
+			const centralTimeOptions = { timeZone: 'America/Chicago' }; // Replace with your desired time zone
+			const centralTimeA = dateA.toLocaleString('en-US', centralTimeOptions);
+			const centralTimeB = dateB.toLocaleString('en-US', centralTimeOptions);
+	
+			// Compare the converted times
+			return new Date(centralTimeA).getTime() - new Date(centralTimeB).getTime();
 		});
 
 		events.forEach((event) => {
