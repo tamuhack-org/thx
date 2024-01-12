@@ -22,7 +22,7 @@
 				}
 			})
 			.to(num, {
-				var: 6000,
+				var: 15000,
 				duration: 2,
 				ease: 'none',
 				onUpdate: changeNumber

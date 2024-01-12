@@ -20,7 +20,7 @@
 			id="prize-text"
 			class="text-white font-poppins font-medium text-2xl sm:text-3xl opacity-90 z-10"
 		>
-			$6000+ in prizes
+			$15,000+ in prizes
 		</p>
 	</div>
 	<div id="square-container" class="absolute w-full h-full">
