@@ -30,7 +30,8 @@ export async function load() {
 		events.forEach((event) => {
 			const date = new Date(event.date);
 			event.day = date.toLocaleDateString('en-US', {
-				day: 'numeric'
+				day: 'numeric',
+				timeZone: 'America/Chicago'
 			});
 			event.time = date.toLocaleTimeString('en-US', {
 				hour: 'numeric',
