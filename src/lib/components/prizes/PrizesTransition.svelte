@@ -23,7 +23,7 @@
 			})
 			.to(num, {
 				var: 6000,
-				duration: 2,
+				duration: 9999,
 				ease: 'none',
 				onUpdate: changeNumber
 			})
@@ -37,7 +37,7 @@
 
 <div
 	id="transition-container"
-	class="relative flex flex-col items-center justify-start text-white font-bold gap-4 h-full w-full"
+	class="relative flex flex-col items-center justify-start text-white font-semibold gap-4 h-full w-full"
 >
 	<h1 id="numbers" class="text-4xl md:text-8xl">
 		<span class="text-4xl md:text-8xl">$</span>0

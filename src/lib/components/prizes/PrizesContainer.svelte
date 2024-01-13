@@ -90,19 +90,27 @@
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
+		const thankYouHeading = document.querySelector('#thank-you')!;
+
 		ScrollTrigger.create({
 			trigger: '#prizes',
 			start: 'top top',
-			end: 'bottom 5%',
-			markers: false,
+			end: 'bottom top',
+			markers: true,
 			onEnter: () => {
 				gsap.to('body', { background: '#0C0C19', duration: 0.5 });
 			},
 			onEnterBack: () => {
 				gsap.to('body', { background: '#0C0C19', duration: 0.5 });
+				thankYouHeading.style.color = '#FFFFFF';
 			},
-			onLeave: () => gsap.to('body', { background: '#FFFFFF', duration: 0.5 }),
-			onLeaveBack: () => gsap.to('body', { background: '#FFFFFF', duration: 0.5 })
+			onLeave: () => {
+				gsap.to('body', { background: '#FFFFFF', duration: 0.5 });
+				thankYouHeading.style.color = '#222454';
+			},
+			onLeaveBack: () => {
+				gsap.to('body', { background: '#FFFFFF', duration: 0.5 });
+			}
 		});
 
 		const postsSection = document.querySelector('#prize-images')!;
