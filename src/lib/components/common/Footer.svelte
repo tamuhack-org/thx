@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Friend from "../friend/Friend.svelte";
+	import Friend from '../friend/Friend.svelte';
 
 	let resources = [
 		// {
@@ -87,7 +87,7 @@
 </script>
 
 <div class="lg:flex lg:justify-between items-center px-8 lg:px-8 text-dark font-poppins">
-	<div class="lg:text-start text-center text-white opacity-90 blender">
+	<div class="lg:text-start text-center opacity-90">
 		<p class="mb-0 font-poppins text-2xl font-semibold">Sign up to our newsletter</p>
 		<p class="font-poppins font-light">
 			Stay connected! Sign up for our mailing list for events, updates, and more.
@@ -119,7 +119,7 @@
 					value="Subscribe"
 					name="subscribe"
 					id="mc-embedded-subscribe"
-					class="px-4 py-2 w-full min-[401px]:w-auto rounded-md bg-black hover:bg-white border blender text-white hover:text-dark font-normal cursor-pointer"
+					class="px-4 py-2 w-full min-[401px]:w-auto rounded-md bg-dark text-white hover:bg-white border border-dark hover:text-dark font-normal cursor-pointer transition-all"
 				/>
 			</button>
 		</div>
@@ -144,7 +144,7 @@
 </div>
 <!-- End Mailchimp sign up -->
 
-<div class="lg:flex justify-between px-8 my-8 lg:my-16 text-[#FFFFFF] opacity-90 blender">
+<div class="lg:flex justify-between px-8 my-8 lg:my-16 text-dark opacity-90">
 	<div class="lg:w-1/5">
 		<p class="font-poppins font-semibold text-3xl mb-8">TAMUhack X</p>
 		<p class="font-poppins font-base text-xl mb-8">Celebrating 10 years of TAMUhack!</p>
@@ -214,8 +214,8 @@
 </div>
 
 <div class="bottom-0">
-	<div class="h-[3px] mx-8 bg-white blender rounded-xl bg-opacity-5"></div>
-	<p class="mx-8 py-3 text-sm text-white blender font-light">
+	<div class="h-[3px] mx-8 bg-dark rounded-xl bg-opacity-5"></div>
+	<p class="mx-8 py-3 text-sm text-dark font-light">
 		Interested in sponsoring? Reach out to us at <a
 			class="underline"
 			href="mailto:sponsor@tamuhack.com">sponsor@tamuhack.com</a
@@ -224,7 +224,4 @@
 </div>
 
 <style>
-	.blender {
-		mix-blend-mode: difference;
-	}
 </style>
