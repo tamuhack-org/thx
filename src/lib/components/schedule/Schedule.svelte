@@ -81,7 +81,7 @@
 			<img src="/assets/scheduley.png" alt="" class="hidden lg:flex mt-8" />
 		</div>
 	</div>
-	<div class="lg:w-1/2 xl:w-auto flex flex-col xl:flex-row gap-8">
+	<div class="lg:w-1/2 xl:w-auto flex flex-col xl:flex-row gap-4">
 		<div class="xl:w-1/2">
 			<div>
 				<p class="text-3xl text-[#FF5799] font-poppins font-semibold mb-4">Day 1: Saturday</p>
