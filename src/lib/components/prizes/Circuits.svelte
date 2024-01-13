@@ -1792,14 +1792,14 @@
 <style>
 	svg {
 		position: absolute;
-		top: -50%;
+		top: -60%;
 		left: 50%;
 		transform: translate(-50%, 0%);
 		opacity: 0.1;
 		z-index: -10;
 	}
 	.path {
-		animation: draw 20s infinite;
+		animation: draw 15s infinite;
 		animation-timing-function: linear;
 	}
 	.path-01 {

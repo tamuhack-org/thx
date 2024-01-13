@@ -242,7 +242,23 @@
 				<p class="text-base md:text-xl font-poppins copy-on-dark">Prize: Ender 3 3D Printer</p>
 			</div>
 		</div>
+
 		<Circuits />
+	</div>
+	<div class="grid md:grid-cols-2 gap-4 mt-4 mb-32">
+		{#each otherPrizes as prize}
+			<div class="flex flex-col justify-between w-full p-4 dark-bg rounded-md z-10">
+				<div>
+					<p class="text-2xl font-medium font-poppins copy-on-dark">
+						{prize.title}
+					</p>
+					<p class="text-base md:text-lg font-light font-poppins copy-on-dark mt-2 opacity-90">
+						{prize.desc}
+					</p>
+				</div>
+				<p class="text-base md:text-xl font-poppins copy-on-dark mt-8">Prize: {prize.prize}</p>
+			</div>
+		{/each}
 	</div>
 </div>
 

@@ -154,5 +154,7 @@
 		</div>
 		<PrizesTransition />
 	</div>
-	<Prizes />
+	<div class="overflow-hidden">
+		<Prizes />
+	</div>
 </div>
