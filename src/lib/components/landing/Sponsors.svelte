@@ -13,7 +13,7 @@
 	];
 	const imagesMd = [
 		{
-			src: 'philips-66.png',
+			src: 'phillips-66.png',
 			name: 'Phillips 66',
 			href: 'https://www.phillips66.com/'
 		},
