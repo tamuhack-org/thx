@@ -96,7 +96,7 @@
 			trigger: '#prizes',
 			start: 'top top',
 			end: 'bottom top',
-			markers: true,
+			markers: false,
 			onEnter: () => {
 				gsap.to('body', { background: '#0C0C19', duration: 0.5 });
 			},
