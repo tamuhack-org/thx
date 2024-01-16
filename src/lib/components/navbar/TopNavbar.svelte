@@ -45,6 +45,21 @@
 					>Apply</button
 				></a
 			>
+			<a
+				href="https://forms.gle/bVW9KJSCxeYus4xy9"
+				target="_blank"
+				rel="noopener noreferrer"
+				in:scale={{
+					duration: 500,
+					opacity: 1,
+					delay: 2500
+				}}
+			>
+				<button
+					class="px-6 py-3 rounded-md text-dark border-[1px] border-dark bg-transparent font-normal hover:bg-black hover:text-white transition-all"
+					>Mentor</button
+				></a
+			>
 		{/if}
 	</div>
 </div>

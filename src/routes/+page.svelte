@@ -21,6 +21,7 @@
 	import PrizesContainer from '$lib/components/prizes/PrizesContainer.svelte';
 	import { inview } from 'svelte-inview';
 	import { sectionInView } from '$lib/stores';
+	import Sponsors from '$lib/components/landing/Sponsors.svelte';
 
 	export let data;
 
@@ -264,6 +265,9 @@
 		{#if $scheduleLoaded}
 			<PrizesContainer />
 		{/if}
+		<div>
+			<Sponsors />
+		</div>
 		<div id="under-construction" class="my-32">
 			<Construction />
 		</div>

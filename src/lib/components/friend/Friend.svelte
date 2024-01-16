@@ -101,7 +101,7 @@
 
 <style>
 	#friend-zone-haha {
-		filter: invert(1) brightness(0.8) contrast(2.5) saturate(1.5);
+		filter: brightness(1.5) contrast(1.5) saturate(1.5);
 		cursor: grab;
 	}
 
