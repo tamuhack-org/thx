@@ -82,7 +82,7 @@
 <div class="flex flex-col w-full items-center justify-center h-[calc(100dvh)] text-center">
 	<h1
 		id="thank-you"
-		class="text-3xl sm:text-5xl lg:text-7xl font-semibold text-white leading-relaxed"
+		class="text-3xl sm:text-4xl lg:text-6xl font-semibold text-white leading-relaxed"
 	>
 		Thank you to our sponsors...
 	</h1>
@@ -130,7 +130,7 @@
 <div class="flex flex-col w-full items-center justify-center py-32 text-center">
 	<h1
 		id="thank-you"
-		class="text-3xl sm:text-5xl lg:text-7xl font-semibold text-dark leading-relaxed"
+		class="text-3xl sm:text-4xl lg:text-6xl font-semibold text-dark leading-relaxed"
 	>
 		and partners...
 	</h1>
