@@ -89,7 +89,7 @@
 
 		engine.gravity.y = 0;
 
-		let stack = Composites.stack(50, 120, 4, 2, 0, 0, function (x, y, col, row) {
+		let stack = Composites.stack(50, 120, 5, 3, 0, 0, function (x, y, col, row) {
 			let imageName = '';
 			let bodySize = 30;
 
@@ -111,8 +111,8 @@
 						render: {
 							sprite: {
 								texture: 'assets/sharky1.svg',
-								xScale: 0.4,
-								yScale: 0.4
+								xScale: 0.5,
+								yScale: 0.5
 							}
 						}
 					});
@@ -126,8 +126,8 @@
 						render: {
 							sprite: {
 								texture: 'assets/sharky2.svg',
-								xScale: 0.4,
-								yScale: 0.4
+								xScale: 0.5,
+								yScale: 0.5
 							}
 						}
 					});
@@ -141,8 +141,43 @@
 					bodySize = 25;
 					break;
 				}
-				default: {
+				case 7: {
+					imageName = 'assets/fishy2.svg';
+					bodySize = 25;
+					break;
+				}
+				case 8: {
+					imageName = 'assets/fishy3.svg';
+					bodySize = 25;
+					break;
+				}
+				case 9: {
+					imageName = 'assets/fishy4.svg';
+					bodySize = 25;
+					break;
+				}
+				case 10: {
+					imageName = 'assets/fishy5.svg';
+					bodySize = 25;
+					break;
+				}
+				case 11: {
+					imageName = 'assets/fishy6.svg';
+					bodySize = 25;
+					break;
+				}
+				case 12: {
+					imageName = 'assets/stingy2.svg';
+					bodySize = 25;
+					break;
+				}
+				case 13: {
 					imageName = 'assets/jelly1.svg';
+					bodySize = 35;
+					break;
+				}
+				default: {
+					imageName = 'assets/jelly2.svg';
 					bodySize = 35;
 					break;
 				}
