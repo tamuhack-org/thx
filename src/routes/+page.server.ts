@@ -1,3 +1,4 @@
+
 export async function load() {
 
 	type ScheduledEvent = {
@@ -12,7 +13,19 @@ export async function load() {
 
 	//fetch and format schedule data
 	const getEvents = async () => {
-		const res = await fetch('https://hum-console.vercel.app/api/th24').then((res) => res.json());
+		let res;
+		try {
+			const response = await fetch('https://hum-console.vercel.app/api/th24');
+		
+			if (!response.ok) {
+				throw new Error(`HTTP error! Status: ${response.status}`);
+			}
+		
+			res = await response.json();
+		} catch (error) {
+			return []
+		}
+
 
 		const events: ScheduledEvent[] = res.Items.sort((a: ScheduledEvent, b: ScheduledEvent) => {
 			const dateA = new Date(a.date);
