@@ -27,7 +27,7 @@
 	let hoverText = '1st place overall prize.';
 
 	function handleHover() {
-		hoverText = 'and the scooter was electric...';
+		hoverText = '...and the scooter was electric.';
 	}
 
 	function handleMouseOut() {
