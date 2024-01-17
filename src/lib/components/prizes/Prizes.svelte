@@ -67,8 +67,6 @@
 					<p class="text-2xl font-medium font-poppins copy-on-dark">First Place</p>
 					<p
 						on:mouseover={handleHover}
-						on:focus={handleHover}
-						on:blur={handleMouseOut}
 						on:mouseout={handleMouseOut}
 						class="text-lg font-light font-poppins copy-on-dark opacity-90 cursor-default"
 					>
