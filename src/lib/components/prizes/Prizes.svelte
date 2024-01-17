@@ -23,6 +23,16 @@
 			prize: 'Mini-Projector'
 		}
 	];
+
+	let hoverText = '1st place overall prize.';
+
+	function handleHover() {
+		hoverText = 'and the scooter was electric...';
+	}
+
+	function handleMouseOut() {
+		hoverText = '1st place overall prize.';
+	}
 </script>
 
 <div id="prizes-section" />
@@ -55,8 +65,14 @@
 			<div class="flex flex-col justify-between w-full h-[150px] p-4 dark-bg rounded-b-md z-10">
 				<div>
 					<p class="text-2xl font-medium font-poppins copy-on-dark">First Place</p>
-					<p class="text-lg font-light font-poppins copy-on-dark opacity-90">
-						1st place overall prize.
+					<p
+						on:mouseover={handleHover}
+						on:focus={handleHover}
+						on:blur={handleMouseOut}
+						on:mouseout={handleMouseOut}
+						class="text-lg font-light font-poppins copy-on-dark opacity-90 cursor-default"
+					>
+						{hoverText}
 					</p>
 				</div>
 				<p class="text-xl font-poppins copy-on-dark">Prize: Electric Scooter</p>
