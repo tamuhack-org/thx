@@ -1,0 +1,67 @@
+[
+    {
+        "title": "General",
+        "questions": [
+            {
+                "question": "Who can attend?",
+                "answers": [
+                    "All students can sign up to be a hacker. Regardless of your experience, education, or background, as long as you are excited about learning, building, and having fun, we’d love for you to attend. If you are currently under the age of 18, please contact our team at hello@tamuhack.com to fill out a waiver form."
+                ]
+            },
+            {
+                "question": "When is the deadline to apply to TAMUhack?",
+                "answers": [   
+                    "The deadline for registration is January 22, at 23:59. We'll be doing rolling admissions until that date. Our capacity is limited, so make sure to apply early!",
+                    "NOTE: Even if you are admitted, entry to the event is first-come first-serve due to limited capacity of the MSC. We will only grant entry to the first 750 participants to check-in. Please arrive early to ensure your spot."
+                ]
+            },
+            {
+                "question": "How much experience do I need?",
+                "answers": [
+                    "Absolutely zero! We want you here because you have a passion for creating, not because you’re the most experienced hacker on the block. We’ll have lots of resources including workshops and a bunch of mentors to help beginners get started. There'll also be plenty of people to learn from and help out!"
+                ]
+            },
+            {
+                "question": "How much does it cost?",
+                "answers": [
+                    "Nothing. Nada. Zilch. It’s completely free for all accepted hackers. To make it even better, we’ll be giving out a ton of swag to every hacker, and prizes to our winners."
+                ]
+            },
+            {
+                "question": "What should I bring?",
+                "answers": [
+                    "Please bring a valid student ID in addition to anything that would help you with creating your hack or making you comfortable. A laptop, charger, mouse, keyboard, hardware, light jacket, and any hygienic products should be helpful. Don't bring anything you wouldn't bring on an airplane."
+                ]
+            },
+            {
+                "question": "How do teams work?",
+                "answers": [
+                    "Teams are limited to 1-4 hackers. If you have a team in mind, make sure all members submit an application before the deadline. If you don't have a team and would like to be a part of one, no worries! We'll have a dedicated time for team formation after the opening ceremony. Teams are only finalized when the final Devpost submission is due."
+                ]
+            },
+            {
+                "question": "Will there be workshops or talks?",
+                "answers": [
+                    "Of course! We will have workshops running throughout the whole event. We will release the complete schedule on the website closer to the event."
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Submission",
+        "questions": [
+            {
+                "question":"What do I need to submit?",
+                "answers": [
+                    "All teams are REQUIRED to complete a Devpost submission for their project by 11:59 AM on 01/28/24 to be considered for judging. Submitting a video demo on Devpost is MANDATORY!"
+                ]
+            },
+            {
+                "question": "What classifies a project as a 'beginner hack' ?",
+                "answers": [
+                    "A beginner hack is a project where 50% or more of the team members have never participated in a hackathon before. If you're not sure if your project qualifies, just ask us!"
+                ]
+            }
+        ]
+    }
+]

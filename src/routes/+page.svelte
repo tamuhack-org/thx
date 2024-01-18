@@ -22,8 +22,23 @@
 	import { inview } from 'svelte-inview';
 	import { sectionInView } from '$lib/stores';
 	import Sponsors from '$lib/components/landing/Sponsors.svelte';
+	import Faq from '$lib/components/faq/faq.svelte';
 
-	export let data;
+	// TODO: use export and use ScheduledEvent 
+	export let data: 
+	{
+		events: 
+		{	
+			event_name: string;
+			id: string;
+			time: string;
+			day: string;
+			date: string;
+			description: string;
+			tags?: string[];
+		}[];
+		currentEventIndex: number;
+	};
 
 	function startLoader() {
 		let counterElement = document.querySelector('.count p') as HTMLElement;
@@ -57,10 +72,13 @@
 		gsap.to('.count', { opacity: 0, delay: 1.5, duration: 0.5 });
 
 		let textWrapper = document.querySelector('.ml16');
-		textWrapper.innerHTML = textWrapper?.textContent?.replace(
-			/\S/g,
-			"<span class='inline-block leading-4 text-dark'>$&</span>"
-		);
+	
+		if (textWrapper?.textContent) {
+			textWrapper.innerHTML = textWrapper?.textContent?.replace(
+				/\S/g,
+				"<span class='inline-block leading-4 text-dark'>$&</span>"
+			);
+		}
 
 		anime
 			.timeline({ loop: false })
@@ -265,6 +283,9 @@
 		{#if $scheduleLoaded}
 			<PrizesContainer />
 		{/if}
+		<div class="mt-72">
+			<Faq />
+		</div>
 		<div>
 			<Sponsors />
 		</div>
