@@ -63,5 +63,28 @@
                 ]
             }
         ]
+    },
+    {
+        "title": "Hardware",
+        "questions": [
+            {
+                "question":"How is TAMUhack X making hardware different than previous years?",
+                "answers": [
+                    "TAMUhack is partnering with IEEE to provide dedicated hardware tracks for hackers. Participants will get access to hardware at the event. We will also have a hardware mentorship program to help you with your hardware projects. It's a combination of TAMUhack and TAMUMake!"
+                ]
+            },
+            {
+                "question": "Can I participate in both software and hardware tracks? ",
+                "answers": [
+                    "At this time, a team can only participate in one track, either software or hardware. The different tracks will be judged separately, by specialists in the respective field."
+                ]
+            },
+            {
+                "question": "Where can I specify that I want to participate in the hardware track?",
+                "answers": [
+                    "There is a question on the application form that asks if you want to participate in the hardware track. If you have already submitted your application, please contact us."
+                ]
+            }
+        ]
     }
 ]
