@@ -283,7 +283,7 @@
 		{#if $scheduleLoaded}
 			<PrizesContainer />
 		{/if}
-		<div class="mt-72">
+		<div id="faq" class="mt-72">
 			<Faq />
 		</div>
 		<div>

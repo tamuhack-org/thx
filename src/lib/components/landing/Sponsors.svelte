@@ -79,10 +79,10 @@
 	];
 </script>
 
-<div class="flex flex-col w-full items-center justify-center h-[calc(100dvh)] text-center">
+<div class="flex flex-col w-full items-center justify-center text-center py-32">
 	<h1
 		id="thank-you"
-		class="text-3xl sm:text-4xl lg:text-6xl font-semibold text-white leading-relaxed"
+		class="text-3xl sm:text-4xl lg:text-6xl font-semibold text-dark leading-relaxed"
 	>
 		Thank you to our sponsors...
 	</h1>
