@@ -4,7 +4,6 @@
 
 </script>
 
-<!-- TODO: make dynamic -->
 <div class="w-full lg:container">
     <div class="flex">
         <div class="w-full lg:w-3/4">
