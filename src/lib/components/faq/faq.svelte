@@ -7,16 +7,24 @@
 	<div class="flex">
 		<div class="w-full lg:w-3/4">
 			<h1 id="faq-title" class="font-semibold text-7xl text-white lg:">FAQ</h1>
-			<div class="mt-10 text-[#192F6D] text-2xl">
+			<div class="mt-10 text-[#192F6D] text-xl md:text-2xl">
 				<p>Everything you need to know about participating in TAMUhack.</p>
-				<p class="">
+				<p class="mt-4 md:mt-0">
 					Can’t find what you’re looking for? <a class="underline" href="mailto:hello@tamuhack.com"
 						>Contact Our Team.</a
 					>
 				</p>
+				<!-- <div class="flex gap-4 mt-8">
+					<a
+						href="#"
+						class="px-4 py-1 font-poppins text-base text-dark border-2 bg-pink rounded-full"
+					>
+						General
+					</a>
+				</div> -->
 			</div>
 		</div>
-		<div class="w-0 lg:w-1/4">
+		<div class="w-0 lg:w-1/4 mr-10">
 			<img src="/assets/faqgif.png" alt="happy computer" />
 		</div>
 	</div>
