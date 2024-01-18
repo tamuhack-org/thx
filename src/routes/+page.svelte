@@ -289,9 +289,6 @@
 		<div>
 			<Sponsors />
 		</div>
-		<div id="under-construction" class="my-32">
-			<Construction />
-		</div>
 	</div>
 
 	<Footer />
