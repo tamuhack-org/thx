@@ -18,7 +18,6 @@
 	let filters = ['Required', 'Company Events', 'Food', 'Workshops', 'For Fun'];
 	let activeFilters: string[] = [];
 
-	// nit: why not use the native .filter method? 
 	const handleFilter = (filter: string) => {
 		if (activeFilters.includes(filter)) {
 			activeFilters.splice(activeFilters.indexOf(filter), 1);
