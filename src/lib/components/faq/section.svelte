@@ -18,7 +18,7 @@
 					{item.question}
 					<img src="/assets/arrow.png" class="arrow h-full w-auto" alt="arrow" />
 				</summary>
-				<p class="mt-2 text-xl">
+				<p class="mt-2 text-base md:text-lg px-2">
 					{#each item.answers as answer}
 						<p class="my-5">{answer}</p>
 					{/each}
