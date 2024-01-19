@@ -49,7 +49,7 @@
 				class="flex flex-col items-center justify-center gap-[6px] bg-black bg-opacity-70 backdrop-blur-sm rounded-t-xl expand-container px-[6px]"
 			>
 				<div
-					class="flex flex-col justify-center items-center mt-[6px] bg-[#2b2b2b] bg-opacity-70 px-6 backdrop-blur-sm rounded-lg w-full h-full text-white text-sm text-left gap-8"
+					class="flex flex-col justify-center items-start mt-[6px] bg-[#2b2b2b] bg-opacity-70 px-6 backdrop-blur-sm rounded-lg w-full h-full text-white text-sm text-left gap-8"
 				>
 					<div
 						class:opacity-100={open}
@@ -121,9 +121,9 @@
 					<IconTrophy class="w-5 h-5" />
 				</a>
 				<a
-					href="#under-construction"
+					href="#faq"
 					class={`p-1 border ${
-						false ? 'border-gray-400' : 'border-transparent'
+						$sectionInView === 'FAQ' ? 'border-gray-400' : 'border-transparent'
 					} rounded-sm transition-all`}
 				>
 					<IconUserQuestion class="w-5 h-5" />
@@ -215,7 +215,7 @@
 					<div class="flex p-[6px] gap-[6px] ml-[6px] bg-[#2b2b2b] rounded-lg scroll-smooth">
 						<NavButton text="Schedule" link="#schedule" />
 						<NavButton text="Prizes" link="#prizes-section" />
-						<NavButton text="FAQ" link="#faq"/>
+						<NavButton text="FAQ" link="#faq" />
 						<CTANavButton text="Apply" link="https://register.tamuhack.com/" />
 					</div>
 				</div>

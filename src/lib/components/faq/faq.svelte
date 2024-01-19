@@ -6,8 +6,8 @@
 <div class="w-full lg:container">
 	<div class="flex">
 		<div class="w-full lg:w-3/4">
-			<h1 id="faq-title" class="font-semibold text-7xl text-white lg:">FAQ</h1>
-			<div class="mt-10 text-[#192F6D] text-xl md:text-2xl">
+			<h1 id="faq-title" class="font-semibold text-7xl text-transparent">FAQ</h1>
+			<div id="faq-description" class="mt-10 text-white text-xl md:text-2xl">
 				<p>Everything you need to know about participating in TAMUhack.</p>
 				<p class="mt-4 md:mt-0">
 					Can’t find what you’re looking for? <a class="underline" href="mailto:hello@tamuhack.com"
@@ -40,7 +40,7 @@
 <style>
 	#faq-title {
 		-webkit-text-stroke-width: 4px;
-		-webkit-text-stroke-color: #000044;
-		opacity: 0.5;
+		-webkit-text-stroke-color: #ffffff;
+		opacity: 0.7;
 	}
 </style>

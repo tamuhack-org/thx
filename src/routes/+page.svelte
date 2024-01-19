@@ -24,11 +24,9 @@
 	import Sponsors from '$lib/components/landing/Sponsors.svelte';
 	import Faq from '$lib/components/faq/faq.svelte';
 
-	// TODO: use export and use ScheduledEvent 
-	export let data: 
-	{
-		events: 
-		{	
+	// TODO: use export and use ScheduledEvent
+	export let data: {
+		events: {
 			event_name: string;
 			id: string;
 			time: string;
@@ -72,7 +70,7 @@
 		gsap.to('.count', { opacity: 0, delay: 1.5, duration: 0.5 });
 
 		let textWrapper = document.querySelector('.ml16');
-	
+
 		if (textWrapper?.textContent) {
 			textWrapper.innerHTML = textWrapper?.textContent?.replace(
 				/\S/g,
@@ -270,7 +268,9 @@
 			on:inview_leave={(event) => {
 				const { inView, scrollDirection } = event.detail;
 				if (scrollDirection.vertical === 'down') {
-					$sectionInView = '';
+					if (window.scrollY !== 0) {
+						$sectionInView = '';
+					}
 				} else {
 					$sectionInView = 'Prizes';
 				}
@@ -283,7 +283,27 @@
 		{#if $scheduleLoaded}
 			<PrizesContainer />
 		{/if}
-		<div id="faq" class="mt-72">
+		<div
+			id="faq"
+			class="mt-72"
+			use:inview
+			on:inview_enter={(event) => {
+				const { inView } = event.detail;
+				if (inView) {
+					$sectionInView = 'FAQ';
+				}
+			}}
+			on:inview_leave={(event) => {
+				const { inView, scrollDirection } = event.detail;
+				if (scrollDirection.vertical === 'down') {
+					if (window.scrollY !== 0) {
+						$sectionInView = 'Prizes';
+					}
+				} else {
+					$sectionInView = '';
+				}
+			}}
+		>
 			<Faq />
 		</div>
 		<div>

@@ -79,7 +79,7 @@
 	];
 </script>
 
-<div class="flex flex-col w-full items-center justify-center text-center py-32">
+<div class="flex flex-col w-full items-center justify-center text-center py-16 md:py-32">
 	<h1
 		id="thank-you"
 		class="text-3xl sm:text-4xl lg:text-6xl font-semibold text-dark leading-relaxed"
@@ -127,7 +127,7 @@
 		</a>
 	{/each}
 </div>
-<div class="flex flex-col w-full items-center justify-center py-32 text-center">
+<div class="flex flex-col w-full items-center justify-center py-16 md:py-32 text-center">
 	<h1
 		id="thank-you"
 		class="text-3xl sm:text-4xl lg:text-6xl font-semibold text-dark leading-relaxed"

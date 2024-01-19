@@ -90,7 +90,10 @@
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 
-		const thankYouHeading = document.querySelector('#thank-you')!;
+		const faqTitle = document.querySelector('#faq-title')!;
+		const faqDescription = document.querySelector('#faq-description')!;
+		const faqQuestions = document.querySelectorAll('.faq-question')!;
+		const faqQuestionBottoms = document.querySelectorAll('.faq-question-bottom')!;
 
 		ScrollTrigger.create({
 			trigger: '#prizes',
@@ -99,17 +102,47 @@
 			markers: false,
 			onEnter: () => {
 				gsap.to('body', { background: '#0C0C19', duration: 0.5 });
+				faqTitle.style.webkitTextStrokeColor = '#FFFFFF';
+				faqDescription.style.color = '#FFFFFF';
+				faqQuestions.forEach((question) => {
+					question.style.color = '#FFFFFF';
+				});
+				faqQuestionBottoms.forEach((bottom) => {
+					bottom.style.backgroundColor = '#FFFFFF';
+				});
 			},
 			onEnterBack: () => {
 				gsap.to('body', { background: '#0C0C19', duration: 0.5 });
-				thankYouHeading.style.color = '#FFFFFF';
+				faqTitle.style.webkitTextStrokeColor = '#FFFFFF';
+				faqDescription.style.color = '#FFFFFF';
+				faqQuestions.forEach((question) => {
+					question.style.color = '#FFFFFF';
+				});
+				faqQuestionBottoms.forEach((bottom) => {
+					bottom.style.backgroundColor = '#FFFFFF';
+				});
 			},
 			onLeave: () => {
 				gsap.to('body', { background: '#FFFFFF', duration: 0.5 });
-				thankYouHeading.style.color = '#222454';
+				faqTitle.style.webkitTextStrokeColor = '#222454';
+				faqDescription.style.color = '#222454';
+				faqQuestions.forEach((question) => {
+					question.style.color = '#222454';
+				});
+				faqQuestionBottoms.forEach((bottom) => {
+					bottom.style.backgroundColor = '#222454';
+				});
 			},
 			onLeaveBack: () => {
 				gsap.to('body', { background: '#FFFFFF', duration: 0.5 });
+				faqTitle.style.webkitTextStrokeColor = '#222454';
+				faqDescription.style.color = '#222454';
+				faqQuestions.forEach((question) => {
+					question.style.color = '#222454';
+				});
+				faqQuestionBottoms.forEach((bottom) => {
+					bottom.style.backgroundColor = '#222454';
+				});
 			}
 		});
 
@@ -145,7 +178,7 @@
 				$sectionInView = 'Schedule';
 			}
 		} else {
-			$sectionInView = '';
+			$sectionInView = 'FAQ';
 		}
 	}}
 >
