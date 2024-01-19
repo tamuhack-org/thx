@@ -19,7 +19,7 @@
 					delay: $screenWidth > 768 ? 2500 : 1500
 				}}
 			>
-				<img src="/assets/logoy.png" alt="TAMUhack Logo" class="h-[50px] md:h-[60px]" />
+				<img src="/assets/logoy.png" alt="TAMUhack Logo" class="h-[30px] md:h-[40px]" />
 			</a>
 		{/if}
 	</div>
