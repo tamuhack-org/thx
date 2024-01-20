@@ -46,6 +46,18 @@
                 ]
             },
             {
+                "question": "Can I stay in the MSC overnight?",
+                "answers": [
+                    "Yes, however, you will not be able to re-enter the MSC after its closing time, so plan accordingly."
+                ]
+            },
+            {
+                "question": "I got waitlisted. What does that mean?",
+                "answers": [
+                    "Due to space limitations of the MSC, we are only able to accept 750 hackers. We will have a waitlist line for students who are not accepted. Starting at 11AM, we will admit people from the waitlist line until the MSC capacity has been reached."
+                ]
+            },
+            {
                 "question": "Will there be workshops or talks?",
                 "answers": [
                     "Of course! We will have workshops running throughout the whole event. We will release the complete schedule on the website closer to the event."
@@ -60,6 +72,12 @@
                 "question":"What do I need to submit?",
                 "answers": [
                     "All teams are REQUIRED to complete a Devpost submission for their project by 11:59 AM on 01/28/24 to be considered for judging. Submitting a video demo on Devpost is MANDATORY!"
+                ]
+            },
+            {
+                "question":"How many tracks can I apply for?",
+                "answers": [
+                    "Depending on whether you applied to software or hardware, your project will be eligible for the 'Best Overall Software' or 'Best Overall Hardware' track. In addition to that, you can apply to any other tracks that your project is eligible for, within your respective category."
                 ]
             },
             {
@@ -88,7 +106,7 @@
             {
                 "question": "Where can I specify that I want to participate in the hardware track?",
                 "answers": [
-                    "There is a question on the application form that asks if you want to participate in the hardware track. If you have already submitted your application, please contact us."
+                    "There is a question on the application form that asks if you want to participate in the hardware track. All selections on the application are final."
                 ]
             }
         ]

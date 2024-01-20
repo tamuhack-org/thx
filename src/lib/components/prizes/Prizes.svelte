@@ -63,17 +63,15 @@
 			<div
 				class="relative green-gradient w-full h-[250px] rounded-t-md overflow-hidden md:overflow-visible"
 			>
-				{#if isInView}
-					<img
-						in:scale={{
-							duration: 750,
-							easing: quintInOut
-						}}
-						class="rotate-[20deg] scale-75 md:scale-100 sm:-translate-y-32 lg:-translate-y-0 xl:-translate-y-24"
-						alt="Scooter Graphic"
-						src="/assets/prizes/svgs/scooter-sparkle.svg"
-					/>
-				{/if}
+				<img
+					in:scale={{
+						duration: 750,
+						easing: quintInOut
+					}}
+					class="rotate-[20deg] scale-75 md:scale-100 sm:-translate-y-32 lg:-translate-y-0 xl:-translate-y-24"
+					alt="Scooter Graphic"
+					src="/assets/prizes/svgs/scooter-sparkle.svg"
+				/>
 			</div>
 			<div class="flex flex-col justify-between w-full h-[150px] p-4 dark-bg rounded-b-md z-10">
 				<div>
@@ -93,18 +91,16 @@
 			<div
 				class="relative blue-gradient w-full h-[250px] rounded-t-md overflow-hidden md:overflow-visible"
 			>
-				{#if isInView}
-					<img
-						in:scale={{
-							duration: 750,
-							delay: 100,
-							easing: quintInOut
-						}}
-						class="sm:w-1/2 mx-auto md:w-full scale-[0.8] md:-tranlate-y-12 lg:-translate-y-0 xl:-translate-y-12"
-						alt="Monitor Graphic"
-						src="/assets/prizes/monitor.png"
-					/>
-				{/if}
+				<img
+					in:scale={{
+						duration: 750,
+						delay: 100,
+						easing: quintInOut
+					}}
+					class="sm:w-1/2 mx-auto md:w-full scale-[0.8] md:-tranlate-y-12 lg:-translate-y-0 xl:-translate-y-12"
+					alt="Monitor Graphic"
+					src="/assets/prizes/monitor.webp"
+				/>
 			</div>
 			<div class="flex flex-col justify-between w-full h-[150px] p-4 dark-bg rounded-b-md z-10">
 				<div>
@@ -122,18 +118,16 @@
 			<div
 				class="relative pink-gradient w-full h-[250px] rounded-t-md overflow-hidden md:overflow-visible"
 			>
-				{#if isInView}
-					<img
-						in:scale={{
-							duration: 750,
-							delay: 200,
-							easing: quintInOut
-						}}
-						class="rotate-[20deg] sm:w-1/2 mx-auto md:w-full scale-75 -translate-y-12 sm:-translate-y-12 lg:-translate-y-0 xl:-translate-y-24 bg-transparent"
-						alt="Headphones Graphic"
-						src="/assets/prizes/headphones-sparkle.png"
-					/>
-				{/if}
+				<img
+					in:scale={{
+						duration: 750,
+						delay: 200,
+						easing: quintInOut
+					}}
+					class="rotate-[20deg] sm:w-1/2 mx-auto md:w-full scale-75 -translate-y-12 sm:-translate-y-12 lg:-translate-y-0 xl:-translate-y-24 bg-transparent"
+					alt="Headphones Graphic"
+					src="/assets/prizes/headphones-sparkle.webp"
+				/>
 			</div>
 			<div class="flex flex-col justify-between w-full h-[150px] p-4 dark-bg rounded-b-md z-10">
 				<div>
@@ -177,17 +171,15 @@
 			<div
 				class="relative green-gradient w-full h-[250px] rounded-t-md overflow-hidden md:overflow-visible"
 			>
-				{#if isInView}
-					<img
-						in:scale={{
-							duration: 750,
-							easing: quintInOut
-						}}
-						class="rotate-[20deg] sm:-translate-y-32 lg:-translate-y-0 xl:-translate-y-12"
-						alt="iPad Graphic"
-						src="/assets/prizes/ipadhardware.webp"
-					/>
-				{/if}
+				<img
+					in:scale={{
+						duration: 750,
+						easing: quintInOut
+					}}
+					class="rotate-[20deg] sm:-translate-y-32 lg:-translate-y-0 xl:-translate-y-12"
+					alt="iPad Graphic"
+					src="/assets/prizes/ipadhardware.webp"
+				/>
 			</div>
 			<div class="flex flex-col justify-between w-full h-[150px] p-4 dark-bg rounded-b-md z-10">
 				<div>
@@ -203,18 +195,16 @@
 			<div
 				class="relative blue-gradient w-full h-[250px] rounded-t-md overflow-hidden md:overflow-visible"
 			>
-				{#if isInView}
-					<img
-						in:scale={{
-							duration: 750,
-							delay: 100,
-							easing: quintInOut
-						}}
-						class="sm:w-1/2 mx-auto md:w-full xl:scale-125 rotate-12 md:-tranlate-y-12 lg:-translate-y-0 xl:-translate-y-12"
-						alt="Monitor Graphic"
-						src="/assets/prizes/scooterhardware.webp"
-					/>
-				{/if}
+				<img
+					in:scale={{
+						duration: 750,
+						delay: 100,
+						easing: quintInOut
+					}}
+					class="sm:w-1/2 mx-auto md:w-full xl:scale-125 rotate-12 md:-tranlate-y-12 lg:-translate-y-0 xl:-translate-y-12"
+					alt="Monitor Graphic"
+					src="/assets/prizes/scooterhardware.webp"
+				/>
 			</div>
 			<div class="flex flex-col justify-between w-full h-[150px] p-4 dark-bg rounded-b-md z-10">
 				<div>
@@ -232,18 +222,16 @@
 			<div
 				class="relative pink-gradient w-full h-[250px] rounded-t-md overflow-hidden md:overflow-visible"
 			>
-				{#if isInView}
-					<img
-						in:scale={{
-							duration: 750,
-							delay: 200,
-							easing: quintInOut
-						}}
-						class="-rotate-12 sm:w-1/2 mx-auto md:w-full sm:-translate-y-6 lg:-translate-y-0 xl:-translate-y-12 bg-transparent"
-						alt="Headphones Graphic"
-						src="/assets/prizes/3dprinter.webp"
-					/>
-				{/if}
+				<img
+					in:scale={{
+						duration: 750,
+						delay: 200,
+						easing: quintInOut
+					}}
+					class="-rotate-12 sm:w-1/2 mx-auto md:w-full sm:-translate-y-6 lg:-translate-y-0 xl:-translate-y-12 bg-transparent"
+					alt="Headphones Graphic"
+					src="/assets/prizes/3dprinter.webp"
+				/>
 			</div>
 			<div class="flex flex-col justify-between w-full h-[150px] p-4 dark-bg rounded-b-md z-10">
 				<div>
@@ -286,6 +274,10 @@
 
 	.green-gradient {
 		background: linear-gradient(180deg, #d8f9e9 0.09%, #fff 151.34%);
+	}
+
+	.blue-gradient {
+		background: #cabcff;
 	}
 
 	.blue-gradient {
