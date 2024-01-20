@@ -19,7 +19,8 @@
 					delay: $screenWidth > 768 ? 2500 : 1500
 				}}
 			>
-				<img src="/assets/logoy.png" alt="TAMUhack Logo" class="h-[30px] md:h-[40px]" />
+				<video src="/assets/anniematedlogo.webm" autoplay loop muted class="h-[30px] md:h-[40px]"
+				></video>
 			</a>
 		{/if}
 	</div>
