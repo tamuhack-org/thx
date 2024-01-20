@@ -61,7 +61,7 @@
 						height: [startHeight, endHeight]
 					},
 					{
-						duration: 400,
+						duration: 200,
 						easing: 'ease-out'
 					}
 				);
@@ -102,7 +102,7 @@
 						height: [startHeight, endHeight]
 					},
 					{
-						duration: 400,
+						duration: 200,
 						easing: 'ease-out'
 					}
 				);
