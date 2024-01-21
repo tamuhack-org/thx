@@ -25,6 +25,7 @@
 	$: active = open ? 'active' : '';
 
 	onMount(() => {
+		$sectionInView = '';
 		loaded = true;
 	});
 </script>

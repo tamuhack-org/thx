@@ -13,7 +13,13 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import anime from 'animejs';
-	import { animationDone, screenWidth, screenHeight, scheduleLoaded } from '$lib/stores';
+	import {
+		animationDone,
+		screenWidth,
+		screenHeight,
+		scheduleLoaded,
+		scrolledToTop
+	} from '$lib/stores';
 	import { fly } from 'svelte/transition';
 	import Tiger from '$lib/components/common/Tiger.svelte';
 	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
@@ -61,9 +67,10 @@
 		setTimeout(() => {
 			window.scroll({
 				top: 0,
-				behavior: 'instant'
+				behavior: 'smooth'
 			});
-		}, 1);
+		}, 0.1);
+		$scrolledToTop = true;
 
 		startLoader();
 
