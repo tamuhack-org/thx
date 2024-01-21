@@ -27,6 +27,7 @@
 	onMount(() => {
 		$sectionInView = '';
 		loaded = true;
+		console.log($sectionInView);
 	});
 </script>
 
