@@ -144,7 +144,7 @@
 			<IconChevronDown class="w-5 h-5" />
 		</span>
 	</summary>
-	<p class="content text-base lg:text-xl pt-4 pb-2">
+	<p class="content text-base md:text-lg pt-4 pb-2">
 		{#each item.answers as answer}
 			<p class="">{answer}</p>
 		{/each}
@@ -155,12 +155,12 @@
 ></div>
 
 <style>
-	.arrow-close {
+	.arrow-open {
 		animation: flip-icon 0.25s ease-in-out;
 		transform: rotateX(180deg);
 	}
 
-	.arrow-open {
+	.arrow-close {
 		animation: flip-icon-close 0.25s ease-in-out;
 		transform: rotateX(0deg);
 	}
