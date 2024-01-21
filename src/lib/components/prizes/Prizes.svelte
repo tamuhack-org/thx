@@ -169,7 +169,7 @@
 			class="flex flex-col justify-between items-center col-span-6 w-full md:w-2/3 lg:col-span-2 lg:w-full mx-auto"
 		>
 			<div
-				class="relative green-gradient w-full h-[250px] rounded-t-md overflow-hidden md:overflow-visible"
+				class="relative pink-gradient w-full h-[250px] rounded-t-md overflow-hidden md:overflow-visible"
 			>
 				<img
 					in:scale={{
@@ -220,7 +220,7 @@
 		</div>
 		<div class="flex flex-col justify-between items-center col-span-6 md:col-span-3 lg:col-span-2">
 			<div
-				class="relative pink-gradient w-full h-[250px] rounded-t-md overflow-hidden md:overflow-visible"
+				class="relative green-gradient w-full h-[250px] rounded-t-md overflow-hidden md:overflow-visible"
 			>
 				<img
 					in:scale={{
