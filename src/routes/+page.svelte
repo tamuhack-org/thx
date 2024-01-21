@@ -67,9 +67,9 @@
 		setTimeout(() => {
 			window.scroll({
 				top: 0,
-				behavior: 'instant'
+				behavior: 'smooth'
 			});
-		}, 0);
+		}, 0.5);
 		$scrolledToTop = true;
 
 		startLoader();

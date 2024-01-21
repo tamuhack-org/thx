@@ -20,7 +20,7 @@
 				$sectionInView = '';
 			}
 		} else {
-			$sectionInView = 'Schedule';
+			$sectionInView = '';
 		}
 	}}
 >
