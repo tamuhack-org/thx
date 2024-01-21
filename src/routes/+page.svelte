@@ -69,7 +69,7 @@
 				top: 0,
 				behavior: 'smooth'
 			});
-		}, 0.5);
+		}, 0.1);
 		$scrolledToTop = true;
 
 		startLoader();
