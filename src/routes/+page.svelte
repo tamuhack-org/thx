@@ -22,8 +22,21 @@
 	import { inview } from 'svelte-inview';
 	import { sectionInView } from '$lib/stores';
 	import Sponsors from '$lib/components/landing/Sponsors.svelte';
+	import Faq from '$lib/components/faq/faq.svelte';
 
-	export let data;
+	// TODO: use export and use ScheduledEvent
+	export let data: {
+		events: {
+			event_name: string;
+			id: string;
+			time: string;
+			day: string;
+			date: string;
+			description: string;
+			tags?: string[];
+		}[];
+		currentEventIndex: number;
+	};
 
 	function startLoader() {
 		let counterElement = document.querySelector('.count p') as HTMLElement;
@@ -50,17 +63,20 @@
 				top: 0,
 				behavior: 'instant'
 			});
-		}, 1);
+		}, 0.1);
 
 		startLoader();
 
 		gsap.to('.count', { opacity: 0, delay: 1.5, duration: 0.5 });
 
 		let textWrapper = document.querySelector('.ml16');
-		textWrapper.innerHTML = textWrapper?.textContent?.replace(
-			/\S/g,
-			"<span class='inline-block leading-4 text-dark'>$&</span>"
-		);
+
+		if (textWrapper?.textContent) {
+			textWrapper.innerHTML = textWrapper?.textContent?.replace(
+				/\S/g,
+				"<span class='inline-block leading-4 text-dark'>$&</span>"
+			);
+		}
 
 		anime
 			.timeline({ loop: false })
@@ -251,10 +267,15 @@
 			}}
 			on:inview_leave={(event) => {
 				const { inView, scrollDirection } = event.detail;
-				if (scrollDirection.vertical === 'down') {
-					$sectionInView = '';
+				if (!$animationDone) {
+					return;
+				}
+				if (scrollDirection.vertical === 'up') {
+					if (window.scrollY !== 0) {
+						$sectionInView = 'Prizes';
+					}
 				} else {
-					$sectionInView = 'Prizes';
+					$sectionInView = '';
 				}
 			}}
 			id="schedule"
@@ -265,11 +286,34 @@
 		{#if $scheduleLoaded}
 			<PrizesContainer />
 		{/if}
+		<div
+			id="faq"
+			class="mt-72"
+			use:inview
+			on:inview_enter={(event) => {
+				const { inView } = event.detail;
+				if (inView) {
+					$sectionInView = 'FAQ';
+				}
+			}}
+			on:inview_leave={(event) => {
+				const { inView, scrollDirection } = event.detail;
+				if (!$animationDone) {
+					return;
+				}
+				if (scrollDirection.vertical === 'up') {
+					if (window.scrollY !== 0) {
+						$sectionInView = '';
+					}
+				} else {
+					$sectionInView = 'Prizes';
+				}
+			}}
+		>
+			<Faq />
+		</div>
 		<div>
 			<Sponsors />
-		</div>
-		<div id="under-construction" class="my-32">
-			<Construction />
 		</div>
 	</div>
 

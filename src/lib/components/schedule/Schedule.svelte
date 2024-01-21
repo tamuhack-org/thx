@@ -25,8 +25,6 @@
 		} else {
 			activeFilters = [...activeFilters, filter];
 		}
-
-		console.log(activeFilters);
 	};
 
 	onMount(async () => {

@@ -229,7 +229,7 @@
 
 	onMount(() => {
 		if ($screenWidth > 768) {
-			renderEngine();
+			// renderEngine();
 		}
 
 		gsap.from('#physics-container', {

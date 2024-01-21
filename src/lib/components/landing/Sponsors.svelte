@@ -79,10 +79,10 @@
 	];
 </script>
 
-<div class="flex flex-col w-full items-center justify-center h-[calc(100dvh)] text-center">
+<div class="flex flex-col w-full items-center justify-center text-center py-16 md:py-32">
 	<h1
 		id="thank-you"
-		class="text-3xl sm:text-4xl lg:text-6xl font-semibold text-white leading-relaxed"
+		class="text-3xl sm:text-4xl lg:text-6xl font-semibold text-dark leading-relaxed"
 	>
 		Thank you to our sponsors...
 	</h1>
@@ -127,7 +127,7 @@
 		</a>
 	{/each}
 </div>
-<div class="flex flex-col w-full items-center justify-center py-32 text-center">
+<div class="flex flex-col w-full items-center justify-center py-16 md:py-32 text-center">
 	<h1
 		id="thank-you"
 		class="text-3xl sm:text-4xl lg:text-6xl font-semibold text-dark leading-relaxed"
@@ -135,7 +135,7 @@
 		and partners...
 	</h1>
 </div>
-<div class="w-full grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="w-full grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
 	{#each partners as image}
 		<a
 			href={image.href}

@@ -6,6 +6,7 @@
 
 	let childWidth: number;
 	let loaded = false;
+
 	$: repeatedChildNumber = Math.floor($screenWidth / childWidth) + 2;
 
 	onMount(() => {

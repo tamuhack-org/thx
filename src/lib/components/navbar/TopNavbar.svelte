@@ -1,10 +1,28 @@
 <script lang="ts">
-	import { animationDone, screenWidth } from '$lib/stores';
+	import { animationDone, screenWidth, sectionInView } from '$lib/stores';
+	import { inview } from 'svelte-inview';
 	import { scale } from 'svelte/transition';
 </script>
 
 <div
 	class="flex justify-between items-center w-[89%] md:w-[90%] lg:w-full min-h-[70px] px-8 mt-[40px]"
+	use:inview
+	on:inview_enter={(event) => {
+		const { inView } = event.detail;
+		if (inView) {
+			$sectionInView = '';
+		}
+	}}
+	on:inview_leave={(event) => {
+		const { inView, scrollDirection } = event.detail;
+		if (scrollDirection.vertical === 'down') {
+			if (window.scrollY !== 0) {
+				$sectionInView = '';
+			}
+		} else {
+			$sectionInView = '';
+		}
+	}}
 >
 	<div class="flex gap-2 items-center w-1/2 h-full">
 		{#if $animationDone}
@@ -19,7 +37,8 @@
 					delay: $screenWidth > 768 ? 2500 : 1500
 				}}
 			>
-				<img src="/assets/logoy.png" alt="TAMUhack Logo" class="h-[30px] md:h-[40px]" />
+				<video src="/assets/anniematedlogo.webm" autoplay loop muted class="h-[30px] md:h-[40px]"
+				></video>
 			</a>
 		{/if}
 	</div>
