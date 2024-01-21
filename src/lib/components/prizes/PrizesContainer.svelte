@@ -5,7 +5,7 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { inview } from 'svelte-inview';
-	import { sectionInView } from '$lib/stores';
+	import { animationDone, sectionInView } from '$lib/stores';
 
 	const prizeAssets = [
 		{
@@ -203,17 +203,22 @@
 	use:inview
 	on:inview_enter={(event) => {
 		const { inView } = event.detail;
-		if (inView) $sectionInView = 'Prizes';
+		if (inView) {
+			$sectionInView = 'Prizes';
+		}
 	}}
 	on:inview_leave={(event) => {
 		const { scrollDirection } = event.detail;
-		if (scrollDirection.vertical === 'down') {
+		if (!$animationDone) {
+			return;
+		}
+		if (scrollDirection.vertical === 'up') {
 			// if statement to fix bug that causes sectionInView to be Schedule when first loading page
 			if (window.scrollY !== 0) {
-				$sectionInView = 'Schedule';
+				$sectionInView = 'FAQ';
 			}
 		} else {
-			$sectionInView = 'FAQ';
+			$sectionInView = 'Schedule';
 		}
 	}}
 >

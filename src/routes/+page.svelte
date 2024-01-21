@@ -13,12 +13,7 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import anime from 'animejs';
-	import {
-		animationDone,
-		screenWidth,
-		screenHeight,
-		scheduleLoaded,
-	} from '$lib/stores';
+	import { animationDone, screenWidth, screenHeight, scheduleLoaded } from '$lib/stores';
 	import { fly } from 'svelte/transition';
 	import Tiger from '$lib/components/common/Tiger.svelte';
 	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
@@ -272,12 +267,15 @@
 			}}
 			on:inview_leave={(event) => {
 				const { inView, scrollDirection } = event.detail;
-				if (scrollDirection.vertical === 'down') {
+				if (!$animationDone) {
+					return;
+				}
+				if (scrollDirection.vertical === 'up') {
 					if (window.scrollY !== 0) {
-						$sectionInView = '';
+						$sectionInView = 'Prizes';
 					}
 				} else {
-					$sectionInView = 'Prizes';
+					$sectionInView = '';
 				}
 			}}
 			id="schedule"
@@ -300,12 +298,15 @@
 			}}
 			on:inview_leave={(event) => {
 				const { inView, scrollDirection } = event.detail;
-				if (scrollDirection.vertical === 'down') {
+				if (!$animationDone) {
+					return;
+				}
+				if (scrollDirection.vertical === 'up') {
 					if (window.scrollY !== 0) {
-						$sectionInView = 'Prizes';
+						$sectionInView = '';
 					}
 				} else {
-					$sectionInView = '';
+					$sectionInView = 'Prizes';
 				}
 			}}
 		>
