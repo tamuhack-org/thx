@@ -18,7 +18,6 @@
 		screenWidth,
 		screenHeight,
 		scheduleLoaded,
-		scrolledToTop
 	} from '$lib/stores';
 	import { fly } from 'svelte/transition';
 	import Tiger from '$lib/components/common/Tiger.svelte';
@@ -67,10 +66,9 @@
 		setTimeout(() => {
 			window.scroll({
 				top: 0,
-				behavior: 'smooth'
+				behavior: 'instant'
 			});
 		}, 0.1);
-		$scrolledToTop = true;
 
 		startLoader();
 
