@@ -9,77 +9,77 @@
 
 	const prizeAssets = [
 		{
-			file: 'echo-bundle.svg',
+			file: 'svgs/echo-bundle.svg',
 			speed: '0.1',
 			width: 'sm:w-[125px]',
 			topPosition: 'top-[15%]',
 			leftPosition: 'left-[85%]'
 		},
 		{
-			file: 'headphones-sparkle.svg',
+			file: 'svgs/headphones-sparkle.svg',
 			speed: '0.35',
 			width: 'sm:w-[200px]',
 			topPosition: 'top-[20%]',
 			leftPosition: 'left-[35%]'
 		},
 		{
-			file: 'instax-mini.svg',
+			file: 'svgs/instax-mini.svg',
 			speed: '0.25',
 			width: 'sm:w-[125px]',
 			topPosition: 'top-[30%]',
 			leftPosition: 'left-[60%]'
 		},
 		{
-			file: 'ipad-sparkle.svg',
+			file: 'svgs/ipad-sparkle.svg',
 			speed: '0.3',
 			width: 'sm:w-[225px]',
 			topPosition: 'top-[60%]',
 			leftPosition: 'left-[45%]'
 		},
 		{
-			file: 'mini-projector.svg',
+			file: 'svgs/mini-projector.svg',
 			speed: '0.4',
 			width: 'sm:w-[125px]',
 			topPosition: 'top-[95%]',
 			leftPosition: 'left-[65%]'
 		},
 		{
-			file: 'monitor.svg',
+			file: 'svgs/monitor.svg',
 			speed: '0.25',
 			width: 'sm:w-[200px]',
 			topPosition: 'top-[90%]',
 			leftPosition: 'left-[25%]'
 		},
 		{
-			file: 'polaroid.svg',
+			file: 'svgs/polaroid.svg',
 			speed: '0.4',
 			width: 'sm:w-[125px]',
 			topPosition: 'top-[45%]',
 			leftPosition: 'left-[10%]'
 		},
 		{
-			file: 'raspberry-pi.svg',
+			file: 'svgs/raspberry-pi.svg',
 			speed: '0.2',
 			width: 'sm:w-[125px]',
 			topPosition: 'top-[65%]',
 			leftPosition: 'left-[20%]'
 		},
 		{
-			file: 'scooter-sparkle.svg',
+			file: 'svgs/scooter-sparkle.svg',
 			speed: '0.35',
 			width: 'sm:w-[250px]',
 			topPosition: 'top-[55%]',
 			leftPosition: 'left-[80%]'
 		},
 		{
-			file: 'speaker.svg',
+			file: 'svgs/speaker.svg',
 			speed: '0.25',
 			width: 'sm:w-[125px]',
 			topPosition: 'top-[10%]',
 			leftPosition: 'left-[10%]'
 		},
 		{
-			file: 'switch-sparkle.svg',
+			file: 'svgs/switch-sparkle.svg',
 			speed: '0.15',
 			width: 'sm:w-[175px]',
 			topPosition: 'top-[70%]',
@@ -97,7 +97,28 @@
 			speed: '0.2',
 			width: 'sm:w-[150px]',
 			topPosition: 'top-[40%]',
-			leftPosition: 'left-[35%]'
+			leftPosition: 'left-[37%]'
+		},
+		{
+			file: 'ipadhardware.webp',
+			speed: '0.15',
+			width: 'sm:w-[300px]',
+			topPosition: 'top-[77%]',
+			leftPosition: 'left-[6%]'
+		},
+		{
+			file: 'scooterhardware.webp',
+			speed: '0.1',
+			width: 'sm:w-[300px]',
+			topPosition: 'top-[80%]',
+			leftPosition: 'left-[47%]'
+		},
+		{
+			file: '3dprinter.webp',
+			speed: '0.2',
+			width: 'sm:w-[250px]',
+			topPosition: 'top-[7%]',
+			leftPosition: 'left-[63%]'
 		}
 	];
 
@@ -200,9 +221,9 @@
 		<div id="prize-images" class="absolute top-32 left-0 w-full h-[1000px]">
 			{#each prizeAssets as prize}
 				<img
-					src={`/assets/prizes/svgs/${prize.file}`}
+					src={`/assets/prizes/${prize.file}`}
 					alt=""
-					class={`absolute opacity-75 -translate-x-1/2 -translate-y-1/2 w-[80px] ${prize.width} ${prize.topPosition} ${prize.leftPosition}`}
+					class={`absolute opacity-75 -translate-x-1/2 -translate-y-1/2 w-[75px] ${prize.width} ${prize.topPosition} ${prize.leftPosition}`}
 					data-speed={`${prize.speed}`}
 				/>
 			{/each}
