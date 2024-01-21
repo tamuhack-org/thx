@@ -36,7 +36,7 @@
 			x: 0,
 			y: 200,
 			opacity: 1,
-			delay: 3000
+			delay: 100
 		}}
 		class="flex w-full justify-center fixed bottom-8 font-poppins select-none z-50 pointer-events-none"
 	>

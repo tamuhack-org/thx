@@ -25,7 +25,7 @@
 			</div>
 		</div>
 		<div class="w-0 lg:w-1/4 mr-10">
-			<img src="/assets/faqgif.png" alt="happy computer" />
+			<img src="/assets/faq.gif" alt="happy computer" />
 		</div>
 	</div>
 	<div class="mt-10">

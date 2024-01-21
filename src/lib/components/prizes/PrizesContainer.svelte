@@ -84,6 +84,20 @@
 			width: 'sm:w-[175px]',
 			topPosition: 'top-[70%]',
 			leftPosition: 'left-[90%]'
+		},
+		{
+			file: 'airpods.webp',
+			speed: '0.1',
+			width: 'sm:w-[150px]',
+			topPosition: 'top-[60%]',
+			leftPosition: 'left-[65%]'
+		},
+		{
+			file: 'airpodspro.webp',
+			speed: '0.2',
+			width: 'sm:w-[150px]',
+			topPosition: 'top-[40%]',
+			leftPosition: 'left-[35%]'
 		}
 	];
 
