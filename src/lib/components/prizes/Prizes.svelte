@@ -9,19 +9,38 @@
 	type Prize = {
 		title: string;
 		desc: string;
-		prize: string;
+		prizes: string[];
 	};
 
 	let otherPrizes: Prize[] = [
 		{
 			title: 'Best Design',
 			desc: 'In the world of hacking and engineering, a product must not only work well, but also provide the best user experience possible. Best hack that demonstrates clear design and usability intentions.',
-			prize: 'Polaroid Now 2nd Gen'
+			prizes: ['Prize: Polaroid Now 2nd Gen']
 		},
 		{
 			title: 'Best Beginner Hack',
 			desc: 'Best hack created by first-time hackers at TAMUhack. (Must have at least 2 first-timers to qualify)',
-			prize: 'Mini-Projector'
+			prizes: ['Prize: Mini-Projector']
+		},
+		{
+			title: 'PIMCO Challenge',
+			desc: 'Develop a hack that encourages good financial behavior and help to set individuals up for success in meeting their financial goals. Whether you choose to focus on saving, investing, building credit, financial literacy, or anything else you dream up, from our perspective, when you combine finance with technology, the sky’s the limit.',
+			prizes: ['1st Place: $80 Amazon gift cards', '2nd Place: $40 Amazon gift cards']
+		},
+		{
+			title: 'Sandia Challenge',
+			desc: 'The proliferation of personally identifiable information (birthdays, interests/hobbies, family connections, occupation/title, etc.) across social media and the wider internet has enabled many threat actors to conduct phishing attacks and impersonate unsuspecting individuals. Develop an application, methodology, or tool to aid in the detection of possible phishing attempts and alert users to open-source intelligence that could be used to impersonate them.',
+			prizes: [
+				'1st Place: Beats™ Studio Buds',
+				'2nd Place: Bose™ Soundlink Flex Bluetooth Speaker',
+				'3rd Place: Sandia Swag Bag'
+			]
+		},
+		{
+			title: 'Frogslayer Challenge',
+			desc: 'Build an application that utilizes a cross-platform framework (Flutter, .NET MAUI, React Native)',
+			prizes: ['Prize: $50 Amazon Gift Cards']
 		}
 	];
 
@@ -34,16 +53,16 @@
 	function handleMouseOut() {
 		hoverText = '1st place overall prize.';
 	}
-	let otherPrizesHardware: Prize[] = [
+	let otherPrizesHardware = [
 		{
-			title: 'Cybersecuity Challenge',
-			desc: 'In the world of hacking and engineering, a product must not only work well, but also provide the best user experience possible. Best hack that demonstrates clear design and usability intentions.',
-			prize: 'Airpods 3rd Gen'
+			title: 'Frogslayer Challenge',
+			desc: 'Build an application that utilizes a cross-platform framework (Flutter, .NET MAUI, React Native)',
+			prizes: ['$50 Amazon Gift Cards']
 		},
 		{
-			title: 'Best Beginner Hack',
-			desc: 'Best hack created by first-time hackers at TAMUhack. (Must have at least 2 first-timers to qualify)',
-			prize: 'Airpods 3rd Gen'
+			title: 'Pimco Challenge',
+			desc: 'Develop a hack that encourages good financial behavior and help to set individuals up for success in meeting their financial goals. Whether you choose to focus on saving, investing, building credit, financial literacy, or anything else you dream up, from our perspective, when you combine finance with technology, the sky’s the limit.',
+			prizes: ['Airpods 3rd Gen']
 		}
 	];
 </script>
@@ -151,7 +170,11 @@
 						{prize.desc}
 					</p>
 				</div>
-				<p class="text-base md:text-xl font-poppins copy-on-dark mt-8">Prize: {prize.prize}</p>
+				<div class="mt-8">
+					{#each prize.prizes as win}
+						<p class="text-base md:text-xl font-poppins copy-on-dark mt-2">{win}</p>
+					{/each}
+				</div>
 			</div>
 		{/each}
 	</div>
