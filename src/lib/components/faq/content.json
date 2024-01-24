@@ -98,6 +98,12 @@
                 ]
             },
             {
+                "question":"What is a hardware hack?",
+                "answers": [
+                    "Hardware projects involve creating or modifying physical devices or components as their baseline. This includes but is not limited to building prototypes, integrating sensors, or designing electronic circuits. These projects, unlike software, require tangible materials, tools for construction, and require some level of assembling and testing physical objects. On the other hand, software projects are typically purely hosted on one’s device and do not have any connection to a physical system. Both types of projects may require a certain degree of programming but ultimately are distinct as they solve issues in varying fields."
+                ]
+            },
+            {
                 "question": "Can I participate in both software and hardware tracks? ",
                 "answers": [
                     "At this time, a team can only participate in one track, either software or hardware. The different tracks will be judged separately, by specialists in the respective field."
