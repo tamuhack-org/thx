@@ -44,14 +44,14 @@
 		}
 	];
 
-	let hoverText = '1st place overall prize.';
+	let hoverText = '1st place software track.';
 
 	function handleHover() {
 		hoverText = '...and the scooter was electric.';
 	}
 
 	function handleMouseOut() {
-		hoverText = '1st place overall prize.';
+		hoverText = '1st place software track.';
 	}
 	let otherPrizesHardware = [
 		{
@@ -94,7 +94,7 @@
 			</div>
 			<div class="flex flex-col justify-between w-full h-[150px] p-4 dark-bg rounded-b-md z-10">
 				<div>
-					<p class="text-2xl font-medium font-poppins copy-on-dark">First Place</p>
+					<p class="text-2xl font-medium font-poppins copy-on-dark">First Place Software</p>
 					<p
 						on:mouseover={handleHover}
 						on:mouseout={handleMouseOut}
@@ -125,7 +125,7 @@
 				<div>
 					<p class="text-2xl font-medium font-poppins copy-on-dark">Second Place Software</p>
 					<p class="text-lg font-light font-poppins copy-on-dark opacity-90">
-						2nd place overall prize.
+						2nd place software track.
 					</p>
 				</div>
 				<p class="text-base md:text-xl font-light font-poppins copy-on-dark">
@@ -152,7 +152,7 @@
 				<div>
 					<p class="text-2xl font-medium font-poppins copy-on-dark">Third Place Software</p>
 					<p class="text-lg font-light font-poppins copy-on-dark opacity-90">
-						3rd place overall prize.
+						3rd place software track.
 					</p>
 				</div>
 				<p class="text-base md:text-xl font-poppins copy-on-dark">Prize: Sony XM4 Headphones</p>
