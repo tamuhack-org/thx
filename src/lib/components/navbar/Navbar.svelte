@@ -15,7 +15,9 @@
 		IconCalendar,
 		IconUserQuestion,
 		IconTrophy,
-		IconCategory
+		IconCategory,
+		IconBrandGit,
+		IconWorld
 	} from '@tabler/icons-svelte';
 	import { animationDone } from '$lib/stores';
 	import { sectionInView } from '$lib/stores';
@@ -89,6 +91,17 @@
 						>
 							<IconLicense class="w-5 h-5" />
 							<p>Code of Conduct</p>
+						</a>
+						<a
+							href="https://docs.google.com/presentation/d/17tD4eOPL54v6YPEZE57gkOrtEo9LA_r4U0bAOBRGRSo/edit?usp=sharing"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
+							<IconBrandGit class="w-5 h-5" />
+							<p>Intro to Git</p>
+						</a>
+						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
+							<IconWorld class="w-5 h-5" />
+							<p>Intro to Web Dev</p>
 						</a>
 					</div>
 				</div>
@@ -170,6 +183,13 @@
 							<IconBrandSpotify class="w-5 h-5" />
 							<p>Spotify Queue</p>
 						</a>
+						<a
+							href="https://docs.google.com/presentation/d/17tD4eOPL54v6YPEZE57gkOrtEo9LA_r4U0bAOBRGRSo/edit?usp=sharing"
+							class="flex flex-row items-center gap-2 transition-opacity"
+						>
+							<IconBrandGit class="w-5 h-5" />
+							<p>Intro to Git</p>
+						</a>
 					</div>
 					<div
 						class:opacity-100={open}
@@ -193,6 +213,13 @@
 						>
 							<IconLicense class="w-5 h-5" />
 							<p>Code of Conduct</p>
+						</a>
+						<a
+							href="https://docs.google.com/presentation/d/17tD4eOPL54v6YPEZE57gkOrtEo9LA_r4U0bAOBRGRSo/edit?usp=sharing"
+							class="flex flex-row items-center gap-2 opacity-75 transition-opacity"
+						>
+							<IconWorld class="w-5 h-5" />
+							<p>Intro to Web Dev</p>
 						</a>
 					</div>
 				</div>
@@ -235,12 +262,12 @@
 	}
 
 	.expand-container.active {
-		height: 140px;
+		height: 160px;
 	}
 
 	@media (max-width: 640px) {
 		.expand-container.active {
-			height: 250px;
+			height: 340px;
 		}
 	}
 

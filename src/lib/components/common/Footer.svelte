@@ -72,8 +72,8 @@
 
 	let workshops = [
 		{
-			name: 'Coming Soon!',
-			link: '/'
+			name: 'Intro to Git',
+			link: 'https://docs.google.com/presentation/d/17tD4eOPL54v6YPEZE57gkOrtEo9LA_r4U0bAOBRGRSo/edit?usp=sharing'
 		}
 		// {
 		// 	name: 'Intro to Web Dev',
