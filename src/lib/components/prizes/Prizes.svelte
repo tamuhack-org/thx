@@ -24,9 +24,9 @@
 			prizes: ['Prize: Mini-Projector']
 		},
 		{
-			title: 'PIMCO Challenge',
-			desc: 'Develop a hack that encourages good financial behavior and help to set individuals up for success in meeting their financial goals. Whether you choose to focus on saving, investing, building credit, financial literacy, or anything else you dream up, from our perspective, when you combine finance with technology, the sky’s the limit.',
-			prizes: ['1st Place: $80 Amazon gift cards', '2nd Place: $40 Amazon gift cards']
+			title: 'American Airlines Challenge',
+			desc: 'Create a solution for the airline industry, be it passenger experience, employee experience, or operational efficiencies.',
+			prizes: ['Prize: AAdvantage Flyer Miles']
 		},
 		{
 			title: 'Sandia Challenge',
@@ -35,6 +35,20 @@
 				'1st Place: Beats™ Studio Buds',
 				'2nd Place: Bose™ Soundlink Flex Bluetooth Speaker',
 				'3rd Place: Sandia Swag Bag'
+			]
+		},
+		{
+			title: 'PIMCO Challenge',
+			desc: 'Develop a hack that encourages good financial behavior and help to set individuals up for success in meeting their financial goals. Whether you choose to focus on saving, investing, building credit, financial literacy, or anything else you dream up, from our perspective, when you combine finance with technology, the sky’s the limit.',
+			prizes: ['1st Place: $80 Amazon gift cards', '2nd Place: $40 Amazon gift cards']
+		},
+		{
+			title: 'PIMCO Challenge',
+			desc: 'L3Harris Technologies is the Trusted Disruptor in the Aerospace & Defense industry. With customers mission-critical needs always in mind, our employee teams deliver creative end-to-end technology solutions connecting space, air, land, sea, and cyber domains in the interest of national security. In order to provide these advanced engineering solutions, we need skilled, engaged, and passionate engineering teams. As a company, we strive to stimulate lasting interest in STEM careers in school-aged children. Challenge: Develop a user experience that will stimulate lasting interest in and preparation for STEM careers for those under 12 years of age.',
+			prizes: [
+				'1st Place: $200 Amazon gift cards',
+				'2nd Place: $100 Amazon gift cards',
+				'3rd Place: $50 Amazon gift cards'
 			]
 		},
 		{
