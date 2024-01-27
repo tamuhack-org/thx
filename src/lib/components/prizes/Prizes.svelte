@@ -6,10 +6,16 @@
 
 	let isInView: boolean;
 
+	type ProjectReference = {
+		name: string;
+		link: string;
+	};
+
 	type Prize = {
 		title: string;
 		desc: string;
 		prizes: string[];
+		projectRefs?: ProjectReference[]; 
 	};
 
 	let otherPrizes: Prize[] = [
@@ -64,6 +70,24 @@
 			title: "USAA Challenge",
 			desc: "Create a hack that utilizes a REST API developed by your team. *Bonus points for resiliency, gathering information from multiple data sources (DB, Other rest apis, etc), full CRUD capabilities, user authentication, friendly UI for non-technical users).",
 			prizes: ["Raspberry Pi 4 Model B: Quad Core 64 bit, WiFi + Bluetooth"]
+		},
+		{
+			title: "Baker Hughes Challenge",
+			desc: "Develop an innovative solution for compressing 3-phase power analysis data without any loss in information. Make sure to read through the challenge document for more information!",
+			prizes: [
+				"1st Place: Toshiba Canvio Flex 2TB Portable External Hard Drive",
+				"2nd Place: Baker Hughes Swag Bag"
+			],
+			projectRefs: [
+				{
+					name: "Challenge Document",
+					link: "http://bit.ly/BakerHughesChallengeDoc"
+				},
+				{
+					name: "Dataset",
+					link: "http://bit.ly/BakerHughesDataset"
+				}
+			]
 		}
 	];
 
@@ -186,12 +210,24 @@
 		{#each otherPrizes as prize}
 			<div class="flex flex-col justify-between w-full p-4 dark-bg rounded-md z-10">
 				<div>
-					<p class="text-2xl font-medium font-poppins copy-on-dark">
+					<h1 class="text-2xl font-medium font-poppins copy-on-dark">
 						{prize.title}
-					</p>
+					</h1>
 					<p class="text-base md:text-lg font-light font-poppins copy-on-dark mt-2 opacity-90">
 						{prize.desc}
 					</p>
+						{#if prize?.projectRefs}
+							<h2 class="text-base md:text-xl font-poppins copy-on-dark mt-4">
+								Project References
+							</h2>
+							<ul class="text-base md:text-lg font-light font-poppings copy-on-dark mt-2 opacity-90">
+								{#each prize.projectRefs as ref}
+									<li>
+										<a href={ref.link}><u>{ref.name}</u></a>
+									</li>
+								{/each}
+							</ul>
+						{/if}
 				</div>
 				<div class="mt-8">
 					{#each prize.prizes as win}
