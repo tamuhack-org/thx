@@ -43,7 +43,7 @@
 			prizes: ['1st Place: $80 Amazon gift cards', '2nd Place: $40 Amazon gift cards']
 		},
 		{
-			title: 'PIMCO Challenge',
+			title: 'L3Harris Technologies Challenge',
 			desc: 'L3Harris Technologies is the Trusted Disruptor in the Aerospace & Defense industry. With customers mission-critical needs always in mind, our employee teams deliver creative end-to-end technology solutions connecting space, air, land, sea, and cyber domains in the interest of national security. In order to provide these advanced engineering solutions, we need skilled, engaged, and passionate engineering teams. As a company, we strive to stimulate lasting interest in STEM careers in school-aged children. Challenge: Develop a user experience that will stimulate lasting interest in and preparation for STEM careers for those under 12 years of age.',
 			prizes: [
 				'1st Place: $200 Amazon gift cards',
