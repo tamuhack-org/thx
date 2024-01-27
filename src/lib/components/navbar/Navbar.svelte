@@ -63,10 +63,10 @@
 						class="flex flex-col gap-4 transition-opacity duration-150 justify-between"
 					>
 						<a
-							href="/"
+							href="https://drive.google.com/file/d/1LH0qNhCGSjjXyUuk_xUZzM5xzK8Zxsba/view?usp=sharing"
 							target="_blank"
 							rel="noreferrer noopener"
-							class="flex flex-row items-center gap-2 opacity-75 transition-opacity"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconNotebook class="w-5 h-5" />
 							<p>Hacker Guide</p>
@@ -221,10 +221,10 @@
 						class="flex flex-col gap-3 justify-start h-full transition-opacity duration-150"
 					>
 						<a
-							href="/"
+							href="https://drive.google.com/file/d/1LH0qNhCGSjjXyUuk_xUZzM5xzK8Zxsba/view?usp=sharing"
 							target="_blank"
 							rel="noreferrer noopener"
-							class="flex flex-row items-center gap-2 opacity-75 transition-opacity"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconNotebook class="w-5 h-5" />
 							<p>Hacker Guide</p>

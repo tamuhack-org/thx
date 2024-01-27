@@ -2,10 +2,10 @@
 	import Friend from '../friend/Friend.svelte';
 
 	let resources = [
-		// {
-		// 	name: 'Hacker Guide',
-		// 	link: 'https://hackers.tamuhack.com/'
-		// },
+		{
+			name: 'Hacker Guide',
+			link: 'https://drive.google.com/file/d/1LH0qNhCGSjjXyUuk_xUZzM5xzK8Zxsba/view?usp=sharing'
+		},
 		{
 			name: 'HelpR',
 			link: 'https://helpr.tamuhack.org/'
