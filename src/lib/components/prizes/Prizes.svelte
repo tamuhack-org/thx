@@ -26,7 +26,11 @@
 		{
 			title: 'American Airlines Challenge',
 			desc: 'Create a solution for the airline industry, be it passenger experience, employee experience, or operational efficiencies.',
-			prizes: ['Prize: AAdvantage Flyer Miles']
+			prizes: [
+				'1st Place: 75k AAdvantage® Miles for each team member',
+				'2nd Place: 50k AAdvantage® Miles for each team member',
+				'3rd Place: 25k AAdvantage® Miles for each team member'
+			]
 		},
 		{
 			title: 'Sandia Challenge',
