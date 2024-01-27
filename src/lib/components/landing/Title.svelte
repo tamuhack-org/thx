@@ -97,13 +97,20 @@
 						delay: $screenWidth > 768 ? 2500 : 1500
 					}}
 				>
-					<a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer">
+					<!-- <a href="https://register.tamuhack.com/" target="_blank" rel="noopener noreferrer">
 						<button
 							class="px-6 py-3 rounded-md text-white border-[1px] border-dark bg-dark font-normal hover:bg-black transition-all"
 							>Apply</button
 						></a
-					>
-					<a
+					> -->
+					<div>
+						<div
+							class="px-6 py-3 rounded-md text-white border-[1px] border-dark bg-dark font-normal transition-all opacity-75"
+						>
+							Apply
+						</div>
+					</div>
+					<!-- <a
 						href="https://forms.gle/bVW9KJSCxeYus4xy9"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -117,7 +124,20 @@
 							class="px-6 py-3 rounded-md text-dark border-[1px] border-dark bg-transparent font-normal hover:bg-black hover:text-white transition-all"
 							>Mentor</button
 						></a
+					> -->
+					<div
+						in:scale={{
+							duration: 500,
+							opacity: 1,
+							delay: $screenWidth > 768 ? 2500 : 1500
+						}}
 					>
+						<div
+							class="px-6 py-3 rounded-md text-dark border-[1px] border-dark bg-transparent font-normal opacity-75 transition-all"
+						>
+							Mentor
+						</div>
+					</div>
 				</div>
 			{/if}
 		</div>

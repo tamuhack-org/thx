@@ -49,7 +49,7 @@
 			></a
 		> -->
 		{#if $animationDone}
-			<a
+			<!-- <a
 				href="https://register.tamuhack.com/"
 				target="_blank"
 				rel="noopener noreferrer"
@@ -63,8 +63,21 @@
 					class="px-6 py-3 rounded-md text-white border-[1px] border-dark bg-dark font-normal hover:bg-black transition-all"
 					>Apply</button
 				></a
+			> -->
+			<div
+				in:scale={{
+					duration: 500,
+					opacity: 1,
+					delay: 2500
+				}}
 			>
-			<a
+				<div
+					class="px-6 py-3 rounded-md text-white border-[1px] border-dark bg-dark font-normal transition-all opacity-75 pointer-events-none"
+				>
+					Apply
+				</div>
+			</div>
+			<!-- <a
 				href="https://forms.gle/bVW9KJSCxeYus4xy9"
 				target="_blank"
 				rel="noopener noreferrer"
@@ -78,7 +91,20 @@
 					class="px-6 py-3 rounded-md text-dark border-[1px] border-dark bg-transparent font-normal hover:bg-black hover:text-white transition-all"
 					>Mentor</button
 				></a
+			> -->
+			<div
+				in:scale={{
+					duration: 500,
+					opacity: 1,
+					delay: 2500
+				}}
 			>
+				<div
+					class="px-6 py-3 rounded-md text-dark border-[1px] border-dark bg-transparent font-normal transition-all opacity-75 pointer-events-none"
+				>
+					Mentor
+				</div>
+			</div>
 		{/if}
 	</div>
 </div>

@@ -21,6 +21,22 @@
 		{
 			name: 'Code of Conduct',
 			link: 'https://static.mlh.io/docs/mlh-code-of-conduct.pdf'
+		},
+		{
+			name: 'Misconduct Reporting',
+			link: 'https://tamuhack.org/misconduct'
+		},
+		{
+			name: 'Team Formation',
+			link: 'https://tamuhack.org/team-formation'
+		},
+		{
+			name: 'Spotify Queue',
+			link: 'https://tamuhack.org/team-formation'
+		},
+		{
+			name: 'Devpost',
+			link: 'https://tamuhack.org/devpost'
 		}
 	];
 
@@ -74,15 +90,15 @@
 		{
 			name: 'Intro to Git',
 			link: 'https://docs.google.com/presentation/d/17tD4eOPL54v6YPEZE57gkOrtEo9LA_r4U0bAOBRGRSo/edit?usp=sharing'
+		},
+		{
+			name: 'Intro to Web Dev',
+			link: 'https://docs.google.com/presentation/d/16moIOAhsbH5qlyeWv0xfH73XT_hk0TJ-b6xct3njT5U/edit?usp=sharing'
+		},
+		{
+			name: 'Intro to Hardware',
+			link: 'https://docs.google.com/presentation/d/1PGyzuwHUsFabeBiMDdyGySel6rtKnuKERMko81i1Lb0/edit?usp=sharing'
 		}
-		// {
-		// 	name: 'Intro to Web Dev',
-		// 	link: '/'
-		// }
-		// {
-		// 	name: 'Intro to Git',
-		// 	link: '/'
-		// }
 	];
 </script>
 

@@ -17,7 +17,10 @@
 		IconTrophy,
 		IconCategory,
 		IconBrandGit,
-		IconWorld
+		IconWorld,
+		IconCpu,
+		IconExclamationCircle,
+		IconUsers
 	} from '@tabler/icons-svelte';
 	import { animationDone } from '$lib/stores';
 	import { sectionInView } from '$lib/stores';
@@ -59,27 +62,46 @@
 						class:opacity-0={!open}
 						class="flex flex-col gap-4 transition-opacity duration-150 justify-between"
 					>
-						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
+						<a
+							href="/"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 opacity-75 transition-opacity"
+						>
 							<IconNotebook class="w-5 h-5" />
 							<p>Hacker Guide</p>
 						</a>
 						<a
 							href="https://discord.gg/VZyKP4JcC3"
+							target="_blank"
+							rel="noreferrer noopener"
 							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconBrandDiscord class="w-5 h-5" />
 							<p>Discord</p>
 						</a>
-						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
+						<a
+							href="/"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 opacity-75 transition-opacity"
+						>
 							<IconBrandSpotify class="w-5 h-5" />
 							<p>Spotify Queue</p>
 						</a>
-						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
+						<a
+							href="https://tamuhack.org/devpost"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 transition-opacity"
+						>
 							<IconScale class="w-5 h-5" />
 							<p>Devpost</p>
 						</a>
 						<a
 							href="https://helpr.tamuhack.org"
+							target="_blank"
+							rel="noreferrer noopener"
 							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconHelp class="w-5 h-5" />
@@ -87,6 +109,8 @@
 						</a>
 						<a
 							href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf?_gl=1*19bpx84*_ga*NDgxNjY1Mzk0LjE3MDIxODA5Njk.*_ga_E5KT6TC4TK*MTcwMjcwNzc3NC40LjAuMTcwMjcwNzc3NC4wLjAuMA.."
+							target="_blank"
+							rel="noreferrer noopener"
 							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconLicense class="w-5 h-5" />
@@ -94,14 +118,48 @@
 						</a>
 						<a
 							href="https://docs.google.com/presentation/d/17tD4eOPL54v6YPEZE57gkOrtEo9LA_r4U0bAOBRGRSo/edit?usp=sharing"
+							target="_blank"
+							rel="noreferrer noopener"
 							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconBrandGit class="w-5 h-5" />
 							<p>Intro to Git</p>
 						</a>
-						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
+						<a
+							href="https://docs.google.com/presentation/d/16moIOAhsbH5qlyeWv0xfH73XT_hk0TJ-b6xct3njT5U/edit?usp=sharing"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 transition-opacity"
+						>
 							<IconWorld class="w-5 h-5" />
 							<p>Intro to Web Dev</p>
+						</a>
+						<a
+							href="https://docs.google.com/presentation/d/1PGyzuwHUsFabeBiMDdyGySel6rtKnuKERMko81i1Lb0/edit?usp=sharing"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 transition-opacity"
+						>
+							<IconCpu class="w-5 h-5" />
+							<p>Intro to Hardware</p>
+						</a>
+						<a
+							href="http://tamuhack.org/misconduct"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 transition-opacity"
+						>
+							<IconExclamationCircle class="w-5 h-5" />
+							<p>Misconduct Reporting</p>
+						</a>
+						<a
+							href="https://tamuhack.org/team-formation"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 transition-opacity"
+						>
+							<IconUsers class="w-5 h-5" />
+							<p>Team Formation</p>
 						</a>
 					</div>
 				</div>
@@ -142,14 +200,17 @@
 				>
 					<IconUserQuestion class="w-5 h-5" />
 				</a>
-				<button
+				<!-- <button
 					on:click={() => {
 						window.scrollTo({ top: 0, behavior: 'smooth' });
 					}}
 					class="p-1 border border-transparent rounded-sm"
 				>
 					<IconEdit class="w-5 h-5" />
-				</button>
+				</button> -->
+				<div class="p-1 border border-transparent rounded-sm opacity-75">
+					<IconEdit class="w-5 h-5" />
+				</div>
 			</div>
 		</div>
 		<!-- DESKTOP -->
@@ -161,47 +222,86 @@
 				class="flex flex-col items-center justify-center gap-[6px] bg-black bg-opacity-70 backdrop-blur-sm rounded-t-xl expand-container px-[6px]"
 			>
 				<div
-					class="flex flex-row items-center bg-[#2b2b2b] mt-[6px] bg-opacity-70 px-6 backdrop-blur-sm rounded-lg w-full h-full text-white text-sm text-left gap-16"
+					class="flex flex-row items-center bg-[#2b2b2b] mt-[6px] bg-opacity-70 px-6 py-6 backdrop-blur-sm rounded-lg w-full h-full text-white text-sm text-left gap-16"
 				>
 					<div
 						class:opacity-100={open}
 						class:opacity-0={!open}
-						class="flex flex-col gap-3 transition-opacity duration-150"
+						class="flex flex-col gap-3 justify-start h-full transition-opacity duration-150"
 					>
-						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
+						<a
+							href="/"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 opacity-75 transition-opacity"
+						>
 							<IconNotebook class="w-5 h-5" />
 							<p>Hacker Guide</p>
 						</a>
 						<a
 							href="https://discord.gg/VZyKP4JcC3"
+							target="_blank"
+							rel="noreferrer noopener"
 							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconBrandDiscord class="w-5 h-5" />
 							<p>Discord</p>
 						</a>
-						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
+						<a
+							href="/"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 opacity-75 transition-opacity"
+						>
 							<IconBrandSpotify class="w-5 h-5" />
 							<p>Spotify Queue</p>
 						</a>
 						<a
 							href="https://docs.google.com/presentation/d/17tD4eOPL54v6YPEZE57gkOrtEo9LA_r4U0bAOBRGRSo/edit?usp=sharing"
-							class="flex flex-row items-center gap-2 transition-opacity"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconBrandGit class="w-5 h-5" />
 							<p>Intro to Git</p>
+						</a>
+						<a
+							href="https://docs.google.com/presentation/d/1PGyzuwHUsFabeBiMDdyGySel6rtKnuKERMko81i1Lb0/edit?usp=sharing"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
+							<IconCpu class="w-5 h-5" />
+							<p>Intro to Hardware</p>
+						</a>
+						<a
+							href="https://tamuhack.org/team-formation"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
+							<IconUsers class="w-5 h-5" />
+							<p>Team Formation</p>
 						</a>
 					</div>
 					<div
 						class:opacity-100={open}
 						class:opacity-0={!open}
-						class="flex flex-col gap-3 transition-opacity duration-150"
+						class="flex flex-col gap-3 justify-start h-full transition-opacity duration-150"
 					>
-						<a href="/" class="flex flex-row items-center gap-2 opacity-75 transition-opacity">
+						<a
+							href="https://tamuhack.org/devpost"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
 							<IconScale class="w-5 h-5" />
 							<p>Devpost</p>
 						</a>
 						<a
 							href="https://helpr.tamuhack.org"
+							target="_blank"
+							rel="noreferrer noopener"
 							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconHelp class="w-5 h-5" />
@@ -209,17 +309,30 @@
 						</a>
 						<a
 							href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf?_gl=1*19bpx84*_ga*NDgxNjY1Mzk0LjE3MDIxODA5Njk.*_ga_E5KT6TC4TK*MTcwMjcwNzc3NC40LjAuMTcwMjcwNzc3NC4wLjAuMA.."
+							target="_blank"
+							rel="noreferrer noopener"
 							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconLicense class="w-5 h-5" />
 							<p>Code of Conduct</p>
 						</a>
 						<a
-							href="https://docs.google.com/presentation/d/17tD4eOPL54v6YPEZE57gkOrtEo9LA_r4U0bAOBRGRSo/edit?usp=sharing"
-							class="flex flex-row items-center gap-2 opacity-75 transition-opacity"
+							href="https://docs.google.com/presentation/d/16moIOAhsbH5qlyeWv0xfH73XT_hk0TJ-b6xct3njT5U/edit?usp=sharing"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
 						>
 							<IconWorld class="w-5 h-5" />
 							<p>Intro to Web Dev</p>
+						</a>
+						<a
+							href="http://tamuhack.org/misconduct"
+							target="_blank"
+							rel="noreferrer noopener"
+							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
+						>
+							<IconExclamationCircle class="w-5 h-5" />
+							<p>Misconduct Reporting</p>
 						</a>
 					</div>
 				</div>
@@ -262,12 +375,12 @@
 	}
 
 	.expand-container.active {
-		height: 160px;
+		height: 240px;
 	}
 
 	@media (max-width: 640px) {
 		.expand-container.active {
-			height: 340px;
+			height: 420px;
 		}
 	}
 
