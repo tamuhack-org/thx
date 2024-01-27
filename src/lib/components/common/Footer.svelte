@@ -6,14 +6,6 @@
 		// 	name: 'Hacker Guide',
 		// 	link: 'https://hackers.tamuhack.com/'
 		// },
-		// {
-		// 	name: 'Spotify Queue',
-		// 	link: '/'
-		// },
-		// {
-		// 	name: 'Devpost',
-		// 	link: '/'
-		// },
 		{
 			name: 'HelpR',
 			link: 'https://helpr.tamuhack.org/'
@@ -28,10 +20,6 @@
 		},
 		{
 			name: 'Team Formation',
-			link: 'https://tamuhack.org/team-formation'
-		},
-		{
-			name: 'Spotify Queue',
 			link: 'https://tamuhack.org/team-formation'
 		},
 		{

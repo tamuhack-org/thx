@@ -81,15 +81,6 @@
 							<p>Discord</p>
 						</a>
 						<a
-							href="/"
-							target="_blank"
-							rel="noreferrer noopener"
-							class="flex flex-row items-center gap-2 opacity-75 transition-opacity"
-						>
-							<IconBrandSpotify class="w-5 h-5" />
-							<p>Spotify Queue</p>
-						</a>
-						<a
 							href="https://tamuhack.org/devpost"
 							target="_blank"
 							rel="noreferrer noopener"
@@ -248,15 +239,6 @@
 							<p>Discord</p>
 						</a>
 						<a
-							href="/"
-							target="_blank"
-							rel="noreferrer noopener"
-							class="flex flex-row items-center gap-2 opacity-75 transition-opacity"
-						>
-							<IconBrandSpotify class="w-5 h-5" />
-							<p>Spotify Queue</p>
-						</a>
-						<a
 							href="https://docs.google.com/presentation/d/17tD4eOPL54v6YPEZE57gkOrtEo9LA_r4U0bAOBRGRSo/edit?usp=sharing"
 							target="_blank"
 							rel="noreferrer noopener"
@@ -375,12 +357,12 @@
 	}
 
 	.expand-container.active {
-		height: 240px;
+		height: 200px;
 	}
 
 	@media (max-width: 640px) {
 		.expand-container.active {
-			height: 420px;
+			height: 400px;
 		}
 	}
 
