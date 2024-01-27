@@ -55,6 +55,11 @@
 			title: 'Frogslayer Challenge',
 			desc: 'Build an application that utilizes a cross-platform framework (Flutter, .NET MAUI, React Native)',
 			prizes: ['Prize: $50 Amazon Gift Cards']
+		},
+		{
+			title: "USAA Challenge",
+			desc: "Create a hack that utilizes a REST API developed by your team. *Bonus points for resiliency, gathering information from multiple data sources (DB, Other rest apis, etc), full CRUD capabilities, user authentication, friendly UI for non-technical users).",
+			prizes: ["Raspberry Pi 4 Model B: Quad Core 64 bit, WiFi + Bluetooth"]
 		}
 	];
 
