@@ -373,7 +373,6 @@
 				</div>
 			</div>
 		{/each}
-		<Circuits />
 	</div>
 	<!-- <div class="grid md:grid-cols-2 gap-4 mt-4 mb-32">
 		{#each otherPrizes as prize}
