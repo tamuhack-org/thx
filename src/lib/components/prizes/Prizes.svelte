@@ -25,7 +25,7 @@
 			prizes: ['Prize: Polaroid Now 2nd Gen']
 		},
 		{
-			title: 'Best Beginner Hack',
+			title: 'Best Beginner Software Hack',
 			desc: 'Best hack created by first-time hackers at TAMUhack. (Must have at least 2 first-timers to qualify)',
 			prizes: ['Prize: Mini-Projector']
 		},
@@ -104,6 +104,11 @@
 			title: 'Best Medical Device Hack',
 			desc: 'The Best Medical Device Hack is an open ended challenge meant to target the medical or biomedical field in terms of engineering application. Hackers can create their own project without limitations. If you have questions, reach out to IEEE!',
 			prizes: ['Prize: AirPods (3rd Generation)']
+		},
+		{
+			title: 'Best Beginner Hardware Hack',
+			desc: 'Best hardware hack created by first-time hackers at TAMUhack. (Must have at least 2 first-timers to qualify)',
+			prizes: ['Prize: Wireless Qi Charger']
 		}
 	];
 
@@ -368,7 +373,6 @@
 				</div>
 			</div>
 		{/each}
-		<Circuits />
 	</div>
 	<!-- <div class="grid md:grid-cols-2 gap-4 mt-4 mb-32">
 		{#each otherPrizes as prize}
