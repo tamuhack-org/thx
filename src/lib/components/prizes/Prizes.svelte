@@ -57,9 +57,22 @@
 			prizes: ['Prize: $50 Amazon Gift Cards']
 		},
 		{
-			title: "USAA Challenge",
-			desc: "Create a hack that utilizes a REST API developed by your team. *Bonus points for resiliency, gathering information from multiple data sources (DB, Other rest apis, etc), full CRUD capabilities, user authentication, friendly UI for non-technical users).",
-			prizes: ["Raspberry Pi 4 Model B: Quad Core 64 bit, WiFi + Bluetooth"]
+			title: 'USAA Challenge',
+			desc: 'Create a hack that utilizes a REST API developed by your team. *Bonus points for resiliency, gathering information from multiple data sources (DB, Other rest apis, etc), full CRUD capabilities, user authentication, friendly UI for non-technical users).',
+			prizes: ['Prize: Raspberry Pi 4 Model B: Quad Core 64 bit, WiFi + Bluetooth']
+		}
+	];
+
+	let otherHardwarePrizes = [
+		{
+			title: 'Cybersecurity Challenge',
+			desc: 'USB devices are commonly used for data transfer between computers and various peripherals. However, these devices pose security risks due to the potential introduction of malware or unauthorized data access. Ensuring the integrity and confidentiality of data transferred via USB is crucial for cybersecurity. Develop a simple and cost-effective hardware solution to enhance the security of USB data transfer',
+			prizes: ['Prize: AirPods (2nd Generation)']
+		},
+		{
+			title: 'Best Medical Device Hack',
+			desc: 'The Best Medical Device Hack is an open ended challenge meant to target the medical or biomedical field in terms of engineering application. Hackers can create their own project without limitations. If you have questions, reach out to IEEE!',
+			prizes: ['Prize: AirPods (2nd Generation)']
 		}
 	];
 
@@ -285,6 +298,25 @@
 				<p class="text-base md:text-xl font-poppins copy-on-dark">Prize: Ender 3 3D Printer</p>
 			</div>
 		</div>
+	</div>
+	<div class="grid md:grid-cols-2 gap-4 mt-4">
+		{#each otherHardwarePrizes as prize}
+			<div class="flex flex-col justify-between w-full p-4 dark-bg rounded-md z-10">
+				<div>
+					<p class="text-2xl font-medium font-poppins copy-on-dark">
+						{prize.title}
+					</p>
+					<p class="text-base md:text-lg font-light font-poppins copy-on-dark mt-2 opacity-90">
+						{prize.desc}
+					</p>
+				</div>
+				<div class="mt-8">
+					{#each prize.prizes as win}
+						<p class="text-base md:text-xl font-poppins copy-on-dark mt-2">{win}</p>
+					{/each}
+				</div>
+			</div>
+		{/each}
 
 		<Circuits />
 	</div>
