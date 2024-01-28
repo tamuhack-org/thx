@@ -92,7 +92,7 @@
 		{
 			title: 'Cybersecurity Challenge',
 			desc: 'USB devices are commonly used for data transfer between computers and various peripherals. However, these devices pose security risks due to the potential introduction of malware or unauthorized data access. Ensuring the integrity and confidentiality of data transferred via USB is crucial for cybersecurity. Develop a simple and cost-effective hardware solution to enhance the security of USB data transfer',
-			prizes: ['Prize: AirPods (2nd Generation)'],
+			prizes: ['Prize: AirPods (3rd Generation)'],
 			projectRefs: [
 				{
 					name: 'Challenge Document',
@@ -103,7 +103,7 @@
 		{
 			title: 'Best Medical Device Hack',
 			desc: 'The Best Medical Device Hack is an open ended challenge meant to target the medical or biomedical field in terms of engineering application. Hackers can create their own project without limitations. If you have questions, reach out to IEEE!',
-			prizes: ['Prize: AirPods (2nd Generation)']
+			prizes: ['Prize: AirPods (3rd Generation)']
 		}
 	];
 
