@@ -107,7 +107,7 @@
 		},
 		{
 			title: 'Best Beginner Hardware Hack',
-			desc: 'The Best Medical Device Hack is an open ended challenge meant to target the medical or biomedical field in terms of engineering application. Hackers can create their own project without limitations. If you have questions, reach out to IEEE!',
+			desc: 'Best hardware hack created by first-time hackers at TAMUhack. (Must have at least 2 first-timers to qualify)',
 			prizes: ['Prize: Wireless Qi Charger']
 		}
 	];
