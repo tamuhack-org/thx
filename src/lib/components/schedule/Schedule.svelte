@@ -29,6 +29,7 @@
 
 	onMount(async () => {
 		$scheduleLoaded = true;
+		console.log(currentEventIndex);
 	});
 </script>
 

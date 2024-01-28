@@ -72,7 +72,7 @@ export async function load() {
 		let index = 0;
 		for (let i = 0; i < events.length; i++) {
 			const event = events[i];
-			const eventTime = new Date(event.time).getTime();
+			const eventTime = new Date(event.date).getTime();
 			if (eventTime > now) {
 				index = i;
 				break;
