@@ -36,27 +36,6 @@
 <p class="text-center font-medium text-[30px] text-dark font-poppins">Next Up</p>
 <div class="mx-auto w-[50px] h-1 bg-dark rounded-full"></div>
 
-<div class="flex justify-center gap-4 mt-4 md:mt-8 overflow-hidden">
-	<NextUpCard
-		title={events[currentEventIndex - 1]?.event_name || 'Loading'}
-		description={events[currentEventIndex - 1]?.description || ''}
-		time={events[currentEventIndex - 1]?.time || ''}
-		hidden={currentEventIndex <= 0}
-	/>
-	<NextUpCard
-		title={events[currentEventIndex]?.event_name || 'Loading'}
-		description={events[currentEventIndex]?.description || ''}
-		time={events[currentEventIndex]?.time || 'Loading'}
-		active
-	/>
-	<NextUpCard
-		title={events[currentEventIndex + 1]?.event_name || 'Loading'}
-		description={events[currentEventIndex + 1]?.description || ''}
-		time={events[currentEventIndex + 1]?.time || ''}
-		hidden={currentEventIndex > events.length - 1}
-	/>
-</div>
-
 <div class="flex flex-col lg:flex-row justify-center gap-4 mt-8">
 	<div class="relative">
 		<div class="sticky top-0 lg:translate-y-[56px] lg:w-[300px] max-w-[400px] mx-auto">
