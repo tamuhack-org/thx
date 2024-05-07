@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="flex justify-between items-center w-[89%] md:w-[90%] lg:w-full min-h-[70px] px-8 mt-[40px]"
+	class="flex justify-between items-center w-[89%] md:w-[90%] lg:w-full min-h-[70px] px-8 mt-0"
 	use:inview
 	on:inview_enter={(event) => {
 		const { inView } = event.detail;
