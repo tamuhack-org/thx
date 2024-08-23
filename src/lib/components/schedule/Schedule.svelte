@@ -55,7 +55,6 @@
 					{/each}
 				</div>
 			</div>
-			<p class="font-poppins text-dark">*More events coming soon</p>
 			<img src="/assets/scheduley.png" alt="" class="hidden lg:flex mt-8" />
 		</div>
 	</div>
