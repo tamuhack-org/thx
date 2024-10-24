@@ -24,7 +24,7 @@
 		},
 		{
 			name: 'Devpost',
-			link: 'https://tamuhack.org/devpost'
+			link: 'https://thx.devpost.com'
 		}
 	];
 

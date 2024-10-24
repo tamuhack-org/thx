@@ -81,7 +81,7 @@
 							<p>Discord</p>
 						</a>
 						<a
-							href="https://tamuhack.org/devpost"
+							href="https://thx.devpost.com"
 							target="_blank"
 							rel="noreferrer noopener"
 							class="flex flex-row items-center gap-2 transition-opacity"
@@ -272,7 +272,7 @@
 						class="flex flex-col gap-3 justify-start h-full transition-opacity duration-150"
 					>
 						<a
-							href="https://tamuhack.org/devpost"
+							href="https://thx.devpost.com"
 							target="_blank"
 							rel="noreferrer noopener"
 							class="flex flex-row items-center gap-2 hover:opacity-75 transition-opacity"
