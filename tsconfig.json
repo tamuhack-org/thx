@@ -3,14 +3,12 @@
 	"compilerOptions": {
 		"allowJs": true,
 		"checkJs": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"resolveJsonModule": true,
-		"skipLibCheck": true,
-		"sourceMap": true,
-		"strict": true,
-		"moduleResolution": "bundler"
-	}
+		"moduleResolution": "bundler",
+		"target": "es2017",
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true
+	},
+	"include": ["src", "tests", "*.config.js", "*.config.ts"]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
 	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
