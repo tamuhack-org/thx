@@ -1,6 +1,4 @@
-
 export async function load() {
-
 	type ScheduledEvent = {
 		eventName: string;
 		id: string;
@@ -16,28 +14,27 @@ export async function load() {
 		let res;
 		try {
 			const response = await fetch('https://team.tamuhack.org/api/th24');
-		
+
 			if (!response.ok) {
 				throw new Error(`HTTP error! Status: ${response.status}`);
 			}
-		
+
 			res = await response.json();
 		} catch (error) {
-			return []
+			return [];
 		}
 
-		console.log(res.Items)
-
+		console.log(res.Items);
 
 		const events: ScheduledEvent[] = res.sort((a: ScheduledEvent, b: ScheduledEvent) => {
 			const dateA = new Date(a.date);
 			const dateB = new Date(b.date);
-	
+
 			// Convert UTC to Central Time
 			const centralTimeOptions = { timeZone: 'America/Chicago' }; // Replace with your desired time zone
 			const centralTimeA = dateA.toLocaleString('en-US', centralTimeOptions);
 			const centralTimeB = dateB.toLocaleString('en-US', centralTimeOptions);
-	
+
 			// Compare the converted times
 			return new Date(centralTimeA).getTime() - new Date(centralTimeB).getTime();
 		});
@@ -83,11 +80,11 @@ export async function load() {
 		return index;
 	};
 
-  const events = await getEvents();
-  const currentEventIndex = getCurrentEventIndex(events);
+	const events = await getEvents();
+	const currentEventIndex = getCurrentEventIndex(events);
 
 	return {
 		events: events,
-		currentEventIndex: currentEventIndex,
+		currentEventIndex: currentEventIndex
 	};
 }

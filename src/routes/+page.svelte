@@ -1,133 +1,134 @@
 <script lang="ts">
-    import Title from '$lib/components/landing/Title.svelte';
-    import PhysicsContainer from '$lib/components/landing/PhysicsContainer.svelte';
-    import Navbar from '$lib/components/navbar/Navbar.svelte';
-    import Marquee from '$lib/components/marquee/Marquee.svelte';
-    import TopNavbar from '$lib/components/navbar/TopNavbar.svelte';
-    import Eyes from '$lib/components/about/Eyes.svelte';
-    import PrizesAmount from '$lib/components/about/PrizesAmount.svelte';
-    import Phone from '$lib/components/about/Phone.svelte';
-    import Construction from '$lib/components/common/Construction.svelte';
-    import Footer from '$lib/components/common/Footer.svelte';
-    import Anniversary from '$lib/components/about/Anniversary.svelte';
-    import { onMount } from 'svelte';
-    import { gsap } from 'gsap';
-    
-    // --- MIGRATION CHANGE: Updated Imports ---
-    import { createTimeline, stagger } from 'animejs'; 
-    
-    import { animationDone, screenWidth, screenHeight, scheduleLoaded } from '$lib/stores';
-    import { fly } from 'svelte/transition';
-    import Tiger from '$lib/components/common/Tiger.svelte';
-    import CommandMenu from '$lib/components/common/CommandMenu.svelte';
-    import Schedule from '$lib/components/schedule/Schedule.svelte';
-    import PrizesContainer from '$lib/components/prizes/PrizesContainer.svelte';
-    import { inview } from 'svelte-inview';
-    import { sectionInView } from '$lib/stores';
-    import Sponsors from '$lib/components/landing/Sponsors.svelte';
-    import Faq from '$lib/components/faq/faq.svelte';
+	import Title from '$lib/components/landing/Title.svelte';
+	import PhysicsContainer from '$lib/components/landing/PhysicsContainer.svelte';
+	import Navbar from '$lib/components/navbar/Navbar.svelte';
+	import Marquee from '$lib/components/marquee/Marquee.svelte';
+	import TopNavbar from '$lib/components/navbar/TopNavbar.svelte';
+	import Eyes from '$lib/components/about/Eyes.svelte';
+	import PrizesAmount from '$lib/components/about/PrizesAmount.svelte';
+	import Phone from '$lib/components/about/Phone.svelte';
+	import Construction from '$lib/components/common/Construction.svelte';
+	import Footer from '$lib/components/common/Footer.svelte';
+	import Anniversary from '$lib/components/about/Anniversary.svelte';
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
 
-    // TODO: use export and use ScheduledEvent
-    export let data: {
-        events: {
-            event_name: string;
-            id: string;
-            time: string;
-            day: string;
-            date: string;
-            description: string;
-            tags?: string[];
-        }[];
-        currentEventIndex: number;
-    };
+	// --- MIGRATION CHANGE: Updated Imports ---
+	import { createTimeline, stagger } from 'animejs';
 
-    function startLoader() {
-        let counterElement = document.querySelector('.count p') as HTMLElement;
-        let currentValue = 0;
+	import { animationDone, screenWidth, screenHeight, scheduleLoaded } from '$lib/stores';
+	import { fly } from 'svelte/transition';
+	import Tiger from '$lib/components/common/Tiger.svelte';
+	import CommandMenu from '$lib/components/common/CommandMenu.svelte';
+	import Schedule from '$lib/components/schedule/Schedule.svelte';
+	import PrizesContainer from '$lib/components/prizes/PrizesContainer.svelte';
+	import { inview } from 'svelte-inview';
+	import { sectionInView } from '$lib/stores';
+	import Sponsors from '$lib/components/landing/Sponsors.svelte';
+	import Faq from '$lib/components/faq/faq.svelte';
 
-        function updateCounter() {
-            if (currentValue < 100) {
-                let increment = Math.floor(Math.random() * 10) + 1;
-                currentValue = Math.min(currentValue + increment, 100);
-                counterElement.textContent = currentValue.toString();
+	// TODO: use export and use ScheduledEvent
+	export let data: {
+		events: {
+			event_name: string;
+			id: string;
+			time: string;
+			day: string;
+			date: string;
+			description: string;
+			tags?: string[];
+		}[];
+		currentEventIndex: number;
+	};
 
-                let delay = Math.floor(Math.random() * 50) + 25;
-                setTimeout(updateCounter, delay);
-            }
-        }
+	function startLoader() {
+		let counterElement = document.querySelector('.count p') as HTMLElement;
+		let currentValue = 0;
 
-        updateCounter();
-    }
+		function updateCounter() {
+			if (currentValue < 100) {
+				let increment = Math.floor(Math.random() * 10) + 1;
+				currentValue = Math.min(currentValue + increment, 100);
+				counterElement.textContent = currentValue.toString();
 
-    onMount(() => {
-        // force scroll to top after reload
-        setTimeout(() => {
-            window.scroll({
-                top: 0,
-                behavior: 'instant'
-            });
-        }, 0.1);
+				let delay = Math.floor(Math.random() * 50) + 25;
+				setTimeout(updateCounter, delay);
+			}
+		}
 
-        startLoader();
+		updateCounter();
+	}
 
-        gsap.to('.count', { opacity: 0, delay: 1.5, duration: 0.5 });
+	onMount(() => {
+		// force scroll to top after reload
+		setTimeout(() => {
+			window.scroll({
+				top: 0,
+				behavior: 'instant'
+			});
+		}, 0.1);
 
-        let textWrapper = document.querySelector('.ml16');
+		startLoader();
 
-        if (textWrapper?.textContent) {
-            textWrapper.innerHTML = textWrapper?.textContent?.replace(
-                /\S/g,
-                "<span class='inline-block leading-4 text-dark'>$&</span>"
-            );
-        }
+		gsap.to('.count', { opacity: 0, delay: 1.5, duration: 0.5 });
 
-        // --- MIGRATION CHANGE: Updated Timeline Syntax ---
-        createTimeline() // 'loop: false' is default behavior in v4 (no repetitions)
-            .add('.ml16 span', { // Target moved to first argument
-                translateY: { from: -100, to: 0 }, // Converted array to object syntax
-                ease: 'outExpo', // Renamed 'easing' to 'ease', removed 'ease' prefix
-                duration: 1000,
-                delay: stagger(10) // Converted function delay to stagger helper
-            })
-            .add('.ml16 span', {
-                translateY: { from: 0, to: 100 },
-                ease: 'outExpo',
-                duration: 5000,
-                delay: stagger(30, { start: 500 }) // Converted offset stagger
-            });
+		let textWrapper = document.querySelector('.ml16');
 
-        gsap.to('.pre-loader', {
-            scale: 0.5,
-            ease: 'power4.inOut',
-            duration: 2,
-            delay: 1.5
-        });
+		if (textWrapper?.textContent) {
+			textWrapper.innerHTML = textWrapper?.textContent?.replace(
+				/\S/g,
+				"<span class='inline-block leading-4 text-dark'>$&</span>"
+			);
+		}
 
-        gsap.to('.loader', {
-            height: '0',
-            ease: 'power4.inOut',
-            duration: 1.5,
-            delay: 2.25
-        });
+		// --- MIGRATION CHANGE: Updated Timeline Syntax ---
+		createTimeline() // 'loop: false' is default behavior in v4 (no repetitions)
+			.add('.ml16 span', {
+				// Target moved to first argument
+				translateY: { from: -100, to: 0 }, // Converted array to object syntax
+				ease: 'outExpo', // Renamed 'easing' to 'ease', removed 'ease' prefix
+				duration: 1000,
+				delay: stagger(10) // Converted function delay to stagger helper
+			})
+			.add('.ml16 span', {
+				translateY: { from: 0, to: 100 },
+				ease: 'outExpo',
+				duration: 5000,
+				delay: stagger(30, { start: 500 }) // Converted offset stagger
+			});
 
-        gsap.to('.loader-bg', {
-            height: '0',
-            ease: 'power4.inOut',
-            duration: 1.5,
-            delay: 2.5
-        });
+		gsap.to('.pre-loader', {
+			scale: 0.5,
+			ease: 'power4.inOut',
+			duration: 2,
+			delay: 1.5
+		});
 
-        gsap.to('.loader-2', {
-            clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-            ease: 'power4.inOut',
-            duration: 1,
-            delay: 2.375,
-            onComplete: () => {
-                $animationDone = true;
-                document.querySelector('body')!.style.overflow = 'auto';
-            }
-        });
-    });
+		gsap.to('.loader', {
+			height: '0',
+			ease: 'power4.inOut',
+			duration: 1.5,
+			delay: 2.25
+		});
+
+		gsap.to('.loader-bg', {
+			height: '0',
+			ease: 'power4.inOut',
+			duration: 1.5,
+			delay: 2.5
+		});
+
+		gsap.to('.loader-2', {
+			clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+			ease: 'power4.inOut',
+			duration: 1,
+			delay: 2.375,
+			onComplete: () => {
+				$animationDone = true;
+				document.querySelector('body')!.style.overflow = 'auto';
+			}
+		});
+	});
 </script>
 
 <svelte:window bind:innerWidth={$screenWidth} bind:innerHeight={$screenHeight} />
