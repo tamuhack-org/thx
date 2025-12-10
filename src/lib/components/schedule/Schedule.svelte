@@ -4,7 +4,7 @@
 	import { scheduleLoaded } from '$lib/stores';
 
 	type ScheduledEvent = {
-		event_name: string;
+		eventName: string;
 		id: string;
 		time: string;
 		day: string;
@@ -76,7 +76,7 @@
 										{event.time}
 									</p>
 									<p class="font-poppins font-medium text-lg text-dark w-2/3 text-end">
-										{event.event_name}
+										{event.eventName}
 									</p>
 								</div>
 
@@ -110,7 +110,7 @@
 									{event.time}
 								</p>
 								<p class="font-poppins font-medium text-lg text-dark w-2/3 text-end">
-									{event.event_name}
+									{event.eventName}
 								</p>
 							</div>
 

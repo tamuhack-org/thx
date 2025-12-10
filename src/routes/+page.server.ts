@@ -2,7 +2,7 @@
 export async function load() {
 
 	type ScheduledEvent = {
-		event_name: string;
+		eventName: string;
 		id: string;
 		time: string;
 		day: string;
@@ -15,7 +15,7 @@ export async function load() {
 	const getEvents = async () => {
 		let res;
 		try {
-			const response = await fetch('https://hum-console.vercel.app/api/th24');
+			const response = await fetch('https://team.tamuhack.org/api/th24');
 		
 			if (!response.ok) {
 				throw new Error(`HTTP error! Status: ${response.status}`);
@@ -26,8 +26,10 @@ export async function load() {
 			return []
 		}
 
+		console.log(res.Items)
 
-		const events: ScheduledEvent[] = res.Items.sort((a: ScheduledEvent, b: ScheduledEvent) => {
+
+		const events: ScheduledEvent[] = res.sort((a: ScheduledEvent, b: ScheduledEvent) => {
 			const dateA = new Date(a.date);
 			const dateB = new Date(b.date);
 	
